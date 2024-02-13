@@ -1,5 +1,5 @@
 ---
-title: "Themed dashboard"
+title: "Offres d'emploi"
 output: 
   flexdashboard::flex_dashboard:
     theme:
@@ -28,27 +28,20 @@ library(ggplot2)
 
 Column {data-width=650 .tabset}
 -----------------------------------------------------------------------
-
-### Chart A
-
-```{r}
-
-```
-
-### Chart B
+# Répartition des offres
+### Cartes
 
 ```{r}
 
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
-
-### Chart C
+### Secteurs
 
 ```{r}
 
 ```
+
+# Compétences
 
 ### Chart D
 
@@ -56,3 +49,8 @@ Column {data-width=350}
 
 ```
 
+# Salaires par régions
+
+# Salaires par secteur
+
+# Conclusion
