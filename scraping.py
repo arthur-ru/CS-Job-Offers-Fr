@@ -16,8 +16,13 @@ search_bar = driver.find_element(By.CSS_SELECTOR, 'input[name="k"]')
 search_bar.send_keys("Software Engineer")
 search_bar.send_keys(Keys.ENTER)
 
-
-
 sleep(5)
+
+# Obtient tous les blocs
+blocs = driver.find_elements(By.XPATH, '//div[contains(@class, "augmented new action crushed hoverable !tw-p-4 md:!tw-p-6 !tw-rounded-2xl")]')
+print(blocs)
+print(len(blocs))
+
+sleep(3)
 # Fermer le navigateur une fois que la boucle est terminée
 driver.quit()
