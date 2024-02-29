@@ -5,8 +5,7 @@ import time
 import csv
 
 def extract_data_from_all_pages():
-    s = Service('/Users/noeflandre/Downloads/geckodriver')
-    driver = webdriver.Firefox(service=s)
+    driver = webdriver.Firefox()
     
     page = 1
     data = []
@@ -41,7 +40,7 @@ def extract_data_from_all_pages():
 data = extract_data_from_all_pages()
 
 # Save the data to a CSV file
-csv_file_path = 'extracted_data.csv'
+csv_file_path = 'data/extracted_data.csv'
 with open(csv_file_path, 'w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
     writer.writerow(['Text Content'])
@@ -49,5 +48,3 @@ with open(csv_file_path, 'w', newline='', encoding='utf-8') as file:
         writer.writerow([item])
 
 print(f"Data extracted and saved to '{csv_file_path}'.")
-
-#commentairetest
