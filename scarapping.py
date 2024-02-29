@@ -29,7 +29,7 @@ for page in range(1,5):
             company_name = infos.find_element(By.CSS_SELECTOR, '[data-cy="companyName"]').text.strip()
         job_title = ""
         if(infos.find_element(By.CSS_SELECTOR, 'h3 a')):
-            job_title = infos.find_element(By.CSS_SELECTOR, 'h3 a').text.strip()
+            job_title = infos.find_element(By.CSS_SELECTOR, 'h3 a').get_attribute("href")
         contract_type=""
         if(infos.find_element(By.CSS_SELECTOR, '[data-cy="contract"]')):
             contract_type = infos.find_element(By.CSS_SELECTOR, '[data-cy="contract"]').text.strip()
