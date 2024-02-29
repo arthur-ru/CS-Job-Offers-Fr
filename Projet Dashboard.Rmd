@@ -1,0 +1,148 @@
+---
+title: "Projet de collecte"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      bg: "#101010"
+      fg: "#FDF7F7" 
+      primary: "#ED79F9"
+      base_font:
+        google: Prompt
+      code_font:
+        google: JetBrains Mono
+    orientation: columns
+    vertical_layout: fill
+    runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(leaflet)
+library(ggplot2)
+library(maps)
+library("dplyr")
+world_map <- map_data("world")
+df <- data.frame(
+  valeur = c(10, 20, 30, 40),
+  categorie = c("A", "B", "C", "D")
+)
+```
+
+# Répartition des offres 
+```{r}
+
+
+```
+## Column 1 {data-width=650}
+### Cartes
+```{r}
+
+ggplot() +
+  geom_map(data = world_map, map = world_map,
+           aes(x = long, y = lat, map_id = region),
+           fill = "lightblue", color = "black") +
+  expand_limits(x = world_map$long, y = world_map$lat) + theme_void()
+```
+
+## Column 2 {data-width=350}
+### Secteurs
+```{r}
+selectInput("competence", label = "Sélectionnez une compétence :", 
+            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
+            selected = "Compétence 1")
+count.data <- data.frame(
+  class = c("1st", "2nd", "3rd", "Crew"),
+  n = c(325, 285, 706, 885),
+  prop = c(14.8, 12.9, 32.1, 40.2)
+)
+count.data <- count.data %>%
+  arrange(desc(class)) %>%
+  mutate(lab.ypos = cumsum(prop) - 0.5*prop)
+mycols <- c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF")
+
+ggplot(count.data, aes(x = "", y = prop, fill = class)) +
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  coord_polar("y", start = 0)+
+  geom_text(aes(y = lab.ypos, label = prop), color = "white")+
+  scale_fill_manual(values = mycols) +
+  theme_void()
+```
+
+# Compétences
+## Column 1 {data-width=650}
+```{r}
+set.seed(123)
+secteur_data <- data.frame(Secteur = sample(c("Finance", "Technologie", "Santé", "Éducation"), 100, replace = TRUE),
+                           Salaire = rnorm(100, mean = 50000, sd = 10000))
+
+# Tracer l'histogramme
+ggplot(secteur_data, aes(x = Salaire)) +
+  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+  labs(title = "Répartition des salaires par secteur",
+       x = "Salaire", y = "Fréquence") +
+  theme_minimal()
+
+```
+
+## Column 2 {data-width=350}
+```{r}
+selectInput("competence", label = "Sélectionnez une compétence :", 
+            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
+            selected = "Compétence 1")
+df <- data.frame(
+  sexe = c("f", "f", "h", "h"),
+  age = c(52, 31, 29, 35),
+  blond = c(FALSE, TRUE, TRUE, FALSE),
+  stringsAsFactors = FALSE
+)
+df
+```
+
+# Salaires par départements
+## Column 1 {data-width=650}
+```{r}
+ggplot() +
+  geom_map(data = world_map, map = world_map,
+           aes(x = long, y = lat, map_id = region),
+           fill = "lightblue", color = "black") +
+  expand_limits(x = world_map$long, y = world_map$lat) + theme_void()
+
+```
+
+## Column 2 {data-width=350}
+```{r}
+selectInput("competence", label = "Sélectionnez une compétence :", 
+            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
+            selected = "Compétence 1")
+df
+```
+
+# Salaire par secteur
+## Column 1 {data-width=650}
+```{r}
+set.seed(123)
+secteur_data <- data.frame(Secteur = sample(c("Finance", "Technologie", "Santé", "Éducation"), 100, replace = TRUE),
+                           Salaire = rnorm(100, mean = 50000, sd = 10000))
+
+# Tracer l'histogramme
+ggplot(secteur_data, aes(x = Salaire)) +
+  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+  labs(title = "Répartition des salaires par secteur",
+       x = "Salaire", y = "Fréquence") +
+  theme_minimal()
+
+```
+
+## Column 2 {data-width=350}
+```{r}
+selectInput("competence", label = "Sélectionnez une compétence :", 
+            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
+            selected = "Compétence 1")
+df
+```
+# Conclusion
+
+```{r}
+
+```
+
