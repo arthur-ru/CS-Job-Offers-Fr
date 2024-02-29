@@ -1,0 +1,842 @@
+[
+  {
+    "Company Name": "ENGIE",
+    "Job Title": "Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Us - 95",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45661282.html"
+  },
+  {
+    "Company Name": "ENGIE",
+    "Job Title": "Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Us - 95",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45661306.html"
+  },
+  {
+    "Company Name": "Relyens",
+    "Job Title": "Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46791935.html"
+  },
+  {
+    "Company Name": "IT Link",
+    "Job Title": "Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Luxembourg",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45512844.html"
+  },
+  {
+    "Company Name": "Talan",
+    "Job Title": "Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Nantes - 44",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44080843.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Wasquehal - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46504090.html"
+  },
+  {
+    "Company Name": "Otteo",
+    "Job Title": "Android Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Lille - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46917937.html"
+  },
+  {
+    "Company Name": "ENGIE",
+    "Job Title": "Senior Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Us - 95",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45661296.html"
+  },
+  {
+    "Company Name": "Astek",
+    "Job Title": "Software Engineer Mbd H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris 1er - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/47027617.html"
+  },
+  {
+    "Company Name": "Astek",
+    "Job Title": "Software Engineer Mbd H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris 1er - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/47027464.html"
+  },
+  {
+    "Company Name": "EEKEM",
+    "Job Title": "C++ Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Biot - 06",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/47027866.html"
+  },
+  {
+    "Company Name": "EEKEM",
+    "Job Title": "Java Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Biot - 06",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/47028266.html"
+  },
+  {
+    "Company Name": "Work & You\nSuper recruteur",
+    "Job Title": "Senior Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Bordeaux - 33",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46970445.html"
+  },
+  {
+    "Company Name": "CS Group",
+    "Job Title": "Junior Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Pyrénées-Atlantiques - 64",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46793856.html"
+  },
+  {
+    "Company Name": "OVHCloud",
+    "Job Title": "Stage - Software Engineer H/F",
+    "Contract Type": "Stage",
+    "Location": "Paris 1er - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/41833496.html"
+  },
+  {
+    "Company Name": "OVHCloud",
+    "Job Title": "Network Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "France",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46711851.html"
+  },
+  {
+    "Company Name": "TRSB",
+    "Job Title": "Java Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Aix-en-Provence - 13",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44209107.html"
+  },
+  {
+    "Company Name": "TRSB",
+    "Job Title": ".Net Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44122824.html"
+  },
+  {
+    "Company Name": "Voyage Privé",
+    "Job Title": "Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Aix-en-Provence - 13",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44841436.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Suresnes - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46194774.html"
+  },
+  {
+    "Company Name": "Pixie Services France",
+    "Job Title": "Software Engineer .Net - Angular H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46900031.html"
+  },
+  {
+    "Company Name": "ALTEN",
+    "Job Title": "Back End Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Valbonne - 06",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45614786.html"
+  },
+  {
+    "Company Name": "Sept Lieues",
+    "Job Title": "Software Engineer Python - Pyqt H/F",
+    "Contract Type": "CDI",
+    "Location": "Montigny-le-Bretonneux - 78",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46967969.html"
+  },
+  {
+    "Company Name": "Capgemini",
+    "Job Title": "Lead Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46380347.html"
+  },
+  {
+    "Company Name": "Hardis Group",
+    "Job Title": "Google Cloud Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Nantes - 44",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/18579025.html"
+  },
+  {
+    "Company Name": "TRSB",
+    "Job Title": "Software Engineer Java H/F",
+    "Contract Type": "CDI",
+    "Location": "Aix-en-Provence - 13",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/43835273.html"
+  },
+  {
+    "Company Name": "TRSB",
+    "Job Title": "Software Engineer .Net H/F",
+    "Contract Type": "CDI",
+    "Location": "Avignon - 84",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/43829579.html"
+  },
+  {
+    "Company Name": "Seyos\nSuper recruteur",
+    "Job Title": "Software Engineer Golang - Aws H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris 17e - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46667749.html"
+  },
+  {
+    "Company Name": "Idemia",
+    "Job Title": "Ingénieur Logiciel - Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Courbevoie - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46251314.html"
+  },
+  {
+    "Company Name": "Hardis Group",
+    "Job Title": "Microsoft Cloud Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Grenoble - 38",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/41438006.html"
+  },
+  {
+    "Company Name": "Mondial Relay",
+    "Job Title": "Java Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Villeneuve-d'Ascq - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44847436.html"
+  },
+  {
+    "Company Name": "Weavy Consulting",
+    "Job Title": "Senior Java Fullstack Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46962245.html"
+  },
+  {
+    "Company Name": "Abylsen",
+    "Job Title": "Senior Software Engineer Java Developer H/F",
+    "Contract Type": "CDI",
+    "Location": "Valbonne - 06",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46701095.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Software Engineer Mainframe H/F",
+    "Contract Type": "CDI",
+    "Location": "Nanterre - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46194893.html"
+  },
+  {
+    "Company Name": "Seyos\nSuper recruteur",
+    "Job Title": "Software Engineer Llm - Node.Js - Vue.Js H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris 8e - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46911279.html"
+  },
+  {
+    "Company Name": "IT Link",
+    "Job Title": "Real Time-Embedded Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Belgique",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45512841.html"
+  },
+  {
+    "Company Name": "Inetum",
+    "Job Title": "Software Engineer Formal Methods H/F",
+    "Contract Type": "CDI",
+    "Location": "Vélizy-Villacoublay - 78",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/34027234.html"
+  },
+  {
+    "Company Name": "TRSB",
+    "Job Title": "Software Engineer Java Backend H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46387279.html"
+  },
+  {
+    "Company Name": "TRSB",
+    "Job Title": "Software Engineer Java Backend H/F",
+    "Contract Type": "CDI",
+    "Location": "Marseille - 13",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46387255.html"
+  },
+  {
+    "Company Name": "DAVRICOURT",
+    "Job Title": "Software Engineer Back Nest Typescript H/F",
+    "Contract Type": "CDI",
+    "Location": "Lille - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46762207.html"
+  },
+  {
+    "Company Name": "Capgemini",
+    "Job Title": "Software Engineer Java - Angular H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46380331.html"
+  },
+  {
+    "Company Name": "VAHUMANA",
+    "Job Title": "Software Engineer Java - Angular H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/43892228.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Software Engineer .Net - Reactjs en Alternance H/F",
+    "Contract Type": "Alternance",
+    "Location": "Wasquehal - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46825502.html"
+  },
+  {
+    "Company Name": "MAIF",
+    "Job Title": "Développeur - Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Niort - 79",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46473574.html"
+  },
+  {
+    "Company Name": "AGICAP",
+    "Job Title": "Full-Stack Software Engineer Python - Angular H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46838035.html"
+  },
+  {
+    "Company Name": "AGICAP",
+    "Job Title": "Front-End Software Engineer Ddd & Angular H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46837857.html"
+  },
+  {
+    "Company Name": "AGICAP",
+    "Job Title": "Back-End Software Engineer Ddd & .Net H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46837397.html"
+  },
+  {
+    "Company Name": "CS Group",
+    "Job Title": "Junior Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Darmstadt - Allemagne",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/43528911.html"
+  },
+  {
+    "Company Name": "VAHUMANA",
+    "Job Title": "Software Engineer .Net H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/43551379.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Software Engineer Java - Springboot H/F",
+    "Contract Type": "CDI",
+    "Location": "Nanterre - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46195156.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Software Engineer C# .Net H/F",
+    "Contract Type": "CDI",
+    "Location": "Nanterre - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46194930.html"
+  },
+  {
+    "Company Name": "Seyos\nSuper recruteur",
+    "Job Title": "Software Engineer Java - Angular - Tv Numérique H/F",
+    "Contract Type": "CDI",
+    "Location": "Cesson-Sévigné - 35",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46668246.html"
+  },
+  {
+    "Company Name": "Apside",
+    "Job Title": "Java Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Sophia-Antipolis - 06",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/42089474.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Software Engineer Java Métier Sinistre H/F",
+    "Contract Type": "CDI",
+    "Location": "Wasquehal - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46195292.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Senior Software Engineer Java - Springboot H/F",
+    "Contract Type": "CDI",
+    "Location": "Wasquehal - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46195155.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Software Engineer Java Métier Sinistre H/F",
+    "Contract Type": "CDI",
+    "Location": "Nanterre - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46194859.html"
+  },
+  {
+    "Company Name": "IT Link",
+    "Job Title": "Super Spécialiste Temps Réel-Embedded Software Engineer-Liège H/F",
+    "Contract Type": "CDI",
+    "Location": "Belgique",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45512830.html"
+  },
+  {
+    "Company Name": "VAHUMANA",
+    "Job Title": "Java Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/43381874.html"
+  },
+  {
+    "Company Name": "Twenty One Talents",
+    "Job Title": "Software Engineer Typescript React Node.Js Exp Mini H/F",
+    "Contract Type": "CDI",
+    "Location": "France",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45029128.html"
+  },
+  {
+    "Company Name": "Exotec",
+    "Job Title": "Senior Integration Software Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Lille - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/42016375.html"
+  },
+  {
+    "Company Name": "Exotec",
+    "Job Title": "R&D Software Engineer C++ H/F",
+    "Contract Type": "CDI",
+    "Location": "Lille - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/42016295.html"
+  },
+  {
+    "Company Name": "Exotec",
+    "Job Title": "R&D Software Engineer C++ H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon 1er - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/42016362.html"
+  },
+  {
+    "Company Name": "Deloitte",
+    "Job Title": "Junior - Software Engineer - Full Stack - Financial Services H/F",
+    "Contract Type": "CDI",
+    "Location": "La Défense - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44845382.html"
+  },
+  {
+    "Company Name": "Deloitte",
+    "Job Title": "Stagiaire - Software Engineer - Full Stack - Financial Services H/F",
+    "Contract Type": "Stage",
+    "Location": "La Défense - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44844434.html"
+  },
+  {
+    "Company Name": "CS Group",
+    "Job Title": "5141 Software Engineer Galileo Satellite Navigation H/F",
+    "Contract Type": "CDI",
+    "Location": "Tarn-et-Garonne - 82",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/43507281.html"
+  },
+  {
+    "Company Name": "Exotec",
+    "Job Title": "Lead Software R&D Engineer - Robotics & Vision H/F",
+    "Contract Type": "CDI",
+    "Location": "Lille - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45258063.html"
+  },
+  {
+    "Company Name": "ALTEN",
+    "Job Title": "Qa - Software Test Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Valbonne - 06",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45479091.html"
+  },
+  {
+    "Company Name": "Twenty One Talents",
+    "Job Title": "Fullstack Software Engineer Java - Typescript Exp Mini H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/41024681.html"
+  },
+  {
+    "Company Name": "Atos",
+    "Job Title": "Software Integration Engineer Confirmé H/F",
+    "Contract Type": "CDI",
+    "Location": "Grenoble - 38",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46493790.html"
+  },
+  {
+    "Company Name": "Eviden",
+    "Job Title": "System Software Development Engineer R&D - DevOps M - F H/F",
+    "Contract Type": "CDI",
+    "Location": "Échirolles - 38",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/42520769.html"
+  },
+  {
+    "Company Name": "CS Group",
+    "Job Title": "Software Architect & Embedded Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Montréal - Canada",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44439711.html"
+  },
+  {
+    "Company Name": "Guarani",
+    "Job Title": "Ingénieur Logiciel - Ingénieure Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Nice - 06",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46966478.html"
+  },
+  {
+    "Company Name": "Altim",
+    "Job Title": "Ingénieur Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Toulouse - 31",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/35632264.html"
+  },
+  {
+    "Company Name": "LR Technologies Groupe",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Pacy-sur-Eure - 27",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/31948687.html"
+  },
+  {
+    "Company Name": "Human Immobilier\nSuper recruteur",
+    "Job Title": "Ingénieur en Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Bordeaux - 33",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45638551.html"
+  },
+  {
+    "Company Name": "JNOV TECH",
+    "Job Title": "Ingenieur Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Colomiers - 31",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45628231.html"
+  },
+  {
+    "Company Name": "Astek",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris 1er - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/47027839.html"
+  },
+  {
+    "Company Name": "Expleo",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Toulouse - 31",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45733080.html"
+  },
+  {
+    "Company Name": "Consulting Technical Support",
+    "Job Title": "Ingénieur en Développement Logiciels H/F",
+    "Contract Type": "CDI",
+    "Location": "Clamart - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46938886.html"
+  },
+  {
+    "Company Name": "Consulting Technical Support",
+    "Job Title": "Ingénieur en Développement Logiciels H/F",
+    "Contract Type": "CDI",
+    "Location": "Clamart - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46938135.html"
+  },
+  {
+    "Company Name": "Ameg",
+    "Job Title": "Ingenieur Developpement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Strasbourg - 67",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46935409.html"
+  },
+  {
+    "Company Name": "JL Executive",
+    "Job Title": "Ingenieur Developpement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Pessac - 33",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46846025.html"
+  },
+  {
+    "Company Name": "Prime Engineering",
+    "Job Title": "Ingénieur Software H/F",
+    "Contract Type": "CDI",
+    "Location": "Isère - 38",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45468298.html"
+  },
+  {
+    "Company Name": "Eviden",
+    "Job Title": "Architecte Applicatif H/F",
+    "Contract Type": "CDI",
+    "Location": "Bezons - 95",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44290616.html"
+  },
+  {
+    "Company Name": "Nextgen RH\nSuper recruteur",
+    "Job Title": "Ingénieur Développement Logiciels H/F",
+    "Contract Type": "CDI",
+    "Location": "Mérignac - 33",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/47024018.html"
+  },
+  {
+    "Company Name": "Brawo",
+    "Job Title": "Ingénieur Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Pau - 64",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45700181.html"
+  },
+  {
+    "Company Name": "Hays",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Villeneuve-lès-Bouloc - 31",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46987734.html"
+  },
+  {
+    "Company Name": "Segula Technologies",
+    "Job Title": "Ingénieur Software H/F",
+    "Contract Type": "CDI",
+    "Location": "Strasbourg - 67",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46796842.html"
+  },
+  {
+    "Company Name": "GENIPLURI",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Saint-Égrève - 38",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46779225.html"
+  },
+  {
+    "Company Name": "IT Link",
+    "Job Title": "Ingénieur Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Luxembourg",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45512874.html"
+  },
+  {
+    "Company Name": "IT Link",
+    "Job Title": "Ingénieur Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Belgique",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45512842.html"
+  },
+  {
+    "Company Name": "Atos",
+    "Job Title": "Architecte Applicatif H/F",
+    "Contract Type": "CDI",
+    "Location": "Bezons - 95",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44290598.html"
+  },
+  {
+    "Company Name": "LR Technologies Groupe",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Beauvais - 60",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/38123261.html"
+  },
+  {
+    "Company Name": "Akkodis",
+    "Job Title": "Ingénieur en Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Bordeaux - 33",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46701097.html"
+  },
+  {
+    "Company Name": "Akkodis",
+    "Job Title": "Ingénieur en Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Bordeaux - 33",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46701076.html"
+  },
+  {
+    "Company Name": "AXA en France",
+    "Job Title": "Software Developer & Application Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Puteaux - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46194955.html"
+  },
+  {
+    "Company Name": "Aubay",
+    "Job Title": "Embedded Software Test Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Paris - 75",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/32187640.html"
+  },
+  {
+    "Company Name": "S&You",
+    "Job Title": "Ingénieur Logiciels H/F",
+    "Contract Type": "CDI",
+    "Location": "La Talaudière - 42",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45374969.html"
+  },
+  {
+    "Company Name": "S&You",
+    "Job Title": "Ingénieur Logiciels H/F",
+    "Contract Type": "CDI",
+    "Location": "Toulouse - 31",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45376099.html"
+  },
+  {
+    "Company Name": "Omniciel",
+    "Job Title": "Architecte Applicatif H/F",
+    "Contract Type": "CDI",
+    "Location": "Aix-en-Provence - 13",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/41509083.html"
+  },
+  {
+    "Company Name": "Nextgen RH\nSuper recruteur",
+    "Job Title": "Ingénieur Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Valbonne - 06",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46616959.html"
+  },
+  {
+    "Company Name": "Altelios Technology Group",
+    "Job Title": "Ingénieur en Développement de Logiciels H/F",
+    "Contract Type": "CDI",
+    "Location": "Buc - 78",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45266205.html"
+  },
+  {
+    "Company Name": "Es Tete Grand Sud Ouest",
+    "Job Title": "Software Power Control Engineer H/F",
+    "Contract Type": "CDI",
+    "Location": "Toulouse - 31",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/39840886.html"
+  },
+  {
+    "Company Name": "Expectra\nSuper recruteur",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Toulouse - 31",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45219653.html"
+  },
+  {
+    "Company Name": "Hager Group",
+    "Job Title": "Ingénieur Développement Logiciels H/F",
+    "Contract Type": "CDI",
+    "Location": "Crolles - 38",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45167801.html"
+  },
+  {
+    "Company Name": "Bureau Veritas",
+    "Job Title": "Ingénieur Développement Logiciels H/F",
+    "Contract Type": "CDI",
+    "Location": "Courbevoie - 92",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/44006329.html"
+  },
+  {
+    "Company Name": "Emovia",
+    "Job Title": "Ingenieur Developpement Software H/F",
+    "Contract Type": "CDI",
+    "Location": "Colmar - 68",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46476551.html"
+  },
+  {
+    "Company Name": "CGI",
+    "Job Title": "Expert Elk H/F",
+    "Contract Type": "CDI",
+    "Location": "Montpellier - 34",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/45152052.html"
+  },
+  {
+    "Company Name": "Proévolution",
+    "Job Title": "Ingenieur Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Saint-Louis - 68",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46499987.html"
+  },
+  {
+    "Company Name": "Eviden",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Les Clayes-sous-Bois - 78",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/42520758.html"
+  },
+  {
+    "Company Name": "Randstad\nSuper recruteur",
+    "Job Title": "Ingénieur Software H/F",
+    "Contract Type": "Intérim",
+    "Location": "Crespin - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46504197.html"
+  },
+  {
+    "Company Name": "Eviden",
+    "Job Title": "Architecte Applicatif H/F",
+    "Contract Type": "CDI",
+    "Location": "Bezons - 95",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46408240.html"
+  },
+  {
+    "Company Name": "Safran",
+    "Job Title": "Responsable d'Équipe Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Colombelles - 14",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46374781.html"
+  },
+  {
+    "Company Name": "SOCASS - Société d'Assistance de Service et de Support",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Carrières-sous-Poissy - 78",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/41325237.html"
+  },
+  {
+    "Company Name": "Apave",
+    "Job Title": "Architecte Applicatif H/F",
+    "Contract Type": "CDI",
+    "Location": "Lyon - 69",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/40067244.html"
+  },
+  {
+    "Company Name": "Axians Outsourcing Sud Ouest",
+    "Job Title": "Ingénieur Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Montauban - 82",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46335214.html"
+  },
+  {
+    "Company Name": "Exens Ingénierie",
+    "Job Title": "Ingénieur Développement Software H/F",
+    "Contract Type": "CDI",
+    "Location": "Annecy - 74",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/43886055.html"
+  },
+  {
+    "Company Name": "Segula Technologies",
+    "Job Title": "Ingénieur Train Control - Software Development Engineer Sde H/F",
+    "Contract Type": "CDI",
+    "Location": "Valenciennes - 59",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/43435235.html"
+  },
+  {
+    "Company Name": "Cofabrik",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Saint-Martin-d'Hères - 38",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/46346345.html"
+  },
+  {
+    "Company Name": "Hardis Group",
+    "Job Title": "Ingénieur Développement Logiciel H/F",
+    "Contract Type": "CDI",
+    "Location": "Seyssinet-Pariset - 38",
+    "Link": "https://www.hellowork.com/fr-fr/emplois/18385131.html"
+  }
+]

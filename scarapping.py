@@ -27,9 +27,10 @@ for page in range(1,5):
         company_name =""
         if(infos.find_element(By.CSS_SELECTOR, '[data-cy="companyName"]')):
             company_name = infos.find_element(By.CSS_SELECTOR, '[data-cy="companyName"]').text.strip()
-        job_title = ""
+        job_title, link = "", ""
         if(infos.find_element(By.CSS_SELECTOR, 'h3 a')):
-            job_title = infos.find_element(By.CSS_SELECTOR, 'h3 a').get_attribute("href")
+            job_title = infos.find_element(By.CSS_SELECTOR, 'h3 a').text.strip()
+            link = infos.find_element(By.CSS_SELECTOR, 'h3 a').get_attribute("href")
         contract_type=""
         if(infos.find_element(By.CSS_SELECTOR, '[data-cy="contract"]')):
             contract_type = infos.find_element(By.CSS_SELECTOR, '[data-cy="contract"]').text.strip()
@@ -42,6 +43,7 @@ for page in range(1,5):
         "Job Title": job_title,
         "Contract Type": contract_type,
         "Location": location,
+        "Link": link,
         }
 
         data.append(row)
@@ -52,6 +54,6 @@ driver.quit()
 
 
 
-output_file_path = "offres.json"
+output_file_path = "data/offres.json"
 with open(output_file_path, "w", encoding="utf-8") as output_file:
     json.dump(data, output_file, indent=2, ensure_ascii=False)
