@@ -1,0 +1,11 @@
+Langage / Domaine;Outils
+Java;Java, Spring, Hibernate, JavaFX, IntelliJ IDEA, Eclipse, Git, Subversion (SVN), Jira, Slack, JUnit
+Python;Python, Django, Flask, TensorFlow, PyTorch, PyCharm, Visual Studio Code, Git, Subversion (SVN), Jira, Slack, pytest
+JavaScript;JavaScript, React.js, Angular, Vue.js, Visual Studio Code, Git, Subversion (SVN), Jira, Slack, Jest
+C#;C#, .NET Framework, Xamarin, Visual Studio, Git, Subversion (SVN), Jira, Slack, NUnit
+Swift;Swift, Xcode, Git, Subversion (SVN), Jira, Slack, XCTest
+Sans Langage Associé;MySQL, PostgreSQL, MongoDB, SQLite, Microsoft SQL Server, Docker
+Gestion de Versions;Git, Subversion (SVN)
+Déploiement & Orchestration;Docker
+Gestion de Projet;Jira, Slack
+Tests & Qualité;JUnit (Java), pytest (Python), Jest (JavaScript), NUnit (C#), XCTest (Swift)
