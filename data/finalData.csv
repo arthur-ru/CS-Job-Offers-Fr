@@ -1,4 +1,4 @@
-Job Title,Company Name,Location,Contract Type,Niveau Etude,Secteur,Teletravail,Experience,Salaire,skills
+job_title,company_name,location,contract_type,niveau_etude,secteur,teletravail,experience,salaire,skills
 Software Engineer H/F,AXA en France,Suresnes - 92,CDI,Bac +5,,True,7.0,42500.0,[]
 Software Engineer H/F,ENGIE,Us - 95,CDI,Bac +5,Secteur Energie • Environnement,False,,42500.0,[]
 Ingénieur Logiciel - Software Engineer H/F,Idemia,Courbevoie - 92,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,1.0,60000.0,[]
