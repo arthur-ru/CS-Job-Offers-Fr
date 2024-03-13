@@ -20,12 +20,14 @@ library(flexdashboard)
 library(leaflet)
 library(ggplot2)
 library(maps)
-library("dplyr")
+library(readr)
+library(dplyr)
+library(ggmap)
+library(tmaptools)
+
 world_map <- map_data("world")
-df <- data.frame(
-  valeur = c(10, 20, 30, 40),
-  categorie = c("A", "B", "C", "D")
-)
+france_map <- map_data("france")
+finalData <- read_csv("data/finalData.csv")
 ```
 
 # Répartition des offres 
@@ -36,12 +38,25 @@ df <- data.frame(
 ## Column 1 {data-width=650}
 ### Cartes
 ```{r}
+france_map$region <- unique(france_map$region) %>% sort()
+location <- finalData$location
+num_dep <- substr(location, nchar(location) - 1, nchar(location))
+dep <- france_map$region[num_dep]
+
+map_data <- finalData %>%
+  group_by(dep) %>%
+  summarise(num_offres = n()) %>%
+  left_join(france_map, by = c("dep" = "region"))
 
 ggplot() +
-  geom_map(data = world_map, map = world_map,
+  geom_map(data = france_map, map = france_map,
            aes(x = long, y = lat, map_id = region),
            fill = "lightblue", color = "black") +
-  expand_limits(x = world_map$long, y = world_map$lat) + theme_void()
+  geom_point(data = map_data, aes(x = long, y = lat, size = num_offres),
+             color = "red", alpha = 0.7) +
+  expand_limits(x = france_map$long, y = france_map$lat) +
+  theme_void() +
+  theme(plot.background = element_rect(fill = "black"))
 ```
 
 ## Column 2 {data-width=350}
