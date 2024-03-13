@@ -45,6 +45,6 @@ driver.quit()
 
 
 
-output_file_path = "data/offres.json"
+output_file_path = "data/offresLink.json"
 with open(output_file_path, "w", encoding="utf-8") as output_file:
     json.dump(data, output_file, indent=2, ensure_ascii=False)
