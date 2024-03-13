@@ -1,256 +1,256 @@
 job_title,company_name,location,contract_type,niveau_etude,secteur,teletravail,experience,salaire,skills
-Software Engineer H/F,AXA en France,Suresnes - 92,CDI,Bac +5,,True,7.0,42500.0,[]
-Software Engineer H/F,ENGIE,Us - 95,CDI,Bac +5,Secteur Energie • Environnement,False,,42500.0,[]
-Ingénieur Logiciel - Software Engineer H/F,Idemia,Courbevoie - 92,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,1.0,60000.0,[]
-Android Software Engineer H/F,Otteo,Lille - 59,CDI,Bac +5,Secteur informatique • ESN,True,7.0,45000.0,[]
+Software Engineer H/F,AXA en France,Suresnes - 92,CDI,Bac +5,,True,7.0,42500.0,"['kubernetes', 'python', 'docker', 'spark', 'devops']"
+Software Engineer H/F,ENGIE,Us - 95,CDI,Bac +5,Secteur Energie • Environnement,False,,42500.0,"['unity', 'github', 'integration', 'diversity', 'testing', 'github', 'react', 'apps', 'computer science', 'scala']"
+Ingénieur Logiciel - Software Engineer H/F,Idemia,Courbevoie - 92,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,1.0,60000.0,"['python', 'android', 'ios', 'windows', 'java', 'docker', 'linux', 'devops']"
+Android Software Engineer H/F,Otteo,Lille - 59,CDI,Bac +5,Secteur informatique • ESN,True,7.0,45000.0,['android']
 Java Software Engineer H/F,Mondial Relay,Villeneuve-d'Ascq - 59,CDI,,,False,,40000.0,[]
-Software Engineer .Net H/F,VAHUMANA,Lyon - 69,CDI,,,False,,50000.0,[]
-Software Engineer .Net H/F,Team.is,Toulouse - 31,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,1.0,42500.0,[]
-Senior Software Engineer H/F,Work & You,Bordeaux - 33,CDI,Bac +5,Services aux Entreprises,False,,45000.0,[]
-Java Software Engineer H/F,Apside,Sophia-Antipolis - 06,CDI,Bac +5,Secteur informatique • ESN,False,1.0,50000.0,[]
+Software Engineer .Net H/F,VAHUMANA,Lyon - 69,CDI,,,False,,50000.0,['.net']
+Software Engineer .Net H/F,Team.is,Toulouse - 31,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,1.0,42500.0,"['android', '.net', 'ios', 'css', 'windows', 'angular', 'blazor', 'java', 'javascript']"
+Senior Software Engineer H/F,Work & You,Bordeaux - 33,CDI,Bac +5,Services aux Entreprises,False,,45000.0,"['symfony', 'php', 'docker']"
+Java Software Engineer H/F,Apside,Sophia-Antipolis - 06,CDI,Bac +5,Secteur informatique • ESN,False,1.0,50000.0,"['css', 'angular', 'java']"
 Software Engineer Mbd H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
-Java Software Engineer H/F,VAHUMANA,Lyon - 69,CDI,,,False,,50000.0,[]
-Java Software Engineer H/F,EEKEM,Biot - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,[]
-C++ Software Engineer H/F,EEKEM,Biot - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,[]
-Software Engineer Golang - Aws H/F,Seyos,Paris 17e - 75,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,1.0,55000.0,[]
-Software Engineer Mobile en Alternance H/F,AXA en France,Wasquehal - 59,Alternance,Bac +5,,True,7.0,17514.0,[]
-Software Engineer .Net en Alternance H/F,AXA en France,Nanterre - 92,Alternance,Bac +5,,True,7.0,17514.0,[]
-Software Engineer Python - Pyqt H/F,Sept Lieues,Montigny-le-Bretonneux - 78,CDI,Bac +5,Secteur informatique • ESN,True,7.0,75000.0,[]
-Software Engineer .Net - Angular H/F,Pixie Services France,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,1.0,57500.01,[]
-Back End Software Engineer H/F,ALTEN,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,,50000.0,[]
-Software Engineer Full Stack en Alternance H/F,AXA en France,Wasquehal - 59,Alternance,Bac +5,,True,7.0,17514.0,[]
-Software Engineer .Net - Reactjs en Alternance H/F,AXA en France,Wasquehal - 59,Alternance,Bac +5,,True,7.0,17514.0,[]
+Java Software Engineer H/F,VAHUMANA,Lyon - 69,CDI,,,False,,50000.0,"['angular', 'java']"
+Java Software Engineer H/F,EEKEM,Biot - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,"['java', 'scala']"
+C++ Software Engineer H/F,EEKEM,Biot - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,['scala']
+Software Engineer Golang - Aws H/F,Seyos,Paris 17e - 75,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,1.0,55000.0,"['microservices', 'github', 'docker', 'github', 'cdk', 'react']"
+Software Engineer Mobile en Alternance H/F,AXA en France,Wasquehal - 59,Alternance,Bac +5,,True,7.0,17514.0,"['android', 'ios', 'devops', 'swift']"
+Software Engineer .Net en Alternance H/F,AXA en France,Nanterre - 92,Alternance,Bac +5,,True,7.0,17514.0,['.net']
+Software Engineer Python - Pyqt H/F,Sept Lieues,Montigny-le-Bretonneux - 78,CDI,Bac +5,Secteur informatique • ESN,True,7.0,75000.0,['python']
+Software Engineer .Net - Angular H/F,Pixie Services France,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,1.0,57500.01,"['.net', 'angular']"
+Back End Software Engineer H/F,ALTEN,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,,50000.0,"['product management', 'python', 'jmeter', 'electronics', 'security', 'electron', 'nix', 'java', 'json', 'docker', 'healthcare', 'hbase']"
+Software Engineer Full Stack en Alternance H/F,AXA en France,Wasquehal - 59,Alternance,Bac +5,,True,7.0,17514.0,"['.net', 'react', 'node.js', 'devops']"
+Software Engineer .Net - Reactjs en Alternance H/F,AXA en France,Wasquehal - 59,Alternance,Bac +5,,True,7.0,17514.0,"['kubernetes', '.net', 'docker', 'react', 'devops']"
 Software Engineer Front-End en Alternance H/F,AXA en France,Nanterre - 92,Alternance,Bac +5,,True,7.0,17514.0,[]
-Software Engineer Node - React - Aws H/F,Seyos,Paris 8e - 75,CDI,Bac +5,Secteur informatique • ESN,True,1.0,52500.0,[]
-Google Cloud Software Engineer H/F,Hardis Group,Nantes - 44,CDI,,,False,,60000.0,[]
-Software Engineer Java - Angular - Tv Numérique H/F,Seyos,Cesson-Sévigné - 35,CDI,Bac +5,Secteur informatique • ESN,True,1.0,52500.0,[]
-Software Engineer Llm - Node.Js - Vue.Js H/F,Seyos,Paris 8e - 75,CDI,Bac +5,Secteur informatique • ESN,True,1.0,50000.0,[]
+Software Engineer Node - React - Aws H/F,Seyos,Paris 8e - 75,CDI,Bac +5,Secteur informatique • ESN,True,1.0,52500.0,['react']
+Google Cloud Software Engineer H/F,Hardis Group,Nantes - 44,CDI,,,False,,60000.0,['devops']
+Software Engineer Java - Angular - Tv Numérique H/F,Seyos,Cesson-Sévigné - 35,CDI,Bac +5,Secteur informatique • ESN,True,1.0,52500.0,"['kubernetes', 'mysql', 'angular', 'java', 'docker', 'vue.js', 'postgresql']"
+Software Engineer Llm - Node.Js - Vue.Js H/F,Seyos,Paris 8e - 75,CDI,Bac +5,Secteur informatique • ESN,True,1.0,50000.0,"['python', 'ansible', 'java', 'terraform', 'docker', 'vue.js', 'node.js', 'postgresql', 'javascript']"
 Fullstack Software Engineer Java - Typescript Exp Mini H/F,Twenty One Talents,Paris - 75,CDI,Bac +5,,True,7.0,67500.0,[]
-Junior - Software Engineer - Full Stack - Financial Services H/F,Deloitte,La Défense - 92,CDI,Bac +5,Services aux Entreprises,True,1.0,42500.0,[]
-Senior Software Engineer Java Developer H/F,Abylsen,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,False,1.0,50000.0,[]
-Full-Stack Software Engineer Python - Angular H/F,AGICAP,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,61500.0,[]
-Front-End Software Engineer Ddd & Angular H/F,AGICAP,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,False,1.0,55500.0,[]
+Junior - Software Engineer - Full Stack - Financial Services H/F,Deloitte,La Défense - 92,CDI,Bac +5,Services aux Entreprises,True,1.0,42500.0,"['kubernetes', 'analytics', 'github', 'css', 'angular', 'docker', 'github', 'postgresql', 'devops']"
+Senior Software Engineer Java Developer H/F,Abylsen,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,False,1.0,50000.0,['java']
+Full-Stack Software Engineer Python - Angular H/F,AGICAP,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,61500.0,"['python', 'angular']"
+Front-End Software Engineer Ddd & Angular H/F,AGICAP,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,False,1.0,55500.0,['angular']
 Back-End Software Engineer Ddd & .Net H/F,AGICAP,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,61500.0,[]
-Software Engineer .Net H/F,TRSB,Avignon - 84,CDI,,,False,,32000.0,[]
+Software Engineer .Net H/F,TRSB,Avignon - 84,CDI,,,False,,32000.0,"['.net', 'angular']"
 Lead Software Engineer React Js Nest Js Postgre Redis H/F,Team.is,Nantes - 44,CDI,Bac +5,Secteur informatique • ESN,True,1.0,46500.0,[]
 Lead Software Engineer React Js Nest Js Postgre Redis H/F,Team.is,La Roche-sur-Yon - 85,CDI,Bac +5,Secteur informatique • ESN,True,1.0,46500.0,[]
 Lead Software Engineer React Js Nest Js Postgre Redis H/F,Team.is,Cholet - 49,CDI,Bac +5,Secteur informatique • ESN,True,1.0,46500.0,[]
 Lead Software Engineer React Js Nest Js Postgre Redis H/F,Team.is,Pornic - 44,CDI,Bac +5,Secteur informatique • ESN,True,1.0,46500.0,[]
 Lead Software Engineer React Js Nest Js Postgre Redis H/F,Team.is,Angers - 49,CDI,Bac +5,Secteur informatique • ESN,True,1.0,46500.0,[]
-Software Engineer Java Backend H/F,TRSB,Marseille - 13,CDI,,,False,,45000.0,[]
-Développeur - Software Engineer H/F,MAIF,Niort - 79,CDI,Bac +5,,True,,47500.0,[]
-Software Engineer Java - Angular H/F,VAHUMANA,Lyon - 69,CDI,,,False,,50000.0,[]
-Full-Stack Software Engineer Typescript Next.Js Shadcn 2 à d'Exp Mini H/F,Twenty One Talents,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,[]
-Full Stack Software Engineer Ruby-On-Rails Vuejs Postgresql d'Exp Mini H/F,Twenty One Talents,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,67500.0,[]
+Software Engineer Java Backend H/F,TRSB,Marseille - 13,CDI,,,False,,45000.0,"['kubernetes', 'microservices', 'java', 'docker', 'big data', 'scala']"
+Développeur - Software Engineer H/F,MAIF,Niort - 79,CDI,Bac +5,,True,,47500.0,"['java', 'javascript', 'devops']"
+Software Engineer Java - Angular H/F,VAHUMANA,Lyon - 69,CDI,,,False,,50000.0,"['angular', 'java', 'docker']"
+Full-Stack Software Engineer Typescript Next.Js Shadcn 2 à d'Exp Mini H/F,Twenty One Talents,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,"['next.js', 'postgresql']"
+Full Stack Software Engineer Ruby-On-Rails Vuejs Postgresql d'Exp Mini H/F,Twenty One Talents,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,67500.0,"['rails', 'ruby']"
 Ingénieur Train Control - Software Development Engineer Sde H/F,Segula Technologies,Valenciennes - 59,CDI,,,False,,40000.0,[]
-Qa - Software Test Engineer H/F,ALTEN,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,,52500.0,[]
-Ingénieur Développement Logiciel H/F,Alegria,Grenoble - 38,CDI,Bac +5,Services aux Entreprises,True,1.0,50000.0,[]
+Qa - Software Test Engineer H/F,ALTEN,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,,52500.0,"['electronics', 'security', 'electron', 'integration', 'testing', 'healthcare', 'scala']"
+Ingénieur Développement Logiciel H/F,Alegria,Grenoble - 38,CDI,Bac +5,Services aux Entreprises,True,1.0,50000.0,['fortran']
 Ingenieur Developpement Software H/F,Emovia,Colmar - 68,CDI,Bac +5,,False,1.0,41000.0,[]
-Architecte Applicatif H/F,Open,Rennes - 35,CDI,,,False,,43000.0,[]
-Ingénieur Développement Logiciel H/F,Hager Group,Saverne - 67,CDI,Bac +5,,True,,59500.0,[]
+Architecte Applicatif H/F,Open,Rennes - 35,CDI,,,False,,43000.0,"['ansible', 'android', 'ios', 'angular', 'java', 'docker', 'react', 'devops']"
+Ingénieur Développement Logiciel H/F,Hager Group,Saverne - 67,CDI,Bac +5,,True,,59500.0,"['python', 'linux', 'devops']"
 Ingénieur en Développement Logiciel H/F,CEA,Labège - 31,CDD,Bac +5,Services aux Entreprises,True,,38500.0,[]
-Ingénieur Logiciel - Ingénieure Logiciel H/F,Guarani,Nice - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,[]
-Ingénieur Software H/F,AlisPharm,Montpellier - 34,CDI,,,False,,54000.0,[]
-Ingénieur Software H/F,AlisPharm,Montpellier - 34,CDI,,,False,,54000.0,[]
+Ingénieur Logiciel - Ingénieure Logiciel H/F,Guarani,Nice - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,"['ansible', 'android', '.net', 'ios', 'php', 'flutter', 'react native', 'java', 'c/c++', 'react', 'devops']"
+Ingénieur Software H/F,AlisPharm,Montpellier - 34,CDI,,,False,,54000.0,['windows']
+Ingénieur Software H/F,AlisPharm,Montpellier - 34,CDI,,,False,,54000.0,['windows']
 Ingénieur Développement Logiciel H/F,PRODWAYS GROUP,Yvelines - 78,CDI,Bac +5,,True,7.0,47500.0,[]
 Ingénieur Logiciel H/F,TDM BDX,Mérignac - 33,CDI,Bac +5,,True,1.0,44000.0,[]
-Ingénieur Développement Logiciel H/F,Up Skills Cadres et Experts,Vaulx-en-Velin - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,[]
-Ingénieur Développement Logiciel H/F,LR Technologies Groupe,Pacy-sur-Eure - 27,CDI,Bac +5,Secteur informatique • ESN,True,7.0,47500.0,[]
-Ingénieur Développement Logiciel H/F,Expleo,Toulouse - 31,CDI,,,False,,38500.0,[]
+Ingénieur Développement Logiciel H/F,Up Skills Cadres et Experts,Vaulx-en-Velin - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,"['php', 'windows', 'angular', 'java', 'c/c++', 'deep learning', 'linux', 'javascript']"
+Ingénieur Développement Logiciel H/F,LR Technologies Groupe,Pacy-sur-Eure - 27,CDI,Bac +5,Secteur informatique • ESN,True,7.0,47500.0,['python']
+Ingénieur Développement Logiciel H/F,Expleo,Toulouse - 31,CDI,,,False,,38500.0,"['python', 'raspberry pi', 'windows', 'java', 'c/c++', 'postgresql', 'linux']"
 Ingénieur Logiciels H/F,Nextgen RH,Mérignac - 33,CDI,Bac +5,,False,,50000.0,[]
-Ingénieur Développement Logiciel H/F,Hays,Villeneuve-lès-Bouloc - 31,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,False,1.0,47500.0,[]
+Ingénieur Développement Logiciel H/F,Hays,Villeneuve-lès-Bouloc - 31,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,False,1.0,47500.0,"['python', 'windows', 'linux']"
 Ingénieur en Développement Logiciels H/F,Consulting Technical Support,Clamart - 92,CDI,Bac +5,Services aux Entreprises,True,1.0,52500.0,[]
 Ingénieur en Développement Logiciels H/F,Consulting Technical Support,Clamart - 92,CDI,Bac +5,Services aux Entreprises,True,1.0,52500.0,[]
-Ingénieur en Développement Logiciel H/F,Human Immobilier,Bordeaux - 33,CDI,"Bac +3, Bac +4",,False,1.0,39260.0,[]
-Ingénieur Logiciel H/F,Altim,Toulouse - 31,CDI,,,False,,38500.0,[]
+Ingénieur en Développement Logiciel H/F,Human Immobilier,Bordeaux - 33,CDI,"Bac +3, Bac +4",,False,1.0,39260.0,['devops']
+Ingénieur Logiciel H/F,Altim,Toulouse - 31,CDI,,,False,,38500.0,"['php', 'java', 'spark', 'scala']"
 Ingenieur Developpement Logiciel H/F,JL Executive,Pessac - 33,CDI,,,False,,39260.0,[]
 Ingénieur Software H/F,Prime Engineering,Isère - 38,CDI,Bac +5,Services aux Entreprises,False,7.0,43500.0,[]
-Architecte Applicatif H/F,Eviden,Bezons - 95,CDI,Bac +5,Secteur informatique • ESN,True,7.0,42500.0,[]
+Architecte Applicatif H/F,Eviden,Bezons - 95,CDI,Bac +5,Secteur informatique • ESN,True,7.0,42500.0,"['ios', 'java']"
 Ingénieur Développement Logiciel H/F,GENIPLURI,Saint-Égrève - 38,CDI,Bac +5,Services aux Entreprises,True,7.0,52500.0,[]
-Ingénieur Logiciel R&D H/F,AXA en France,Paris - 75,CDI,Bac +5,,True,,42500.0,[]
-Ingénieur Développement Logiciel C++ H/F,L'Industrie recrute,Igny - 91,CDI,Bac +5,,True,1.0,42500.0,[]
-CDI - Ingénieur Génie Logiciel H/F,Naval Group,Toulon - 83,CDI,Bac +5,,True,1.0,41250.0,[]
+Ingénieur Logiciel R&D H/F,AXA en France,Paris - 75,CDI,Bac +5,,True,,42500.0,"['data science', 'terraform']"
+Ingénieur Développement Logiciel C++ H/F,L'Industrie recrute,Igny - 91,CDI,Bac +5,,True,1.0,42500.0,"['opengl', 'cross-platform', 'windows', 'linux', 'devops']"
+CDI - Ingénieur Génie Logiciel H/F,Naval Group,Toulon - 83,CDI,Bac +5,,True,1.0,41250.0,"['css', 'angular', 'java']"
 Ingénieur Développement Software CDI H/F,CENTUM T&S,Lyon - 69,CDI,,,False,,50000.0,[]
-Ingénieur Software Autosar H/F,Bertrandt,Vélizy-Villacoublay - 78,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
+Ingénieur Software Autosar H/F,Bertrandt,Vélizy-Villacoublay - 78,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,['electron']
 Ingénieur Développement Logiciel Ihm H/F,DEMETER,Cergy - 95,CDI,Bac +5,Services aux Entreprises,False,1.0,50000.0,[]
 Architecte Applicatif Junior H/F,INFOGENE,Neuilly-sur-Seine - 92,CDI,Bac +5,Secteur informatique • ESN,True,1.0,57500.0,[]
-Ingénieur Développement Logiciel C++ H/F,Seyos,Igny - 91,CDI,Bac +5,Secteur informatique • ESN,True,1.0,55000.0,[]
-Ingénieur Logiciel Saas H/F,Adsearch,Nantes - 44,CDI,Bac +5,Services aux Entreprises,False,1.0,55000.0,[]
-Ingénieur en Développement Logiciel C H/F,Thomas Search Consulting,Massy - 91,CDI,Bac +5,Secteur informatique • ESN,True,7.0,46500.0,[]
-Ingénieur Logiciel Applicatif H/F,Akkodis Talent,Lisses - 91,CDI,Bac +5,Services aux Entreprises,False,7.0,42500.0,[]
-CDI - Ingénieur Développement Logiciel H/F,Randstad Consulting,Toulon - 83,CDI,,,False,,45000.0,[]
-Apprenti Ingénieur Développement Logiciel H/F,Safran,Massy - 91,Alternance,Bac +5,,True,7.0,13463.94,[]
+Ingénieur Développement Logiciel C++ H/F,Seyos,Igny - 91,CDI,Bac +5,Secteur informatique • ESN,True,1.0,55000.0,"['windows', 'linux']"
+Ingénieur Logiciel Saas H/F,Adsearch,Nantes - 44,CDI,Bac +5,Services aux Entreprises,False,1.0,55000.0,"['mysql', 'angular', 'java', 'react']"
+Ingénieur en Développement Logiciel C H/F,Thomas Search Consulting,Massy - 91,CDI,Bac +5,Secteur informatique • ESN,True,7.0,46500.0,['windows']
+Ingénieur Logiciel Applicatif H/F,Akkodis Talent,Lisses - 91,CDI,Bac +5,Services aux Entreprises,False,7.0,42500.0,"['python', '.net', 'windows', 'postgresql', 'devops']"
+CDI - Ingénieur Développement Logiciel H/F,Randstad Consulting,Toulon - 83,CDI,,,False,,45000.0,['java']
+Apprenti Ingénieur Développement Logiciel H/F,Safran,Massy - 91,Alternance,Bac +5,,True,7.0,13463.94,"['windows', 'linux', 'devops']"
 Alternant Ingénieur Logiciel H/F,Hensoldt Nexeya France,Six-Fours-les-Plages - 83,Alternance,,,False,,13463.94,[]
 Ingénieur Etude et Développement Logiciel en Neutronique H/F,CEA,Bruyères-le-Châtel - 91,CDI,Bac +5,,True,,42500.0,[]
-Alternance - Ingénieur Développement Logiciel H/F,Amplitude,Pessac - 33,Alternance,Bac +5,,False,7.0,13463.94,[]
-Ingénieur Logiciel en Mécatronique H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
-Ingénieur Logiciel en Mécatronique H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
-Ingénieur Développement Logiciel Bsw H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
-Ingénieur Logiciel Informatique H/F,Onera,Avrieux - 73,CDI,Bac +5,,True,1.0,50000.0,[]
-Ingénieur Génie Logiciel - Lead Developer H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,[]
-Ingénieur Logiciels H/F,S&You,La Talaudière - 42,CDI,,,False,,50000.0,[]
-Ingénieur Logiciels H/F,S&You,Toulouse - 31,CDI,Bac +5,Services aux Entreprises,True,7.0,47500.0,[]
+Alternance - Ingénieur Développement Logiciel H/F,Amplitude,Pessac - 33,Alternance,Bac +5,,False,7.0,13463.94,['windows']
+Ingénieur Logiciel en Mécatronique H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,['c/c++']
+Ingénieur Logiciel en Mécatronique H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,['c/c++']
+Ingénieur Développement Logiciel Bsw H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,['angular']
+Ingénieur Logiciel Informatique H/F,Onera,Avrieux - 73,CDI,Bac +5,,True,1.0,50000.0,['devops']
+Ingénieur Génie Logiciel - Lead Developer H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,"['css', 'angular', 'java']"
+Ingénieur Logiciels H/F,S&You,La Talaudière - 42,CDI,,,False,,50000.0,['.net']
+Ingénieur Logiciels H/F,S&You,Toulouse - 31,CDI,Bac +5,Services aux Entreprises,True,7.0,47500.0,['electron']
 Expert Logiciel Paie H/F,In Extenso,Lyon 2e - 69,CDI,,,False,,50000.0,[]
-Architecte Applicatif H/F,Omniciel,Aix-en-Provence - 13,CDI,Bac +5,Secteur informatique • ESN,True,7.0,64499.98,[]
+Architecte Applicatif H/F,Omniciel,Aix-en-Provence - 13,CDI,Bac +5,Secteur informatique • ESN,True,7.0,64499.98,['scala']
 Ingénieur en Développement de Logiciels H/F,Altelios Technology Group,Buc - 78,CDI,Bac +5,Secteur informatique • ESN,False,1.0,53000.0,[]
 CDI - Ingénieur Logiciel H/F,Naval Group,Ollioules - 83,CDI,,,False,,45000.0,[]
-Architecte Applicatif Java H/F,Conserto,Nantes - 44,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,[]
-Ingénieur Logiciel - Lille H/F,Capgemini,Lille - 59,CDI,,,False,,40000.0,[]
+Architecte Applicatif Java H/F,Conserto,Nantes - 44,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,"['kubernetes', 'java', 'docker', 'scala']"
+Ingénieur Logiciel - Lille H/F,Capgemini,Lille - 59,CDI,,,False,,40000.0,['java']
 Ingénieur Développement Logiciel Système Multiplexé H/F,Segula Technologies,Saint-Bonnet-de-Mure - 69,CDI,Bac +5,,False,7.0,50000.0,[]
 CDI - Ingénieur Logiciel H/F,Naval Group,Ollioules - 83,CDI,,,False,,45000.0,[]
-Ingénieur Software Fullstack Java H/F,BNP Paribas,Paris 19e - 75,CDI,Bac +5,,True,,42500.0,[]
-Ingénieur Software Mainframe Débutant H/F,BNP Paribas,Nantes - 44,CDI,,,False,,60000.0,[]
+Ingénieur Software Fullstack Java H/F,BNP Paribas,Paris 19e - 75,CDI,Bac +5,,True,,42500.0,['java']
+Ingénieur Software Mainframe Débutant H/F,BNP Paribas,Nantes - 44,CDI,,,False,,60000.0,['devops']
 CDI - Ingénieur Logiciel - Java H/F,Randstad Consulting,Ollioules - 83,CDI,,,False,,45000.0,[]
-Ingénieur Développement Logiciel C++ H/F,Seyos,Igny - 91,CDI,Bac +5,Secteur informatique • ESN,True,1.0,57500.0,[]
-Ingénieur Logiciels Java - Ingénieure Logiciels Java H/F,Scalian,Ollioules - 83,CDI,Bac +5,Secteur informatique • ESN,True,7.0,37500.0,[]
-Ingénieur Logiciels Java - Ingénieure Logiciels Java H/F,Scalian,Aix-en-Provence - 13,CDI,Bac +5,Secteur informatique • ESN,False,7.0,37500.0,[]
+Ingénieur Développement Logiciel C++ H/F,Seyos,Igny - 91,CDI,Bac +5,Secteur informatique • ESN,True,1.0,57500.0,"['windows', 'linux']"
+Ingénieur Logiciels Java - Ingénieure Logiciels Java H/F,Scalian,Ollioules - 83,CDI,Bac +5,Secteur informatique • ESN,True,7.0,37500.0,['java']
+Ingénieur Logiciels Java - Ingénieure Logiciels Java H/F,Scalian,Aix-en-Provence - 13,CDI,Bac +5,Secteur informatique • ESN,False,7.0,37500.0,['java']
 Ingénieur Logiciels Systèmes Embarqués H/F,Co-Efficience,Rungis - 94,CDI,Bac +5,Services aux Entreprises,True,1.0,50500.0,[]
 Ingénieur Développement Logiciel - Paris France H/F,Astek,Paris - 75,CDI,Bac +5,,True,,42500.0,[]
-Ingénieur Développement Logiciel H/F,Expectra,Toulouse - 31,CDI,"Bac +3, Bac +4",,True,1.0,37500.0,[]
-Ingénieur Machine Learning - Imagerie Médicale H/F,BlueDocker,La Ciotat - 13,CDI,,,False,,45000.0,[]
-Ingénieur Machine Learning - Imagerie Médicale H/F,Silkhom,La Ciotat - 13,CDI,Bac +5,Services aux Entreprises,True,,57500.0,[]
+Ingénieur Développement Logiciel H/F,Expectra,Toulouse - 31,CDI,"Bac +3, Bac +4",,True,1.0,37500.0,['windows']
+Ingénieur Machine Learning - Imagerie Médicale H/F,BlueDocker,La Ciotat - 13,CDI,,,False,,45000.0,"['python', 'machine learning']"
+Ingénieur Machine Learning - Imagerie Médicale H/F,Silkhom,La Ciotat - 13,CDI,Bac +5,Services aux Entreprises,True,,57500.0,"['python', 'machine learning']"
 Architecte Applicatif Nantes H/F,Norgay IT & Digital Services,Nantes - 44,CDI,Bac +5,Secteur informatique • ESN,False,1.0,58500.0,[]
-Ingénieur Développement Logiciel - Gestion des Énergies H/F,Silkhom,Villeurbanne - 69,CDI,,,False,,50000.0,[]
-Ingénieur Logiciel Fullstack H/F,UpTalent,Angers - 49,CDI,Bac +5,Secteur informatique • ESN,True,7.0,40000.0,[]
-Ingénieur Développement Logiciel Systèmes Embarqués H/F,ALSEAMAR,Six-Fours-les-Plages - 83,CDI,Bac +5,,True,7.0,41500.0,[]
-Ingénieur en Développement de Logiciel Applicatif C++ H/F,Adentis,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,False,1.0,38500.0,[]
-Ingénieur Logiciel Gse - ait - Spatial H/F,Expleo,Toulouse - 31,CDI,,,False,,38500.0,[]
-Ingénieur Logiciel Java - Ingénieure Logiciel Java H/F,Scalian,Marseille 9e - 13,CDI,Bac +5,Secteur informatique • ESN,True,7.0,37500.0,[]
-Ingénieur Logiciels Java - Ingénieure Logiciels Java H/F,Scalian,Nice - 06,CDI,Bac +5,Secteur informatique • ESN,True,7.0,37500.0,[]
-CDI - Ingénieur Logiciel H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,[]
-Ingénieur Software Mbd H/F,Bertrandt,Carrières-sous-Poissy - 78,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
-Ingénieur Logiciels c Embarqué H/F,LHH Recruitment Solutions,Castries - 34,CDI,Bac +5,Services aux Entreprises,True,,50000.0,[]
+Ingénieur Développement Logiciel - Gestion des Énergies H/F,Silkhom,Villeurbanne - 69,CDI,,,False,,50000.0,"['python', 'angular', 'java', 'react', 'javascript', 'devops']"
+Ingénieur Logiciel Fullstack H/F,UpTalent,Angers - 49,CDI,Bac +5,Secteur informatique • ESN,True,7.0,40000.0,['css']
+Ingénieur Développement Logiciel Systèmes Embarqués H/F,ALSEAMAR,Six-Fours-les-Plages - 83,CDI,Bac +5,,True,7.0,41500.0,"['python', 'devops']"
+Ingénieur en Développement de Logiciel Applicatif C++ H/F,Adentis,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,False,1.0,38500.0,['python']
+Ingénieur Logiciel Gse - ait - Spatial H/F,Expleo,Toulouse - 31,CDI,,,False,,38500.0,"['python', 'nix', 'java']"
+Ingénieur Logiciel Java - Ingénieure Logiciel Java H/F,Scalian,Marseille 9e - 13,CDI,Bac +5,Secteur informatique • ESN,True,7.0,37500.0,['java']
+Ingénieur Logiciels Java - Ingénieure Logiciels Java H/F,Scalian,Nice - 06,CDI,Bac +5,Secteur informatique • ESN,True,7.0,37500.0,['java']
+CDI - Ingénieur Logiciel H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,['java']
+Ingénieur Software Mbd H/F,Bertrandt,Carrières-sous-Poissy - 78,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,['electron']
+Ingénieur Logiciels c Embarqué H/F,LHH Recruitment Solutions,Castries - 34,CDI,Bac +5,Services aux Entreprises,True,,50000.0,['linux']
 Ingénieur Logiciel Banc de Test H/F,Segula Technologies,Bordes - 64,CDI,Bac +5,,False,,38500.0,[]
-Stagiaire - Alternant Ingénieur Développement Logiciel H/F,Equans,Lyon - 69,Alternance,,,False,,13463.94,[]
-Ingénieur Développement Logiciel - Secteur Ferroviaire H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
-Ingénieur en Développement Logiciel - Secteur de la Défense H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
-Développeur Informatique Ingénieur R&D Logiciel Embarqué H/F,Manpower,Voreppe - 38,CDI,Bac +5,Services aux Entreprises,False,1.0,45000.0,[]
+Stagiaire - Alternant Ingénieur Développement Logiciel H/F,Equans,Lyon - 69,Alternance,,,False,,13463.94,['java']
+Ingénieur Développement Logiciel - Secteur Ferroviaire H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,['ios']
+Ingénieur en Développement Logiciel - Secteur de la Défense H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,"['snmp', 'opengl', 'java', 'c/c++', 'linux']"
+Développeur Informatique Ingénieur R&D Logiciel Embarqué H/F,Manpower,Voreppe - 38,CDI,Bac +5,Services aux Entreprises,False,1.0,45000.0,"['python', 'zig', 'linux']"
 Ingénieur Logiciel Backend H/F,Kubic,Angers - 49,CDI,Bac +5,,True,1.0,55000.0,[]
-Alternance - Ingénieur Logiciel - Aéronautique H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,[]
+Alternance - Ingénieur Logiciel - Aéronautique H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,"['python', 'react', 'node.js', 'devops']"
 Ingénieur Logiciels - Systèmes Embarqués H/F,Exoes,Gradignan - 33,CDI,Bac +5,,True,1.0,43000.0,[]
-Ingénieur Logiciel - Développement Durable H/F,Viveris.,Villeurbanne - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,[]
-Ingénieur Développement Logiciel Docker H/F,Expleo,Cannes - 06,CDI,Bac +5,Secteur informatique • ESN,True,,38499.99,[]
-Ingénieur Logiciels Applicatifs C++ H/F,SII Sud-Ouest,Bordeaux - 33,CDI,Bac +5,Secteur informatique • ESN,True,,41000.0,[]
+Ingénieur Logiciel - Développement Durable H/F,Viveris.,Villeurbanne - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,['ios']
+Ingénieur Développement Logiciel Docker H/F,Expleo,Cannes - 06,CDI,Bac +5,Secteur informatique • ESN,True,,38499.99,"['docker', 'linux']"
+Ingénieur Logiciels Applicatifs C++ H/F,SII Sud-Ouest,Bordeaux - 33,CDI,Bac +5,Secteur informatique • ESN,True,,41000.0,['c/c++']
 Ingénieur Développement Logiciels Bancs de Test H/F,Celad,Nantes - 44,CDI,,,False,,60000.0,[]
-Ingénieur Développement Logiciel H/F,Eviden,Les Clayes-sous-Bois - 78,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
+Ingénieur Développement Logiciel H/F,Eviden,Les Clayes-sous-Bois - 78,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,"['python', 'security', 'ios', 'windows', 'java', 'rust']"
 CDI - Ingénieur Logiciel H/F,Naval Group,Ollioules - 83,CDI,,,False,,45000.0,[]
-Ingénieur Développement Logiciel C++ H/F,Bureau Veritas,Courbevoie - 92,CDI,Bac +5,Secteur informatique • ESN,False,,42500.0,[]
-Ingénieur Logiciel Java H/F,Scalian,Ollioules - 83,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,[]
-CDI- Ingénieur de Développement Logiciel H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,[]
+Ingénieur Développement Logiciel C++ H/F,Bureau Veritas,Courbevoie - 92,CDI,Bac +5,Secteur informatique • ESN,False,,42500.0,['ios']
+Ingénieur Logiciel Java H/F,Scalian,Ollioules - 83,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,['java']
+CDI- Ingénieur de Développement Logiciel H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,['java']
 Ingénieur Développement Logiciel Ferroviaire H/F,COWORK ENGINEERING,Paris - 75,CDI,Bac +5,Services aux Entreprises,True,7.0,47500.0,[]
-Ingénieur en Développement Logiciel Java Ee H/F,Viveris.,Ramonville-Saint-Agne - 31,CDI,Bac +5,Secteur informatique • ESN,True,1.0,37500.0,[]
-Ingénieur Développement Logiciel pour Applications Critiques H/F,SII Ile de France,Paris - La Défense,CDI,Bac +5,Secteur informatique • ESN,True,1.0,44500.0,[]
+Ingénieur en Développement Logiciel Java Ee H/F,Viveris.,Ramonville-Saint-Agne - 31,CDI,Bac +5,Secteur informatique • ESN,True,1.0,37500.0,['java']
+Ingénieur Développement Logiciel pour Applications Critiques H/F,SII Ile de France,Paris - La Défense,CDI,Bac +5,Secteur informatique • ESN,True,1.0,44500.0,['devops']
 Ingénieur en Développement Logiciel Couche Basse H/F,SII Ouest,Le Mans - 72,CDI,Bac +5,Secteur informatique • ESN,True,,38000.0,[]
-Ingénieur Logiciel Fullstack H/F,UpTalent,Saumur - 49,CDI,Bac +5,Secteur informatique • ESN,True,7.0,40000.0,[]
+Ingénieur Logiciel Fullstack H/F,UpTalent,Saumur - 49,CDI,Bac +5,Secteur informatique • ESN,True,7.0,40000.0,['css']
 Ingénieur Développement Software Embarqué H/F,Segula Technologies,Vénissieux - 69,CDI,,,False,,50000.0,[]
 Ingénieur Développement Logiciel H/F,SOCASS - Société d'Assistance de Service et de Support,Carrières-sous-Poissy - 78,CDI,Bac +5,,False,1.0,41000.0,[]
 Ingenieur Logiciel Banc de Test Sfeao210 H/F,Studiel,Bordes - 64,CDI,Bac +5,,False,1.0,38500.0,[]
-Ingénieur en Développement Logiciel C++ Qt Qml H/F,QuantifiCare,Biot - 06,CDI,Bac +5,Service public hospitalier,False,,50000.0,[]
+Ingénieur en Développement Logiciel C++ Qt Qml H/F,QuantifiCare,Biot - 06,CDI,Bac +5,Service public hospitalier,False,,50000.0,['cmake']
 Ingénieur Logiciel d'Application d'Électrification CDI H/F,CENTUM T&S,Nancy - 54,CDI,Bac +5,Secteur informatique • ESN,False,1.0,42500.0,[]
 Architecte Applicatif - CDI - Bordeaux H/F,Conserto,Bordeaux - 33,CDI,,,False,,43000.0,[]
 Ingénieur Développement Logiciel pour Contrôle Caméra Tcherenkov H/F,CEA,Gif-sur-Yvette - 91,CDD,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
 Ingénieur Développement Logiciel Batterie Bsw Automobile H/F,Avanista,Yvelines - 78,CDI,Bac +5,,False,7.0,47500.0,[]
-Ingénieur Consultant Développement Logiciel - Systèmes Embarqués H/F,Go Concept,Grenoble - 38,CDI,,,False,,50000.0,[]
-Scrum Master - Ingénieur Logiciel H/F,Bertrandt,Guyancourt - 78,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
-Ingénieur Logiciel C# & Vidéo 55K H/F,Thomas Search Consulting,Massy - 91,CDI,Bac +5,Secteur informatique • ESN,True,7.0,58500.0,[]
-Architecte Applicatif Fullstack - Centre de Production H/F,Open,Villeneuve-d'Ascq - 59,CDI,,,False,,40000.0,[]
-Ingénieur Logiciel C - C++ - Ada H/F,IT Link,Les Ulis - 91,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,[]
-Ingénieur Logiciel en Mécatronique - Paris France H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
+Ingénieur Consultant Développement Logiciel - Systèmes Embarqués H/F,Go Concept,Grenoble - 38,CDI,,,False,,50000.0,"['python', 'c/c++']"
+Scrum Master - Ingénieur Logiciel H/F,Bertrandt,Guyancourt - 78,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,['electron']
+Ingénieur Logiciel C# & Vidéo 55K H/F,Thomas Search Consulting,Massy - 91,CDI,Bac +5,Secteur informatique • ESN,True,7.0,58500.0,"['windows', 'linux']"
+Architecte Applicatif Fullstack - Centre de Production H/F,Open,Villeneuve-d'Ascq - 59,CDI,,,False,,40000.0,"['ansible', 'angular', 'java', 'docker', 'react', 'devops']"
+Ingénieur Logiciel C - C++ - Ada H/F,IT Link,Les Ulis - 91,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,['c/c++']
+Ingénieur Logiciel en Mécatronique - Paris France H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,['c/c++']
 Ingénieur Logiciel C++ - Linux H/F,Scalian,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,True,7.0,45000.0,[]
-Ingénieur Développement Logiciel Java Javafx - Swing H/F,LR Technologies,Massy - 91,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,[]
+Ingénieur Développement Logiciel Java Javafx - Swing H/F,LR Technologies,Massy - 91,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,"['css', 'java']"
 Ingénieur Développement Software H/F,Exens Ingénierie,Annecy - 74,CDI,Bac +5,Secteur informatique • ESN,True,7.0,40000.0,[]
-Ingénieur Génie Logiciel C++ - Imagerie Médicale H/F,Silkhom,Gallargues-le-Montueux - 30,CDI,Bac +5,Services aux Entreprises,True,,52500.0,[]
-Ingénieur Développement Logiciel C++ - Embarqué H/F,Guarani,Nantes - 44,CDI,Bac +5,Secteur informatique • ESN,True,1.0,60000.0,[]
-Ingénieur Développement Logiciel H/F,Cofabrik,Saint-Martin-d'Hères - 38,CDI,,,False,,50000.0,[]
+Ingénieur Génie Logiciel C++ - Imagerie Médicale H/F,Silkhom,Gallargues-le-Montueux - 30,CDI,Bac +5,Services aux Entreprises,True,,52500.0,['cmake']
+Ingénieur Développement Logiciel C++ - Embarqué H/F,Guarani,Nantes - 44,CDI,Bac +5,Secteur informatique • ESN,True,1.0,60000.0,"['python', 'linux']"
+Ingénieur Développement Logiciel H/F,Cofabrik,Saint-Martin-d'Hères - 38,CDI,,,False,,50000.0,"['opengl', 'robotics', 'cmake']"
 Ingénieur Développement Logiciel H/F,Hardis Group,Seyssinet-Pariset - 38,CDI,,,False,,50000.0,[]
 Architecte Applicatif Confirmé H/F,Crédit Agricole Assurances,Paris 15e - 75,CDI,Bac +5,,True,7.0,42500.0,[]
-Ingénieur Logiciel Banc de Test - Aéronautique H/F,Astek,Rennes - 35,CDI,,,False,,43000.0,[]
+Ingénieur Logiciel Banc de Test - Aéronautique H/F,Astek,Rennes - 35,CDI,,,False,,43000.0,"['python', 'java']"
 CDI - Ingénieur Logiciel H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,[]
-Architecte Applicatif - Paris H/F,Conserto,Paris 8e - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,57500.0,[]
-Ingénieur en Développement Logiciel C++ H/F,Davidson Consulting,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,41500.0,[]
-Alternance - Ingénieur Logiciel - Energie & Telecom H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,[]
-Alternance - Ingénieur Logiciel - Industrie & Services H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,[]
-Alternance - Ingénieur Logiciel - Défense & Sécurité H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,[]
-Alternance - Ingénieur Logiciel - Service Public H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,[]
-Alternance Ingénieur Software Bureaux d'Etudes H/F,KELIO,Cholet - 49,Alternance,Bac +5,Services aux Entreprises,False,7.0,13463.94,[]
+Architecte Applicatif - Paris H/F,Conserto,Paris 8e - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,57500.0,"['security', 'devops', 'scala']"
+Ingénieur en Développement Logiciel C++ H/F,Davidson Consulting,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,41500.0,['ansible']
+Alternance - Ingénieur Logiciel - Energie & Telecom H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,"['angular', 'java']"
+Alternance - Ingénieur Logiciel - Industrie & Services H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,"['shell', 'ios', 'nix', 'java', 'docker', 'devops']"
+Alternance - Ingénieur Logiciel - Défense & Sécurité H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,"['android', 'electron', 'css', 'windows', 'angular', 'java', 'postgresql']"
+Alternance - Ingénieur Logiciel - Service Public H/F,Sopra Steria,Mérignac - 33,Alternance,Bac +5,Secteur informatique • ESN,True,1.0,13463.94,"['angular', 'java', 'docker']"
+Alternance Ingénieur Software Bureaux d'Etudes H/F,KELIO,Cholet - 49,Alternance,Bac +5,Services aux Entreprises,False,7.0,13463.94,['java']
 Ingénieur Architecte Applicatif H/F,Bassetti,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,28000.0,[]
 Consultant Ingénieur Logiciel H/F,Go Concept,Strasbourg - 67,CDI,,,False,,47000.0,[]
-Ingénieur Logiciel Fullstack Java Angular H/F,Viveris.,Grenoble - 38,CDI,Bac +5,Secteur informatique • ESN,True,1.0,40000.0,[]
+Ingénieur Logiciel Fullstack Java Angular H/F,Viveris.,Grenoble - 38,CDI,Bac +5,Secteur informatique • ESN,True,1.0,40000.0,['devops']
 Ingénieur Développement Logiciel H/F,Advisia RH,Haute-Savoie - 74,CDI,Bac +5,,True,1.0,38500.0,[]
 Ingénieur Logiciel Aix en Provence H/F,Capgemini,Aix-en-Provence - 13,CDI,Bac +5,,False,1.0,36500.0,[]
 Ingénieur Développement Logiciel - Banc de Test - Vélizy-Villacoublay H/F,LGM,Vélizy-Villacoublay - 78,CDI,Bac +5,Secteur informatique • ESN,True,7.0,42500.0,[]
-Ingénieur Logiciel Symfony - Full Remote H/F,Seyos,Saint-Sébastien-sur-Loire - 44,CDI,Bac +2,,True,1.0,42500.0,[]
+Ingénieur Logiciel Symfony - Full Remote H/F,Seyos,Saint-Sébastien-sur-Loire - 44,CDI,Bac +2,,True,1.0,42500.0,"['symfony', 'php', 'java', 'javascript']"
 Ingénieur Développement Logiciel Applicatif - Toulouse 31 H/F,Hedon Technologies,Toulouse - 31,CDI,,,False,,38500.0,[]
-Développeur Informatique Ingénieur R&D Logiciel Embarqué Sénior H/F,Manpower,Voreppe - 38,CDI,Bac +5,Services aux Entreprises,False,7.0,60000.0,[]
-Ingénieur Logiciel Fullstack Industrie H/F,Thelesys,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,True,7.0,39999.99,[]
+Développeur Informatique Ingénieur R&D Logiciel Embarqué Sénior H/F,Manpower,Voreppe - 38,CDI,Bac +5,Services aux Entreprises,False,7.0,60000.0,"['python', 'zig', 'linux']"
+Ingénieur Logiciel Fullstack Industrie H/F,Thelesys,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,True,7.0,39999.99,['react']
 Ingenieur Logiciel Sfeao1042 H/F,Studiel,Toulouse - 31,CDI,Bac +5,,False,1.0,38500.0,[]
-Apprenti Ingénieur Logiciel H/F,Evolis,Beaucouzé - 49,Alternance,"Bac +3, Bac +4",,False,1.0,22500.0,[]
+Apprenti Ingénieur Logiciel H/F,Evolis,Beaucouzé - 49,Alternance,"Bac +3, Bac +4",,False,1.0,22500.0,"['apps', 'devops']"
 Chef de Projet Technique - Architecte Applicatif H/F,Guarani,Rennes - 35,CDI,,,False,,42500.0,[]
 Ingénieur Logiciel Simulation C++ - C# H/F,PROLEXIA,Var - 83,CDI,Bac +5,Secteur informatique • ESN,True,1.0,37500.0,[]
-Architecte Applicatif Cloud Native Aws H/F,Orange Business,Nanterre - 92,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,[]
+Architecte Applicatif Cloud Native Aws H/F,Orange Business,Nanterre - 92,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,['devops']
 Ingénieur Logiciel C++ - Sophia Antipolis H/F,ALTEN,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,,50000.0,[]
 Ingénieur Logiciel c - Linux Embarqué H/F,Scalian,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,True,7.0,45000.0,[]
-Alternance - Ingénieur Logiciel Plm - Paris H/F,Capgemini,Paris - 75,Alternance,"Bac +3, Bac +4",Secteur informatique • ESN,False,1.0,13463.94,[]
-Alternance 2024 Ingénieur Logiciel - Paris H/F,Capgemini,Paris - 75,Alternance,Bac +5,Secteur informatique • ESN,False,1.0,13463.94,[]
+Alternance - Ingénieur Logiciel Plm - Paris H/F,Capgemini,Paris - 75,Alternance,"Bac +3, Bac +4",Secteur informatique • ESN,False,1.0,13463.94,"['python', 'java']"
+Alternance 2024 Ingénieur Logiciel - Paris H/F,Capgemini,Paris - 75,Alternance,Bac +5,Secteur informatique • ESN,False,1.0,13463.94,['java']
 Ingénieur Développement Logiciel Appliqué aux Démonstrateurs Radars H/F,Onera,Palaiseau - 91,CDI,Bac +5,,True,1.0,42500.0,[]
 Ingénieur Logiciel et Instrumentation Labview H/F,Alpee,Chambéry - 73,CDI,Bac +5,Secteur Energie • Environnement,True,1.0,40000.0,[]
-Ingénieur Logiciel Intégration CI - CD H/F,Expleo,Cannes - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,38499.99,[]
+Ingénieur Logiciel Intégration CI - CD H/F,Expleo,Cannes - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,38499.99,"['python', 'github', 'github', 'devops']"
 Ingénieur Logiciels Critiques et Contrôle-Commande Install Nucléaires H/F,IRSN (Institut de radioprotection et de sûreté nucléaire),Fontenay-aux-Roses - 92,CDI,Bac +5,Services aux Entreprises,True,1.0,42500.0,[]
-Ingénieur Software R&I H/F,Valeo,Bobigny - 93,CDI,Bac +5,,True,,42500.0,[]
+Ingénieur Software R&I H/F,Valeo,Bobigny - 93,CDI,Bac +5,,True,,42500.0,"['python', 'unity', 'opengl', 'angular', 'java', 'diversity', 'react', 'javascript']"
 CDI - Ingénieur Logiciel Intégration Système de Combat H/F,Naval Group,Ollioules - 83,CDI,,,False,,45000.0,[]
 Architecte Applicatif Microsoft Dynamics 365 - CRM H/F,Orange Business,Nanterre - 92,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,[]
-Ingénieur Logiciel - Chef de Projet H/F,Chauvin Arnoux,Asnières-sur-Seine - 92,CDI,Bac +5,,True,7.0,42500.0,[]
-Ingénieur Logiciel C++ Qt - Logiciel Analyse Géologique H/F,Silkhom,Clapiers - 34,CDI,Bac +5,Services aux Entreprises,True,,47500.0,[]
-Ingénieur Génie Logiciel - CDD - Paris-Saclay H/F,CEA,Palaiseau - 91,CDD,Bac +5,,True,,42500.0,[]
+Ingénieur Logiciel - Chef de Projet H/F,Chauvin Arnoux,Asnières-sur-Seine - 92,CDI,Bac +5,,True,7.0,42500.0,"['electron', 'linux']"
+Ingénieur Logiciel C++ Qt - Logiciel Analyse Géologique H/F,Silkhom,Clapiers - 34,CDI,Bac +5,Services aux Entreprises,True,,47500.0,['python']
+Ingénieur Génie Logiciel - CDD - Paris-Saclay H/F,CEA,Palaiseau - 91,CDD,Bac +5,,True,,42500.0,"['security', 'scala']"
 CDI - Ingénieur Logiciel H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,[]
 CDI - Ingénieur Logiciel H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,[]
 CDI - Ingénieur Logiciel H/F,Naval Group,Toulon - 83,CDI,,,False,,45000.0,[]
-Architecte Applicatif Java H/F,Inetum,Bordeaux - 33,CDI,,,False,,43000.0,[]
-Ingénieur Logiciel C++ Qt - Logiciel Analyse Géologique H/F,BlueDocker,Clapiers - 34,CDI,Bac +5,Services aux Entreprises,True,,47500.0,[]
+Architecte Applicatif Java H/F,Inetum,Bordeaux - 33,CDI,,,False,,43000.0,['java']
+Ingénieur Logiciel C++ Qt - Logiciel Analyse Géologique H/F,BlueDocker,Clapiers - 34,CDI,Bac +5,Services aux Entreprises,True,,47500.0,['python']
 Ingenieur Developpement Logiciels Sfeao886 H/F,Studiel,Bordes - 64,CDI,Bac +5,,False,1.0,38500.0,[]
-Ingénieur Développement Software Mbd H/F,GIF emploi,Vélizy-Villacoublay - 78,Intérim,Bac +5,,False,1.0,45000.0,[]
-Ingénieur Logiciel C - C++ - Medical H/F,Viveris.,Villeurbanne - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,[]
-Architecte - Ingénieur Logiciel Java H/F,Externatic,Paris 17e - 75,CDI,Bac +5,Services aux Entreprises,True,1.0,57500.0,[]
-Ingénieur Logiciel Vol Embarqué c H/F,Expleo,Cannes - 06,CDI,Bac +5,Secteur informatique • ESN,True,,50000.0,[]
-Ingénieur Développement Logiciel C++ - Plein Coeur de Lyon H/F,Silkhom,Lyon - 69,CDI,Bac +5,Services aux Entreprises,True,,45000.0,[]
+Ingénieur Développement Software Mbd H/F,GIF emploi,Vélizy-Villacoublay - 78,Intérim,Bac +5,,False,1.0,45000.0,['ios']
+Ingénieur Logiciel C - C++ - Medical H/F,Viveris.,Villeurbanne - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,45000.0,['windows']
+Architecte - Ingénieur Logiciel Java H/F,Externatic,Paris 17e - 75,CDI,Bac +5,Services aux Entreprises,True,1.0,57500.0,"['mysql', 'windows', 'angular', 'java', 'linux', 'devops']"
+Ingénieur Logiciel Vol Embarqué c H/F,Expleo,Cannes - 06,CDI,Bac +5,Secteur informatique • ESN,True,,50000.0,['python']
+Ingénieur Développement Logiciel C++ - Plein Coeur de Lyon H/F,Silkhom,Lyon - 69,CDI,Bac +5,Services aux Entreprises,True,,45000.0,['linux']
 Generali Saint-Denis CDI - Expert Applicatif Généraliste - Java Framework H/F,Talentpeople,Saint-Denis - 93,CDI,"Bac +3, Bac +4",Services aux Entreprises,False,1.0,42500.0,[]
 Ingénieur Logiciel C - C++ Qt - Dispositif Connecté Automobile H/F,Viveris.,Lyon 6e - 69,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,[]
-Ingénieur Expert Logiciel Industriel - Ile-De-France H/F,Approach People Recruitment,Massy - 91,CDI,Bac +5,Services aux Entreprises,False,7.0,51500.0,[]
-Ingénieur Développement Logiciel C++ - Qt H/F,LR Technologies Sud Ouest,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,True,7.0,47500.0,[]
-Ingénieur Logiciel C# - .Net H/F,Qualis Recrutement,Vénissieux - 69,CDI,Bac +5,,False,1.0,37000.0,[]
-Ingénieur Logiciel Junior- Editeur de Logiciels International - Paris 45 - 48K€ H/F,L2C Recrutement,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,1.0,46500.0,[]
-Ingénieur Développement Logiciels Télécom C - C++ H/F,Eviden,Aix-en-Provence - 13,CDI,,,False,,45000.0,[]
-Ingénieur Développement Logiciel C++ pour l'Intelligence Artificielle IA Frugale H/F,CEA,Palaiseau - 91,CDD,Bac +5,,True,,42500.0,[]
+Ingénieur Expert Logiciel Industriel - Ile-De-France H/F,Approach People Recruitment,Massy - 91,CDI,Bac +5,Services aux Entreprises,False,7.0,51500.0,['.net']
+Ingénieur Développement Logiciel C++ - Qt H/F,LR Technologies Sud Ouest,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,True,7.0,47500.0,['linux']
+Ingénieur Logiciel C# - .Net H/F,Qualis Recrutement,Vénissieux - 69,CDI,Bac +5,,False,1.0,37000.0,['.net']
+Ingénieur Logiciel Junior- Editeur de Logiciels International - Paris 45 - 48K€ H/F,L2C Recrutement,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,1.0,46500.0,"['github', 'rails', 'docker', 'github', 'ruby', 'postgresql']"
+Ingénieur Développement Logiciels Télécom C - C++ H/F,Eviden,Aix-en-Provence - 13,CDI,,,False,,45000.0,"['python', 'security', 'shell', 'ios', 'windows', 'docker', 'big data', 'linux']"
+Ingénieur Développement Logiciel C++ pour l'Intelligence Artificielle IA Frugale H/F,CEA,Palaiseau - 91,CDD,Bac +5,,True,,42500.0,"['python', 'cmake']"
 CDI - Ingénieur Logiciel Intégration et Performances H/F,Naval Group,Ollioules - 83,CDI,,,False,,45000.0,[]
 Validation Engineer H/F,B-Hive,Molsheim - 67,CDI,Bac +5,Secteur informatique • ESN,False,,42500.0,[]
 Offshore Project Method Lead Engineer H/F,Fimatec Ingénierie,Guyancourt - 78,CDI,Bac +5,Secteur informatique • ESN,True,7.0,45000.0,[]
-Ingenieur Logiciel Embarque H/F,AquisIT,Vénissieux - 69,CDI,Bac +5,Secteur informatique • ESN,True,7.0,40000.0,[]
-Chargé du Développement d'Un Jumeau Numérique de Procédés Complexes H/F,CEA,Bagnols-sur-Cèze - 30,CDD,Bac +5,Services aux Entreprises,True,1.0,32000.0,[]
-Ingenieur de Logiciel Embarque H/F,Ameg,Sablé-sur-Sarthe - 72,CDI,Bac +5,Secteur informatique • ESN,False,,40000.0,[]
+Ingenieur Logiciel Embarque H/F,AquisIT,Vénissieux - 69,CDI,Bac +5,Secteur informatique • ESN,True,7.0,40000.0,['linux']
+Chargé du Développement d'Un Jumeau Numérique de Procédés Complexes H/F,CEA,Bagnols-sur-Cèze - 30,CDD,Bac +5,Services aux Entreprises,True,1.0,32000.0,['machine learning']
+Ingenieur de Logiciel Embarque H/F,Ameg,Sablé-sur-Sarthe - 72,CDI,Bac +5,Secteur informatique • ESN,False,,40000.0,['electron']
 Ingenieur Logiciel Embarque H/F,Ameg,Strasbourg - 67,CDI,,,False,,59500.0,[]
 Senior Solution Engineer H/F,IDnow,Cesson-Sévigné - 35,CDI,,,False,,42500.0,[]
-Apprenti-e Application Rag - Llm avec des Données Spécifiques H/F,Safran,Versailles - 78,Alternance,Bac +5,,False,7.0,13463.94,[]
+Apprenti-e Application Rag - Llm avec des Données Spécifiques H/F,Safran,Versailles - 78,Alternance,Bac +5,,False,7.0,13463.94,['python']
 Alternance - Charge Developpement IT H/F,Energies de Loire,La Baule-Escoublac - 44,Alternance,"Bac +3, Bac +4",Secteur Energie • Environnement,False,1.0,13463.94,[]
-Lead Machine Learning Engineer H/F,KESY PARTNERS,Aix-en-Provence - 13,CDI,Bac +5,Services aux Entreprises,True,1.0,75000.0,[]
+Lead Machine Learning Engineer H/F,KESY PARTNERS,Aix-en-Provence - 13,CDI,Bac +5,Services aux Entreprises,True,1.0,75000.0,['data science']
 Software Specialist H/F,Computacenter,Gonesse - 95,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,[]
-Machine Learning Engineer H/F,Lynx RH,Levallois-Perret - 92,CDI,Bac +5,Services aux Entreprises,False,,62500.0,[]
-Machine Learning Engineer en Alternance H/F,Data ScienceTech Institute,Bordeaux - 33,Alternance,,,False,,13463.94,[]
+Machine Learning Engineer H/F,Lynx RH,Levallois-Perret - 92,CDI,Bac +5,Services aux Entreprises,False,,62500.0,"['python', 'java', 'hadoop', 'machine learning', 'big data', 'spark', 'tensorflow']"
+Machine Learning Engineer en Alternance H/F,Data ScienceTech Institute,Bordeaux - 33,Alternance,,,False,,13463.94,['big data']
 Ingénieur Vsi Pharmaceutique H/F,Altogen,Lyon - 69,CDI,Bac +5,,False,1.0,40500.0,[]
 Ingénieur-e Software H/F,Safran,Les Ulis - 91,CDI,Bac +5,,False,7.0,42500.0,[]
-Machine Learning Engineer H/F,ADHERENCE CONSULTING,Lille - 59,CDI,Bac +5,Secteur informatique • ESN,False,7.0,55000.0,[]
+Machine Learning Engineer H/F,ADHERENCE CONSULTING,Lille - 59,CDI,Bac +5,Secteur informatique • ESN,False,7.0,55000.0,['data science']
 Ingenieur de Developpement Logiciel Embarque Muaao1001 H/F,Studiel,Valbonne - 06,CDI,Bac +5,,False,1.0,38499.99,[]
-Technical Lead H/F,Twenty One Talents,Paris - 75,CDI,Bac +5,,True,7.0,61000.0,[]
-Alternance 2024 - Ingénieur.e Logiciel - Toulouse H/F,Capgemini,Toulouse - 31,Alternance,"Bac +3, Bac +4",,True,1.0,13463.94,[]
+Technical Lead H/F,Twenty One Talents,Paris - 75,CDI,Bac +5,,True,7.0,61000.0,['security']
+Alternance 2024 - Ingénieur.e Logiciel - Toulouse H/F,Capgemini,Toulouse - 31,Alternance,"Bac +3, Bac +4",,True,1.0,13463.94,"['python', 'java']"
 Solutions Engineer H/F,HelloWork,Bordeaux - 33,CDI,Bac +5,,True,1.0,37500.0,[]
-Senior Machine Learning Engineer - Ops Aws H/F,Innova Solutions,Issy-les-Moulineaux - 92,CDI,Bac +5,Secteur informatique • ESN,True,7.0,67500.0,[]
-Lead Machine Learning Engineer Datascientist d'Exp Mini H/F,Twenty One Talents,Aix-en-Provence - 13,CDI,Bac +5,,True,7.0,75000.0,[]
+Senior Machine Learning Engineer - Ops Aws H/F,Innova Solutions,Issy-les-Moulineaux - 92,CDI,Bac +5,Secteur informatique • ESN,True,7.0,67500.0,"['analytics', 'machine learning']"
+Lead Machine Learning Engineer Datascientist d'Exp Mini H/F,Twenty One Talents,Aix-en-Provence - 13,CDI,Bac +5,,True,7.0,75000.0,"['data science', 'lumen']"
 Expert Fortinet - F5 H/F,Celad,Toulouse - 31,CDI,,,False,,38500.0,[]
-Expert Nutanix H/F,MALLYANCE GROUPE,Bagnolet - 93,CDI,Bac +5,Secteur informatique • ESN,False,7.0,57500.0,[]
-Référent Test Cybersécurité Iot H/F,Hager Group,Obernai - 67,CDI,Bac +5,,True,1.0,65000.0,[]
-Technical Lead H/F,Twenty One Talents,Nantes - 44,CDI,Bac +5,,True,7.0,61000.0,[]
+Expert Nutanix H/F,MALLYANCE GROUPE,Bagnolet - 93,CDI,Bac +5,Secteur informatique • ESN,False,7.0,57500.0,['nix']
+Référent Test Cybersécurité Iot H/F,Hager Group,Obernai - 67,CDI,Bac +5,,True,1.0,65000.0,"['python', 'java']"
+Technical Lead H/F,Twenty One Talents,Nantes - 44,CDI,Bac +5,,True,7.0,61000.0,['security']
 Ingenieur Software Embarque H/F,Exens Ingénierie,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,True,7.0,50000.0,[]
 Ingenieur Developpement Logiciel Embarque H/F,Mealys,Grand Est,CDI,Bac +5,,True,7.0,45000.0,[]
-Technical Lead H/F,Twenty One Talents,Paris - 75,CDI,Bac +5,,True,7.0,61000.0,[]
+Technical Lead H/F,Twenty One Talents,Paris - 75,CDI,Bac +5,,True,7.0,61000.0,['security']
 Ingénieur Expérimenté Logiciel Critique H/F,Randstad Digital,Toulouse - 31,CDI,,,False,,38500.0,[]
 Ingénieur.e Développement Logiciels Confirmé.e d'Exp Mini H/F,Twenty One Talents,Nantes - 44,CDI,Bac +5,Secteur informatique • ESN,True,7.0,39000.0,[]
 Ingénieur.e Développement Logiciels Confirmé.e 5 à Exp H/F,Twenty One Talents,Saint-Herblain - 44,CDI,Bac +5,Secteur informatique • ESN,True,7.0,39000.0,[]
@@ -259,88 +259,88 @@ Expert Mulesoft H/F,Reactis Services,Marseille - 13,CDI,,,False,,45000.0,[]
 Expert Ticbo Ebx H/F,HR Team,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,57500.0,[]
 Expert VBA H/F,Groupagora,Bordeaux - 33,CDI,Bac +5,Secteur informatique • ESN,False,7.0,50000.0,[]
 Expert Ticbo Ebx H/F,HR Team,Paris - 75,Indépendant/Freelance,Bac +5,Secteur informatique • ESN,True,7.0,575.0,[]
-Ingénieur de Développement Software H/F,Anderson RH,Lyon - 69,CDI,,,False,,50000.0,[]
-Architecte Applicatif H/F,Michael Page,Mérignac - 33,CDI,Bac +5,Services aux Entreprises,False,1.0,70500.0,[]
+Ingénieur de Développement Software H/F,Anderson RH,Lyon - 69,CDI,,,False,,50000.0,['.net']
+Architecte Applicatif H/F,Michael Page,Mérignac - 33,CDI,Bac +5,Services aux Entreprises,False,1.0,70500.0,"['kubernetes', 'scala']"
 Ingénieur Développement Software H/F,Michael Page,Buc - 78,CDI,Bac +5,Services aux Entreprises,False,1.0,47500.0,[]
 Architecte Applicatif - Leader du Transport et Logistique H/F,Michael Page,Puteaux - 92,CDI,Bac +5,Services aux Entreprises,False,1.0,72500.0,[]
 Expert Applicatif Si SAP S - 4 Maintenance - Production H/F,Michael Page,Châtillon - 92,CDI,Bac +5,Services aux Entreprises,False,1.0,82500.0,[]
 Expert Applicatif Si SAP S - 4 Achats et Chaine Logistique H/F,Michael Page,Châtillon - 92,CDI,Bac +5,Services aux Entreprises,False,1.0,75000.0,[]
-Software Engineer Typescript React Node.Js Exp Mini H/F,Twenty One Talents,France,CDI,Bac +5,,True,7.0,75500.0,[]
-Software Engineer H/F,Air France,Valbonne - 06,CDI,Bac +5,,False,,50000.0,[]
-Software Engineer H/F,Ippon Technologies,Bordeaux - 33,CDI,,,False,,44000.0,[]
-Software Engineer H/F,Ippon Technologies,Tours - 37,CDI,,,False,,39500.0,[]
-Software Engineer .Net H/F,Betclic Group,Bordeaux - 33,CDI,,,False,,43000.0,[]
-Senior Software Engineer F - M - D H/F,Decathlon,Croix - 59,CDI,,,False,,40000.0,[]
-Software Engineer Angular H/F,Betclic Group,Bordeaux - 33,CDI,,,False,,43000.0,[]
-Flight Software Engineer H/F,Loft Orbital Solutions,Toulouse - 31,CDI,,,False,,38500.0,[]
-Junior Software Engineer H/F,Artefact,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,,42500.0,[]
-Software Engineer - Test Platform M H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,[]
-Software Engineer .Net en Alternance H/F,AXA Assurances,Nanterre - 92,Alternance,Bac +5,,True,7.0,13463.94,[]
-Software Engineer Mobile en Alternance H/F,AXA Assurances,Wasquehal - 59,Alternance,Bac +5,,True,7.0,13463.94,[]
-#Onesat On-Board Software Engineer F - M H/F,Airbus,Toulouse - 31,CDI,,,False,,38500.0,[]
-Senior Software Engineer - Back End F - M - D H/F,Decathlon,Croix - 59,CDI,,,False,,40000.0,[]
-Senior Software Engineer - Back End F - M - D H/F,Decathlon,Croix - 59,CDI,,,False,,40000.0,[]
-Software Engineer Java Métier Sinistre H/F,AXA Assurances,Wasquehal - 59,CDI,,,False,,40000.0,[]
+Software Engineer Typescript React Node.Js Exp Mini H/F,Twenty One Talents,France,CDI,Bac +5,,True,7.0,75500.0,['unity']
+Software Engineer H/F,Air France,Valbonne - 06,CDI,Bac +5,,False,,50000.0,"['containers', 'apps', 'big data']"
+Software Engineer H/F,Ippon Technologies,Bordeaux - 33,CDI,,,False,,44000.0,"['angular', 'java', 'docker', 'react']"
+Software Engineer H/F,Ippon Technologies,Tours - 37,CDI,,,False,,39500.0,"['angular', 'java', 'docker', 'react']"
+Software Engineer .Net H/F,Betclic Group,Bordeaux - 33,CDI,,,False,,43000.0,"['github', '.net', 'angular', 'github', 'al design']"
+Senior Software Engineer F - M - D H/F,Decathlon,Croix - 59,CDI,,,False,,40000.0,"['kubernetes', 'microservices', 'github', 'ios', 'windows', 'github actions', 'java', 'github', 'postgresql']"
+Software Engineer Angular H/F,Betclic Group,Bordeaux - 33,CDI,,,False,,43000.0,"['angular', 'react']"
+Flight Software Engineer H/F,Loft Orbital Solutions,Toulouse - 31,CDI,,,False,,38500.0,"['product management', 'unity', 'security', 'diversity', 'c/c++', 'healthcare', 'rust', 'linux']"
+Junior Software Engineer H/F,Artefact,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,,42500.0,"['python', 'terraform', 'docker', 'devops']"
+Software Engineer - Test Platform M H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,"['python', 'unity', 'shell', 'testing', 'linux']"
+Software Engineer .Net en Alternance H/F,AXA Assurances,Nanterre - 92,Alternance,Bac +5,,True,7.0,13463.94,['.net']
+Software Engineer Mobile en Alternance H/F,AXA Assurances,Wasquehal - 59,Alternance,Bac +5,,True,7.0,13463.94,"['android', 'ios', 'code review', 'devops', 'swift']"
+#Onesat On-Board Software Engineer F - M H/F,Airbus,Toulouse - 31,CDI,,,False,,38500.0,"['python', 'corda', 'unity', 'security', 'shell', 'java', 'integration', 'programming languages', 'c/c++', 'testing', 'cmake', 'rust', 'linux', 'computer science']"
+Senior Software Engineer - Back End F - M - D H/F,Decathlon,Croix - 59,CDI,,,False,,40000.0,"['kubernetes', 'github', 'splunk', 'devsecops', 'code review', 'github actions', 'java', 'github', 'postgresql']"
+Senior Software Engineer - Back End F - M - D H/F,Decathlon,Croix - 59,CDI,,,False,,40000.0,"['kubernetes', 'github', 'splunk', 'devsecops', 'code review', 'github actions', 'java', 'github', 'postgresql']"
+Software Engineer Java Métier Sinistre H/F,AXA Assurances,Wasquehal - 59,CDI,,,False,,40000.0,['java']
 Software Engineer Front-End en Alternance H/F,AXA Assurances,Nanterre - 92,Alternance,Bac +5,,True,7.0,13463.94,[]
-Software Engineer Full Stack en Alternance H/F,AXA Assurances,Wasquehal - 59,Alternance,Bac +5,,True,7.0,13463.94,[]
-Software Engineer Java F - M - D H/F,Decathlon,Croix - 59,CDI,,,False,,40000.0,[]
-Software Engineer Backend Node - Shopping App F - M - D H/F,Decathlon,Villeneuve-d'Ascq - 59,CDI,,,False,,40000.0,[]
-Software Engineer .Net - Sport Offering H/F,Betclic Group,Bordeaux - 33,CDI,,,False,,39260.0,[]
-Senior Software Engineer Java - Mirakl Ads H/F,Mirakl,Bordeaux - 33,CDI,,,False,,44000.0,[]
-Software Engineer .Net - Reactjs en Alternance H/F,AXA Assurances,Wasquehal - 59,Alternance,Bac +5,,True,7.0,13463.94,[]
-Senior Software Engineer Developer Experience H/F,Betclic Group,Bordeaux - 33,CDI,,,False,,45000.0,[]
-Back-End Software Engineer H/F,Air France,Valbonne - 06,CDI,Bac +5,,False,,50000.0,[]
-Software Integration Engineer H/F,Loft Orbital Solutions,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,False,,38000.0,[]
-Software Security Engineer - Intern H/F,Ledger,Paris - 75,Stage,Bac +5,Secteur informatique • ESN,True,7.0,15000.0,[]
-Senior Software Development Engineer -Frontend - Technical Lead H/F,Amadeus,Nice - 06,CDI,,,False,,38499.99,[]
-Senior Software Development Engineer - Perception System For Autonomous Train F - M H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,[]
-Ingénieur Logiciel H/F,4Murs,Marly - 57,CDD,Bac +5,,False,,42500.0,[]
-Architecte Applicatif H/F,Groupe Ecocert,L'Isle-Jourdain - 32,CDI,Bac +5,Secteur Energie • Environnement,True,,38500.0,[]
-Architecte Applicatif H/F,Lasecurecrute.fr,Biot - 06,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,[]
-Architecte Applicatif H/F,Lasecurecrute.fr,Biot - 06,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,[]
-Architecte Applicatif H/F,Lasecurecrute.fr,Biot - 06,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,[]
-Architecte Applicatif H/F,Onepoint,Toulouse - 31,CDI,,,False,,42500.0,[]
-24 - 25 - Apprenticeship - Software Quality & Test Engineer H/F,Amadeus,Nice - 06,Alternance,Bac +5,Secteur informatique • ESN,False,7.0,13463.94,[]
-Architecte Applicatif Toulouse H/F,Lasecurecrute.fr,Toulouse - 31,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,[]
-Architecte Applicatif Marseille H/F,Lasecurecrute.fr,Marseille 1er - 13,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,[]
-Architecte Applicatif Toulouse H/F,Lasecurecrute.fr,Toulouse - 31,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,[]
-Architecte Applicatif Marseille H/F,Lasecurecrute.fr,Marseille 1er - 13,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,[]
-Architecte Applicatif Montpellier H/F,Lasecurecrute.fr,Montpellier - 34,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,[]
-Architecte Applicatif Montpellier H/F,Lasecurecrute.fr,Montpellier - 34,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,[]
-Ingénieur Développement Logiciel Expérimenté - Innovation & Transfert H/F,INRIA,Nice - 06,CDI,,,False,,50000.0,[]
-Ingénieur Logiciel .Net - C# - Alchemist H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,[]
-Ingénieur en Développement Logiciel - Support - Plateforme de Test H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,[]
-Ingénieur Logiciel H/F,Labsoft,Toulouse - 31,CDI,,,False,,38500.0,[]
-Stage - Ingénieur - Ingénieure Logiciel H/F,STMicroelectronics,Crolles - 38,CDD,Bac +5,,False,,50000.0,[]
-Architecte d'Applicatif Poste Ouvert Tours Où Paris H/F,Lasecurecrute.fr,Tours - 37,CDI,,,False,,39500.0,[]
+Software Engineer Full Stack en Alternance H/F,AXA Assurances,Wasquehal - 59,Alternance,Bac +5,,True,7.0,13463.94,"['.net', 'devsecops', 'react', 'node.js', 'devops']"
+Software Engineer Java F - M - D H/F,Decathlon,Croix - 59,CDI,,,False,,40000.0,"['github', 'splunk', 'slack', 'windows', 'github actions', 'java', 'gatling', 'mongodb', 'docker', 'testing', 'github', 'react', 'postgresql', 'scala']"
+Software Engineer Backend Node - Shopping App F - M - D H/F,Decathlon,Villeneuve-d'Ascq - 59,CDI,,,False,,40000.0,"['github', 'devsecops', 'windows', 'code review', 'github', 'scala']"
+Software Engineer .Net - Sport Offering H/F,Betclic Group,Bordeaux - 33,CDI,,,False,,39260.0,"['github', '.net', 'code review', 'terraform', 'mongodb', 'github', 'devops']"
+Senior Software Engineer Java - Mirakl Ads H/F,Mirakl,Bordeaux - 33,CDI,,,False,,44000.0,"['kubernetes', 'redux', 'java', 'docker', 'react', 'speakers', 'postgresql', 'scala']"
+Software Engineer .Net - Reactjs en Alternance H/F,AXA Assurances,Wasquehal - 59,Alternance,Bac +5,,True,7.0,13463.94,"['kubernetes', '.net', 'ios', 'code review', 'docker', 'react', 'devops']"
+Senior Software Engineer Developer Experience H/F,Betclic Group,Bordeaux - 33,CDI,,,False,,45000.0,"['python', 'containers', 'microservices', 'github', 'java', 'terraform', 'mongodb', 'docker', 'github']"
+Back-End Software Engineer H/F,Air France,Valbonne - 06,CDI,Bac +5,,False,,50000.0,['integration']
+Software Integration Engineer H/F,Loft Orbital Solutions,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,False,,38000.0,"['python', 'unity', 'security', 'slack', 'integration', 'diversity', 'testing', 'rust']"
+Software Security Engineer - Intern H/F,Ledger,Paris - 75,Stage,Bac +5,Secteur informatique • ESN,True,7.0,15000.0,"['python', 'unity', 'security', 'ledger', 'hacking', 'rust', 'computer science']"
+Senior Software Development Engineer -Frontend - Technical Lead H/F,Amadeus,Nice - 06,CDI,,,False,,38499.99,"['unity', 'css', 'angular', 'diversity', 'healthcare']"
+Senior Software Development Engineer - Perception System For Autonomous Train F - M H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,"['python', 'unity', 'datasets', 'security', 'computer vision', 'testing', 'artificial intelligence', 'machine learning', 'computer science']"
+Ingénieur Logiciel H/F,4Murs,Marly - 57,CDD,Bac +5,,False,,42500.0,['linux']
+Architecte Applicatif H/F,Groupe Ecocert,L'Isle-Jourdain - 32,CDI,Bac +5,Secteur Energie • Environnement,True,,38500.0,"['symfony', '.net', 'php', 'docker', 'vue.js', 'devops']"
+Architecte Applicatif H/F,Lasecurecrute.fr,Biot - 06,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,"['kubernetes', 'python', 'shell', 'angular', 'java', 'docker', 'linux', 'devops']"
+Architecte Applicatif H/F,Lasecurecrute.fr,Biot - 06,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,"['kubernetes', 'python', 'shell', 'angular', 'java', 'docker', 'linux', 'devops']"
+Architecte Applicatif H/F,Lasecurecrute.fr,Biot - 06,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,"['kubernetes', 'python', 'shell', 'angular', 'java', 'docker', 'linux', 'devops']"
+Architecte Applicatif H/F,Onepoint,Toulouse - 31,CDI,,,False,,42500.0,"['microservices', 'devops']"
+24 - 25 - Apprenticeship - Software Quality & Test Engineer H/F,Amadeus,Nice - 06,Alternance,Bac +5,Secteur informatique • ESN,False,7.0,13463.94,"['unity', 'diversity', 'testing', 'computer science']"
+Architecte Applicatif Toulouse H/F,Lasecurecrute.fr,Toulouse - 31,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,"['kubernetes', 'python', 'shell', 'angular', 'java', 'docker', 'linux', 'devops']"
+Architecte Applicatif Marseille H/F,Lasecurecrute.fr,Marseille 1er - 13,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,"['kubernetes', 'python', 'shell', 'angular', 'java', 'docker', 'linux', 'devops']"
+Architecte Applicatif Toulouse H/F,Lasecurecrute.fr,Toulouse - 31,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,"['kubernetes', 'python', 'shell', 'angular', 'java', 'docker', 'linux', 'devops']"
+Architecte Applicatif Marseille H/F,Lasecurecrute.fr,Marseille 1er - 13,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,"['kubernetes', 'python', 'shell', 'angular', 'java', 'docker', 'linux', 'devops']"
+Architecte Applicatif Montpellier H/F,Lasecurecrute.fr,Montpellier - 34,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,"['kubernetes', 'python', 'shell', 'angular', 'java', 'docker', 'linux', 'devops']"
+Architecte Applicatif Montpellier H/F,Lasecurecrute.fr,Montpellier - 34,CDI,Bac +5,Service public des collectivités territoriales,True,,54000.0,"['kubernetes', 'python', 'shell', 'angular', 'java', 'docker', 'linux', 'devops']"
+Ingénieur Développement Logiciel Expérimenté - Innovation & Transfert H/F,INRIA,Nice - 06,CDI,,,False,,50000.0,"['python', 'cassandra', 'data science', 'opengl', 'electron', 'ios', 'java', 'hadoop', 'ruby', 'cmake', 'deep learning', 'big data', 'spark', 'tensorflow', 'linux', 'javascript']"
+Ingénieur Logiciel .Net - C# - Alchemist H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,['.net']
+Ingénieur en Développement Logiciel - Support - Plateforme de Test H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,"['python', 'shell', 'linux']"
+Ingénieur Logiciel H/F,Labsoft,Toulouse - 31,CDI,,,False,,38500.0,['integration']
+Stage - Ingénieur - Ingénieure Logiciel H/F,STMicroelectronics,Crolles - 38,CDD,Bac +5,,False,,50000.0,"['java', 'javascript']"
+Architecte d'Applicatif Poste Ouvert Tours Où Paris H/F,Lasecurecrute.fr,Tours - 37,CDI,,,False,,39500.0,"['angular', 'spark']"
 Expert Applicatif de la Solution ERP - Gpao Vif H/F,Informatis,Lorient - 56,CDI,Bac +5,Secteur informatique • ESN,False,7.0,40000.0,[]
-Architecte Applicatif - Secteur Défense H/F,Genwaves,Aix-en-Provence - 13,CDI,,,False,,45000.0,[]
-Apprenti Ingénieur Logiciel en Calcul Scientifique H/F,Airbus,Paris - 75,Alternance,Bac +5,,False,7.0,13463.94,[]
-# Onesat - Ingénieur Logiciel Infrastructure de Simulation Satellite H/F,Airbus,Toulouse - 31,CDI,,,False,,42500.0,[]
-Apprenti Ingénieur Développement Logiciel sur Équipements Électroniques Spatiaux Embarqués H/F,Airbus,Paris - 75,Alternance,Bac +5,,False,7.0,13463.94,[]
-Ingénieur Développement Logiciel Data Science Machine Learning - Innovation & Transfert H/F,INRIA,Nice - 06,CDI,,,False,,50000.0,[]
-Ingénieur Développement Logiciel Senior - Système de Perception pour Train Autonome 1 H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,[]
-Alternance 2024 - Apprenti Ingénieur en Développement Logiciel All Gender H/F,Airbus,Paris - 75,Alternance,Bac +5,,False,7.0,13463.94,[]
-Alternance 2024 - Apprenti Ingénieur en Développement Logiciel All Gender H/F,Airbus,Toulouse - 31,Alternance,Bac +5,,False,7.0,13463.94,[]
-Ingénieur Développement Logiciel Senior - Système de Perception pour Train Autonome H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,[]
+Architecte Applicatif - Secteur Défense H/F,Genwaves,Aix-en-Provence - 13,CDI,,,False,,45000.0,['java']
+Apprenti Ingénieur Logiciel en Calcul Scientifique H/F,Airbus,Paris - 75,Alternance,Bac +5,,False,7.0,13463.94,"['python', 'shell', 'c/c++']"
+# Onesat - Ingénieur Logiciel Infrastructure de Simulation Satellite H/F,Airbus,Toulouse - 31,CDI,,,False,,42500.0,"['python', 'ios', 'java', 'react', 'linux', 'devops']"
+Apprenti Ingénieur Développement Logiciel sur Équipements Électroniques Spatiaux Embarqués H/F,Airbus,Paris - 75,Alternance,Bac +5,,False,7.0,13463.94,"['python', 'integration', 'linux']"
+Ingénieur Développement Logiciel Data Science Machine Learning - Innovation & Transfert H/F,INRIA,Nice - 06,CDI,,,False,,50000.0,"['python', 'data science', 'opengl', 'electron', 'java', 'docker', 'cmake', 'machine learning', 'tensorflow', 'linux', 'javascript']"
+Ingénieur Développement Logiciel Senior - Système de Perception pour Train Autonome 1 H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,['python']
+Alternance 2024 - Apprenti Ingénieur en Développement Logiciel All Gender H/F,Airbus,Paris - 75,Alternance,Bac +5,,False,7.0,13463.94,"['python', 'java', 'neo4j']"
+Alternance 2024 - Apprenti Ingénieur en Développement Logiciel All Gender H/F,Airbus,Toulouse - 31,Alternance,Bac +5,,False,7.0,13463.94,"['python', 'flask', 'angular', 'linux']"
+Ingénieur Développement Logiciel Senior - Système de Perception pour Train Autonome H/F,Alstom,Villeurbanne - 69,CDI,,,False,,50000.0,['python']
 Alternance - Assistant Platform Owner Servicenow H/F,Chanel,Neuilly-sur-Seine - 92,Alternance,Bac +5,,False,7.0,13463.94,[]
-24 - 25 - Apprenticeship - Cloud Engineering H/F,Amadeus,Nice - 06,Alternance,Bac +5,Secteur informatique • ESN,False,7.0,13463.94,[]
-Ingénieur.e Développement Logiciel et Jumeaux Numériques - Fdp N°978 H/F,ISAE Supaero,Toulouse - 31,CDI,Bac +5,,True,1.0,44500.0,[]
-Ingénieur Expérimenté Logiciel C++ H/F,CS Group,Aix-en-Provence - 13,CDI,,,False,,45000.0,[]
-Ingénieur-e Développement de Logiciels d'Analyse Numérique H/F,Inrae,Castanet-Tolosan - 31,CDI,Bac +5,Service public autres,False,,42500.0,[]
-Ingénieur-e en Ingénierie Logicielle H/F,Inrae,Castanet-Tolosan - 31,CDI,Bac +5,Service public autres,False,,38500.0,[]
+24 - 25 - Apprenticeship - Cloud Engineering H/F,Amadeus,Nice - 06,Alternance,Bac +5,Secteur informatique • ESN,False,7.0,13463.94,"['kubernetes', 'python', 'data science', 'corda', 'unity', 'security', 'shell', 'java', 'hadoop', 'docker', 'diversity', 'c/c++', 'machine learning', 'hbase', 'computer science']"
+Ingénieur.e Développement Logiciel et Jumeaux Numériques - Fdp N°978 H/F,ISAE Supaero,Toulouse - 31,CDI,Bac +5,,True,1.0,44500.0,"['python', '.net', 'java', 'c/c++']"
+Ingénieur Expérimenté Logiciel C++ H/F,CS Group,Aix-en-Provence - 13,CDI,,,False,,45000.0,['ios']
+Ingénieur-e Développement de Logiciels d'Analyse Numérique H/F,Inrae,Castanet-Tolosan - 31,CDI,Bac +5,Service public autres,False,,42500.0,"['python', 'fortran']"
+Ingénieur-e en Ingénierie Logicielle H/F,Inrae,Castanet-Tolosan - 31,CDI,Bac +5,Service public autres,False,,38500.0,"['python', 'symfony', 'php', 'java', 'postgresql', 'linux', 'javascript']"
 Ingenieur Software Embarque H/F,Médiane Système,Lyon - 69,CDI,,,False,,50000.0,[]
-Ingenieur Developpement Logiciel Embarque c Junior H/F,TPL Systèmes,Toulouse - 31,CDI,,,False,,38500.0,[]
-Ingenieur Developpement Logiciel Embarque c Expérimenté H/F,TPL Systèmes,Toulouse - 31,CDI,,,False,,38500.0,[]
-Front-End Device Sdk Engineer H/F,Ledger,Montpellier - 34,CDI,,,False,,57500.0,[]
-Front-End Engineer - Ledger Live H/F,Ledger,Montpellier - 34,CDI,,,False,,40000.0,[]
-CDD - Ir Ingénieur de Recherches Expert en Ingéniérie Logicielle H/F,CNRS,Valbonne - 06,CDD,Bac +5,Service public des collectivités territoriales,False,,38499.99,[]
-Développeur Java - Angular H/F,Mutuelle Interiale,Lille - 59,CDI,,,False,,40000.0,[]
-Développeur Java Confirmé H/F,Capgemini Engineering,Sophia-Antipolis - 06,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,False,1.0,47500.0,[]
+Ingenieur Developpement Logiciel Embarque c Junior H/F,TPL Systèmes,Toulouse - 31,CDI,,,False,,38500.0,"['python', 'ios']"
+Ingenieur Developpement Logiciel Embarque c Expérimenté H/F,TPL Systèmes,Toulouse - 31,CDI,,,False,,38500.0,"['python', 'ios', 'linux']"
+Front-End Device Sdk Engineer H/F,Ledger,Montpellier - 34,CDI,,,False,,57500.0,"['unity', 'github', 'ledger', 'electron', 'react native', 'github actions', 'java', 'integration', 'testing', 'github', 'react', 'apps', 'javascript']"
+Front-End Engineer - Ledger Live H/F,Ledger,Montpellier - 34,CDI,,,False,,40000.0,"['unity', 'ledger', 'electron', 'react native', 'code review', 'java', 'testing', 'react', 'apps', 'javascript']"
+CDD - Ir Ingénieur de Recherches Expert en Ingéniérie Logicielle H/F,CNRS,Valbonne - 06,CDD,Bac +5,Service public des collectivités territoriales,False,,38499.99,"['python', 'electron']"
+Développeur Java - Angular H/F,Mutuelle Interiale,Lille - 59,CDI,,,False,,40000.0,"['flutter', 'xamarin', 'angular', 'java', 'vue.js', 'node.js', 'postgresql']"
+Développeur Java Confirmé H/F,Capgemini Engineering,Sophia-Antipolis - 06,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,False,1.0,47500.0,"['product management', 'testing']"
 Architect Logiciel H/F,Segula Technologies,Trappes - 78,CDI,,,False,,47500.0,[]
-Développeur Java H/F,Haapii services,Gironde - 33,CDI,Bac +5,Secteur informatique • ESN,True,7.0,37500.0,[]
-Backend Developer H/F,Bloomays,Paris - 75,CDI,Bac +5,Services aux Entreprises,True,7.0,65000.0,[]
-Fullstack Developer H/F,Bloomays,Paris - 75,CDI,Bac +5,Services aux Entreprises,True,7.0,65000.0,[]
+Développeur Java H/F,Haapii services,Gironde - 33,CDI,Bac +5,Secteur informatique • ESN,True,7.0,37500.0,"['angular', 'java']"
+Backend Developer H/F,Bloomays,Paris - 75,CDI,Bac +5,Services aux Entreprises,True,7.0,65000.0,"['code review', 'devops']"
+Fullstack Developer H/F,Bloomays,Paris - 75,CDI,Bac +5,Services aux Entreprises,True,7.0,65000.0,"['code review', 'devops']"
 Research Associate Screening & Assay Development H/F,Lesaffre,Marcq-en-Barœul - 59,CDI,Bac +5,,False,7.0,30500.0,[]
 Data Engineer Alternance H/F,Data ScienceTech Institute,Grenoble - 38,Alternance,,,False,,13463.94,[]
 Data Engineer Alternance H/F,Data ScienceTech Institute,Paris - 75,Alternance,,,False,,19014.0,[]
@@ -349,20 +349,20 @@ Ingenieur Developpement Cedre H/F,Onera,Palaiseau - 91,CDI,Bac +5,,True,1.0,5000
 Développeur Logiciel H/F,ISERMA SEARCH,Marseille - 13,CDI,Bac +5,Services aux Entreprises,True,1.0,33500.0,[]
 Assistant Méthodes H/F,Equans,Toulouse - 31,CDI,,,False,,33500.0,[]
 Planificateur H/F,Exens Ingénierie,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,True,7.0,47500.0,[]
-Ingénieur Informatique Industrielle H/F,Onera,Avrieux - 73,CDI,Bac +5,,True,1.0,50000.0,[]
+Ingénieur Informatique Industrielle H/F,Onera,Avrieux - 73,CDI,Bac +5,,True,1.0,50000.0,['devops']
 Research Associate Flow-Cytometry - Microfluidic H/F,Lesaffre,Marcq-en-Barœul - 59,CDI,Bac +5,,False,7.0,30500.0,[]
 Développeur c Embarqué H/F,Estella Mobility,Toulouse - 31,CDI,Bac +5,Services aux Entreprises,False,7.0,39999.98,[]
-Ingénieur Cloud & Back-End CDI H/F,Cabinet Fitae,Aix-en-Provence - 13,CDI,Bac +5,Secteur informatique • ESN,True,7.0,45000.0,[]
-Iot Software Developer H/F,Smart & Connective,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,50000.0,[]
+Ingénieur Cloud & Back-End CDI H/F,Cabinet Fitae,Aix-en-Provence - 13,CDI,Bac +5,Secteur informatique • ESN,True,7.0,45000.0,"['kubernetes', 'github', 'github', 'node.js']"
+Iot Software Developer H/F,Smart & Connective,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,1.0,50000.0,"['unity', 'rust', 'linux']"
 Assistant Comptable en Cabinet H/F,Réseau Acto,Clermont-Ferrand - 63,CDI,Bac +2,Services aux Entreprises,True,1.0,27500.0,[]
-Chef de Projet Applicatifs H/F,L'Hôpital Privé du Confluent,Nantes - 44,CDI,Bac +5,Service public hospitalier,False,,37500.0,[]
-Stage - Développement d'Outils de Validation d'Un Logiciel de Traitement Audio H/F,CS Group,Le Plessis-Robinson - 92,CDI,Bac +5,Secteur informatique • ESN,False,1.0,47500.0,[]
-Référent Logiciel - Lead Technique Architecture et Projet - Environnement International - Remote Possible H/F,L2C Recrutement,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,90000.0,[]
-DevOps Engineer R&D M - F H/F,Eviden,Échirolles - 38,CDI,,,False,,37500.0,[]
-Référent Logiciel - Lead Technique Architecture et Projet - Environnement International - Remote Possible H/F,L2C Recrutement,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,90000.0,[]
+Chef de Projet Applicatifs H/F,L'Hôpital Privé du Confluent,Nantes - 44,CDI,Bac +5,Service public hospitalier,False,,37500.0,['gems']
+Stage - Développement d'Outils de Validation d'Un Logiciel de Traitement Audio H/F,CS Group,Le Plessis-Robinson - 92,CDI,Bac +5,Secteur informatique • ESN,False,1.0,47500.0,['linux']
+Référent Logiciel - Lead Technique Architecture et Projet - Environnement International - Remote Possible H/F,L2C Recrutement,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,90000.0,"['mysql', 'java', 'terraform', 'mongodb', 'docker', 'react', 'spark']"
+DevOps Engineer R&D M - F H/F,Eviden,Échirolles - 38,CDI,,,False,,37500.0,"['kubernetes', 'python', 'containers', 'github', 'integration', 'github', 'linux', 'devops']"
+Référent Logiciel - Lead Technique Architecture et Projet - Environnement International - Remote Possible H/F,L2C Recrutement,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,90000.0,"['mysql', 'java', 'terraform', 'mongodb', 'docker', 'react', 'spark']"
 Expert Méthodes Bim H/F,Fayolle,Soisy-sous-Montmorency - 95,CDI,Bac +5,,False,1.0,47500.0,[]
-Stage Développement d'Automatisation Logiciel avec Uipath H/F,Safran,Massy - 91,Stage,Bac +5,,False,7.0,13200.0,[]
-Développement C++ - Qt - Qml H/F,Altelios Technology Group,Boulogne-Billancourt - 92,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,[]
+Stage Développement d'Automatisation Logiciel avec Uipath H/F,Safran,Massy - 91,Stage,Bac +5,,False,7.0,13200.0,"['electronics', 'electron']"
+Développement C++ - Qt - Qml H/F,Altelios Technology Group,Boulogne-Billancourt - 92,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,['shell']
 Ingénieur Vérification et Validation Logiciel H/F,Framatome,Grenoble - 38,CDI,Bac +5,Secteur Energie • Environnement,True,1.0,47500.0,[]
 Senior Process Engineer H/F,ABYSS ENERGY,Paris - 75,CDI,Bac +5,Services aux Entreprises,True,,38000.0,[]
 Assistant d'Exploitation H/F,Crit,Saint-Priest - 69,CDI,Bac +2,,False,1.0,27500.0,[]
@@ -372,169 +372,169 @@ Gestionnaire de Paie H/F,LIP recrute pour LIP,Lyon 7e - 69,CDI,"Bac +3, Bac +4",
 Gestionnaire Administratif H/F,Groupe Adène,Montpellier - 34,CDI,Bac +2,Service public hospitalier,True,7.0,22404.0,[]
 Graduate Program - Ingénieur Systèmes et Logiciel Embarqué H/F,Volvo Group,Saint-Priest - 69,CDI,,,False,,45000.0,[]
 Support Engineer H/F,Ubique Systems Gmbh,Paris - 75,CDI,Bac +5,,False,1.0,45000.0,[]
-DevOps Integration Engineer R&D M - F H/F,Eviden,Échirolles - 38,CDI,,,False,,40500.0,[]
+DevOps Integration Engineer R&D M - F H/F,Eviden,Échirolles - 38,CDI,,,False,,40500.0,"['kubernetes', 'python', 'ansible', 'shell', 'integration', 'testing', 'linux', 'devops']"
 Dessinateur Projeteur H/F,Satis Jobs Center - Industrie Colmar,Habsheim - 68,CDI,Bac +2,Services aux Entreprises,False,1.0,32500.0,[]
 Expert Paie H/F,Fortify,Lyon 9e - 69,CDI,Bac +5,Secteur informatique • ESN,True,7.0,33000.0,[]
 Technicien Bureau d'Études - Photovoltaïque H/F,VINCI Energies France Infras Sud-Ouest Antilles Guyane,Agen - 47,CDI,,,False,,26400.0,[]
-Lead Développeur Node - React H/F,LR Technologies Groupe,Nantes - 44,CDI,,,False,,45000.0,[]
-Techlead DevOps H/F,Activus Group,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,True,7.0,57000.0,[]
-Pepr Numpex - Exascale Computing - Agile Program Manager H/F,CEA,Saclay - 91,CDD,Bac +5,Services aux Entreprises,True,,55000.0,[]
-Développeur Java H/F,AFD.TECH,Nantes - 44,CDI,,,False,,35000.0,[]
-Développeur Java H/F,AFD.TECH,Rennes - 35,CDI,,,False,,37500.0,[]
-Développeur Logiciel Data - Full Remote - Référence Internationale Majeure au Sein de l'Écosystème Numérique Fr H/F,L2C Recrutement,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,57500.0,[]
-Stage - Portage d'Une Librairie au Sein d'Un Logiciel de Traitement Audio H/F,CS Group,Le Plessis-Robinson - 92,CDI,Bac +5,Secteur informatique • ESN,False,1.0,47500.0,[]
-Ingénieur Développement c Embarqué H/F,Altim,Boulogne-Billancourt - 92,CDI,Bac +5,Secteur informatique • ESN,True,7.0,45000.0,[]
-Ingénieur de Développement Python - Environnement Cybersécurité H/F,LR Technologies Groupe,Nantes - 44,CDI,Bac +5,Secteur informatique • ESN,False,1.0,40000.0,[]
-Architecte Solution - Staff Engineer H/F,Activus Group,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,[]
+Lead Développeur Node - React H/F,LR Technologies Groupe,Nantes - 44,CDI,,,False,,45000.0,"['react', 'devops']"
+Techlead DevOps H/F,Activus Group,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,True,7.0,57000.0,"['kubernetes', 'python', 'ansible', 'devsecops', 'angular', 'java', 'docker', 'postgresql', 'javascript', 'devops']"
+Pepr Numpex - Exascale Computing - Agile Program Manager H/F,CEA,Saclay - 91,CDD,Bac +5,Services aux Entreprises,True,,55000.0,"['unity', 'security', 'integration', 'healthcare', 'scala']"
+Développeur Java H/F,AFD.TECH,Nantes - 44,CDI,,,False,,35000.0,['java']
+Développeur Java H/F,AFD.TECH,Rennes - 35,CDI,,,False,,37500.0,['java']
+Développeur Logiciel Data - Full Remote - Référence Internationale Majeure au Sein de l'Écosystème Numérique Fr H/F,L2C Recrutement,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,57500.0,"['machine learning', 'big data']"
+Stage - Portage d'Une Librairie au Sein d'Un Logiciel de Traitement Audio H/F,CS Group,Le Plessis-Robinson - 92,CDI,Bac +5,Secteur informatique • ESN,False,1.0,47500.0,['linux']
+Ingénieur Développement c Embarqué H/F,Altim,Boulogne-Billancourt - 92,CDI,Bac +5,Secteur informatique • ESN,True,7.0,45000.0,['c/c++']
+Ingénieur de Développement Python - Environnement Cybersécurité H/F,LR Technologies Groupe,Nantes - 44,CDI,Bac +5,Secteur informatique • ESN,False,1.0,40000.0,['python']
+Architecte Solution - Staff Engineer H/F,Activus Group,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,"['kubernetes', 'python', 'ansible', 'angular', 'java', 'docker', 'postgresql', 'javascript']"
 Développeur C - C++ - Qt Machine Spéciale - Médical H/F,Viveris.,Rungis - 94,CDI,Bac +5,Secteur informatique • ESN,True,1.0,40000.0,[]
 Chef de Projet Technique H/F,Apside,Paris - 75,CDI,,,False,,75000.0,[]
 Architecte Système Java C# Python .Net Mini d'Exp H/F,Twenty One Talents,Vélizy-Villacoublay - 78,CDI,Bac +5,Secteur informatique • ESN,True,7.0,70000.0,[]
-Pepr Numpex - Exascale Computing - Agile Scrum Master H/F,CEA,Saclay - 91,CDD,Bac +5,Services aux Entreprises,True,,47000.0,[]
-Architecte Solution H/F,Activus Group,Levallois-Perret - 92,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,[]
+Pepr Numpex - Exascale Computing - Agile Scrum Master H/F,CEA,Saclay - 91,CDD,Bac +5,Services aux Entreprises,True,,47000.0,"['unity', 'security', 'integration', 'healthcare']"
+Architecte Solution H/F,Activus Group,Levallois-Perret - 92,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,"['kubernetes', 'python', 'ansible', 'angular', 'java', 'docker', 'postgresql', 'javascript']"
 Développeur Confirmé Logiciels Scientifiques C# - Toulouse H/F,Capgemini,Toulouse - 31,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,False,1.0,39999.98,[]
 Assistant Comptable en Alternance BTS Comptabilité - Île-De-France H/F,,Paris 2e - 75,Alternance,,,False,,13463.94,[]
 Alternance - Software Asset Manager Licensing H/F,Crédit Agricole Assurances,Paris 15e - 75,Alternance,"Bac +3, Bac +4",,True,7.0,13463.94,[]
-Développeur C++ Domaine Défense H/F,Scalian,Toulon - 83,CDI,Bac +5,Secteur informatique • ESN,False,7.0,45000.0,[]
-Ingénieur Développement C# - .Net - Bagnols H/F,Capgemini,Bagnols-sur-Cèze - 30,CDI,Bac +5,Secteur informatique • ESN,False,1.0,34560.0,[]
-Développeur - Concepteur Logiciel Embarqué - Développement Langage c Temps Réel - Vélizy-Villacoublay H/F,LGM,Vélizy-Villacoublay - 78,CDI,,,False,,47500.0,[]
+Développeur C++ Domaine Défense H/F,Scalian,Toulon - 83,CDI,Bac +5,Secteur informatique • ESN,False,7.0,45000.0,['c/c++']
+Ingénieur Développement C# - .Net - Bagnols H/F,Capgemini,Bagnols-sur-Cèze - 30,CDI,Bac +5,Secteur informatique • ESN,False,1.0,34560.0,"['.net', 'angular']"
+Développeur - Concepteur Logiciel Embarqué - Développement Langage c Temps Réel - Vélizy-Villacoublay H/F,LGM,Vélizy-Villacoublay - 78,CDI,,,False,,47500.0,['ios']
 Ingénieur Ihm - C++ - Qt H/F,Scalian,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,False,7.0,45000.0,[]
 Ingénieur Radio Fréquence - 082022 - Aw2s - Kqn H/F,Serma Ingénierie,Nouvelle-Aquitaine,CDI,Bac +5,Secteur informatique • ESN,True,7.0,27600.0,[]
-Développeur C++ Domaine Aéronautique H/F,Scalian,Vitrolles - 13,CDI,Bac +5,Secteur informatique • ESN,False,7.0,40000.0,[]
-Ingénieur Développeur Software Embarqué Temps Réel Rtos & Linux H/F,Celad,La Ciotat - 13,CDI,Bac +5,Secteur informatique • ESN,True,1.0,38500.0,[]
+Développeur C++ Domaine Aéronautique H/F,Scalian,Vitrolles - 13,CDI,Bac +5,Secteur informatique • ESN,False,7.0,40000.0,['c/c++']
+Ingénieur Développeur Software Embarqué Temps Réel Rtos & Linux H/F,Celad,La Ciotat - 13,CDI,Bac +5,Secteur informatique • ESN,True,1.0,38500.0,['linux']
 Architecte Soluton Digital Commerce H/F,Hardis Group,Paris - 75,CDI,,,False,,37500.0,[]
-Qa Engineer H/F,Team.is,Cestas - 33,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,False,1.0,51000.0,[]
+Qa Engineer H/F,Team.is,Cestas - 33,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,False,1.0,51000.0,"['java', 'selenium', 'javascript']"
 Technicien Géomètre Foncier H/F,Geofit,Templemars - 59,CDI,Bac +2,Secteur informatique • ESN,False,,37500.0,[]
 Ingénieur Maintenance H/F,CLAREBOUT,Bailleul - 59,CDI,"Bac +3, Bac +4",,False,1.0,37500.0,[]
-Développeur Software - Intelligence Artificielle H/F,Viveris.,Rungis - 94,CDI,Bac +5,Secteur informatique • ESN,True,1.0,40000.0,[]
+Développeur Software - Intelligence Artificielle H/F,Viveris.,Rungis - 94,CDI,Bac +5,Secteur informatique • ESN,True,1.0,40000.0,['devops']
 CDI - Ingénieur Logiciel Embarqué Véhicule Autonome H/F,Naval Group,Saint-Tropez - 83,CDI,Bac +5,,False,1.0,48500.0,[]
-Ingénieur Développeur Software Linux Embarqué H/F,Celad,La Ciotat - 13,Indépendant/Freelance,Bac +5,Secteur informatique • ESN,False,1.0,375.0,[]
-Ingénieur Microprogramme - Firmware H/F,NAVA ENGINEERING,Clamart - 92,CDI,Bac +5,Secteur Energie • Environnement,True,7.0,50000.0,[]
+Ingénieur Développeur Software Linux Embarqué H/F,Celad,La Ciotat - 13,Indépendant/Freelance,Bac +5,Secteur informatique • ESN,False,1.0,375.0,['linux']
+Ingénieur Microprogramme - Firmware H/F,NAVA ENGINEERING,Clamart - 92,CDI,Bac +5,Secteur Energie • Environnement,True,7.0,50000.0,"['python', 'devops']"
 Ingénieur Électronicien Confirmé H/F,GENIPLURI,Saint-Égrève - 38,CDI,Bac +5,Services aux Entreprises,False,7.0,42000.0,[]
 Chargé de Clientèle en Paie H/F,Adsearch,Albi - 81,CDI,Bac +2,Services aux Entreprises,True,1.0,36500.0,[]
-Senior Python Developer F - M - D H/F,IDnow,Cesson-Sévigné - 35,CDI,,,False,,37500.0,[]
+Senior Python Developer F - M - D H/F,IDnow,Cesson-Sévigné - 35,CDI,,,False,,37500.0,['python']
 Développeur C++ Confirmé H/F,Team.is,Saint-Herblain - 44,CDI,Bac +2,Secteur informatique • ESN,False,1.0,39000.0,[]
 Développeur C++ Confirmé H/F,Team.is,Nantes - 44,CDI,Bac +2,Secteur informatique • ESN,False,1.0,39000.0,[]
-Platform Security Engineer H/F,,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,7.0,45000.0,[]
+Platform Security Engineer H/F,,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,7.0,45000.0,"['kubernetes', 'security', 'devsecops', 'windows', 'docker', 'linux']"
 Responsable Comptable H/F,Humanae,Saint-Jean-de-Maurienne - 73,CDI,,,False,,42500.0,[]
 Ingénieur Développement Banc de Test Rha H/F,STYREL,Annecy - 74,CDI,Bac +5,,True,1.0,34200.0,[]
-Ingénieur Cybersécurité H/F,CEA,Haute-Garonne - 31,CDD,Bac +5,,True,,37680.0,[]
-Ingénieur DevOps H/F,Viveris.,Rungis - 94,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,[]
-R&D Design Engineer H/F,Groupe Atlantic,Vendée - 85,CDI,Bac +5,,True,,35500.0,[]
-Ingénieur Développement Applicatif C++ Java H/F,Apside,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,1.0,50000.0,[]
+Ingénieur Cybersécurité H/F,CEA,Haute-Garonne - 31,CDD,Bac +5,,True,,37680.0,['security']
+Ingénieur DevOps H/F,Viveris.,Rungis - 94,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42500.0,['devops']
+R&D Design Engineer H/F,Groupe Atlantic,Vendée - 85,CDI,Bac +5,,True,,35500.0,"['corda', 'al design']"
+Ingénieur Développement Applicatif C++ Java H/F,Apside,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,1.0,50000.0,['java']
 CDI - Ingénieur d'Études R&D en Algorithmie H/F,Naval Group,Ollioules - 83,CDI,Bac +5,,False,,43000.0,[]
 Comptable Gérance Confirmé CDD H/F,Adsearch,Bordeaux - 33,CDD,Bac,Services aux Entreprises,False,1.0,36500.0,[]
-Ingénieur Développeur Software Embarqué Temps Réel Rtos & Linux H/F,Celad,La Ciotat - 13,Indépendant/Freelance,Bac +5,Secteur informatique • ESN,True,1.0,365.0,[]
+Ingénieur Développeur Software Embarqué Temps Réel Rtos & Linux H/F,Celad,La Ciotat - 13,Indépendant/Freelance,Bac +5,Secteur informatique • ESN,True,1.0,365.0,['linux']
 Technicien Bureau d'Etude Electricite Industrielle H/F,Toma Interim,Le Chambon-Feugerolles - 42,CDI,"Bac +3, Bac +4",Services aux Entreprises,False,,32500.0,[]
 Analyste Fonctionnel - AMOA H/F,Pro à Pro,Montauban - 82,CDI,Bac +5,,True,1.0,47000.0,[]
-Ingénieur Radio Fréquence - 032024 - Aw2s - Aai H/F,Serma Ingénierie,Nouvelle-Aquitaine,CDI,Bac +5,Secteur informatique • ESN,True,,27600.0,[]
-Scrum Manager H/F,Groupagora,Montpellier - 34,CDI,Bac +5,Secteur informatique • ESN,False,7.0,62500.0,[]
+Ingénieur Radio Fréquence - 032024 - Aw2s - Aai H/F,Serma Ingénierie,Nouvelle-Aquitaine,CDI,Bac +5,Secteur informatique • ESN,True,,27600.0,['electron']
+Scrum Manager H/F,Groupagora,Montpellier - 34,CDI,Bac +5,Secteur informatique • ESN,False,7.0,62500.0,['devops']
 CDI - Développeur Logiciel Temps Réel Embarqué H/F,Naval Group,Saint-Tropez - 83,CDI,Bac +5,,False,1.0,48500.0,[]
-DevOps H/F,ALTEN,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,,40000.0,[]
-Ingénieur Algorithmes et Logiciel Embarqué en Robotique Mobile H/F,ALSEAMAR,Rousset - 13,CDI,Bac +5,,True,7.0,40500.0,[]
-Ingénieur Développement Test et Validation Logiciel H/F,Altelios Technology Group,Buc - 78,CDI,Bac +5,Secteur informatique • ESN,False,1.0,43000.0,[]
-Ingénieur Développement Sous Linux Embarqué 032024 - BE - Mbn H/F,Serma Ingénierie,Toulouse - 31,CDI,Bac +5,,False,1.0,50.0,[]
+DevOps H/F,ALTEN,Valbonne - 06,CDI,Bac +5,Secteur informatique • ESN,True,,40000.0,"['electronics', 'security', 'electron', 'mysql', 'java', 'hadoop', 'docker', 'healthcare', 'big data', 'spark', 'linux', 'devops']"
+Ingénieur Algorithmes et Logiciel Embarqué en Robotique Mobile H/F,ALSEAMAR,Rousset - 13,CDI,Bac +5,,True,7.0,40500.0,['python']
+Ingénieur Développement Test et Validation Logiciel H/F,Altelios Technology Group,Buc - 78,CDI,Bac +5,Secteur informatique • ESN,False,1.0,43000.0,['csv']
+Ingénieur Développement Sous Linux Embarqué 032024 - BE - Mbn H/F,Serma Ingénierie,Toulouse - 31,CDI,Bac +5,,False,1.0,50.0,['linux']
 CDI - Concepteur Logiciel Expérimenté H/F,Naval Group,Ollioules - 83,CDI,Bac +5,,False,1.0,43000.0,[]
 Alternance - BTS Electrotechnique - Maitrise des Energies H/F,Naval Group,Nantes - 44,Alternance,Bac +2,,False,7.0,13463.94,[]
-CDI - Ingénieur Confirmé Intelligence Drone Embarquée H/F,Naval Group,Ollioules - 83,CDI,Bac +5,,False,1.0,30500.0,[]
-Ingénieur Développement C++ - Secteur Défense H/F,SII Ile de France,Paris - La Défense,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,[]
+CDI - Ingénieur Confirmé Intelligence Drone Embarquée H/F,Naval Group,Ollioules - 83,CDI,Bac +5,,False,1.0,30500.0,['ios']
+Ingénieur Développement C++ - Secteur Défense H/F,SII Ile de France,Paris - La Défense,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,"['ios', 'c/c++', 'linux']"
 CDI - Ingénieur Logiciel Temps Réel Embarqué Système de Lancement H/F,Naval Group,Saint-Tropez - 83,CDI,Bac +5,,False,1.0,48500.0,[]
 Assistant Méthodes - Exploitation H/F,Equans,Toulouse - 31,CDI,,,False,,33500.0,[]
-Ingénieur DevOps - DevOps Engineer H/F,ALTEN,Antibes - 06,CDI,Bac +5,Secteur informatique • ESN,True,,40000.0,[]
+Ingénieur DevOps - DevOps Engineer H/F,ALTEN,Antibes - 06,CDI,Bac +5,Secteur informatique • ESN,True,,40000.0,['devops']
 Responsable Département Projets H/F,KARDEX FRANCE,Fontenay-sous-Bois - 94,CDI,Bac +5,,True,7.0,60000.0,[]
 Chargé·e de Missions Modélisation de Données RH H/F,MAIRIE DE VILLEJUIF,Villejuif - 94,CDD,Bac +5,Service public des collectivités territoriales,False,1.0,34500.0,[]
-Directeur Technique H/F,Océane Consulting,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,62500.0,[]
+Directeur Technique H/F,Océane Consulting,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,7.0,62500.0,['devops']
 Commercial - Alternance H/F,SK2H,Rennes - 35,Alternance,,,False,,20150.0,[]
-Architecte Solution H/F,Activus Group,Levallois-Perret - 92,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,[]
+Architecte Solution H/F,Activus Group,Levallois-Perret - 92,CDI,Bac +5,Secteur informatique • ESN,True,7.0,60000.0,"['kubernetes', 'python', 'ansible', 'angular', 'java', 'docker', 'postgresql', 'javascript']"
 Infographiste H/F,Manpower,Oyonnax - 01,CDI,"Bac +3, Bac +4",Services aux Entreprises,False,1.0,26400.0,[]
-Ingénieur Génie Electrique H/F,Ogmios developpement,Hauts-de-Seine - 92,CDI,Bac +5,Services aux Entreprises,True,1.0,40000.0,[]
-Ingénieur Développement Java - Secteur Défense H/F,SII Ile de France,Paris - La Défense,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,[]
-Developpeur Logiciel H/F,ARIAL INDUSTRIES,Pau - 64,CDI,Bac +5,Secteur informatique • ESN,False,,40000.0,[]
+Ingénieur Génie Electrique H/F,Ogmios developpement,Hauts-de-Seine - 92,CDI,Bac +5,Services aux Entreprises,True,1.0,40000.0,"['python', 'devops']"
+Ingénieur Développement Java - Secteur Défense H/F,SII Ile de France,Paris - La Défense,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,['java']
+Developpeur Logiciel H/F,ARIAL INDUSTRIES,Pau - 64,CDI,Bac +5,Secteur informatique • ESN,False,,40000.0,"['python', 'shell', 'data engineering', 'css', 'data visualization']"
 Analyste Fonctionnel H/F,Utigroup,Strasbourg - 67,CDI,Bac +5,Secteur informatique • ESN,False,1.0,40000.0,[]
 Ingenieur Composants Optiques Telecom Terminal Wdm H/F,NAVA ENGINEERING,Nozay - 91,CDI,Bac +5,Secteur informatique • ESN,True,1.0,35483.2,[]
-Développeur Java Fullstack H/F,Extia,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,47500.0,[]
-Directeur Technique Applicatif H/F,Océane Consulting,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,7.0,62500.0,[]
+Développeur Java Fullstack H/F,Extia,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,47500.0,"['kubernetes', 'angular', 'java', 'docker', 'react']"
+Directeur Technique Applicatif H/F,Océane Consulting,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,7.0,62500.0,['devops']
 Ingénieur - Ingénieure Logiciel Embarqué H/F,FEELINKS,Labège - 31,CDI,Bac +2,Services aux Entreprises,True,1.0,47499.98,[]
 Ingénieur - Ingénieure Logiciel Embarqué H/F,FEELINKS,Labège - 31,CDI,Bac +2,Services aux Entreprises,True,1.0,47499.98,[]
 Gestionnaire de Paie H/F,LHH Recruitment Solutions,Pornichet - 44,CDI,"Bac +3, Bac +4",Services aux Entreprises,False,7.0,27500.0,[]
 Ingénieur Géomètre H/F,Colas,Montlhéry - 91,CDI,Bac +5,,False,,32500.0,[]
-Ingénieur Electronique Numérique - 102022 - Aw2s - Kqn H/F,Serma Ingénierie,Nouvelle-Aquitaine,CDI,Bac +5,Secteur informatique • ESN,True,7.0,27600.0,[]
-Cloud & DevOps Architect H/F,Open,Levallois-Perret - 92,CDI,,,False,,67500.0,[]
-Industrial Test Engineering Manager H/F,Valeo,Créteil - 94,CDI,Bac +5,,True,,62500.0,[]
+Ingénieur Electronique Numérique - 102022 - Aw2s - Kqn H/F,Serma Ingénierie,Nouvelle-Aquitaine,CDI,Bac +5,Secteur informatique • ESN,True,7.0,27600.0,['electron']
+Cloud & DevOps Architect H/F,Open,Levallois-Perret - 92,CDI,,,False,,67500.0,"['ansible', 'microservices', 'angular', 'java', 'docker', 'react', 'devops']"
+Industrial Test Engineering Manager H/F,Valeo,Créteil - 94,CDI,Bac +5,,True,,62500.0,"['python', 'unity', 'electron', 'diversity']"
 Responsable Atelier Usinage H/F,Start People,Avoine - 37,CDI,"Bac +3, Bac +4",Services aux Entreprises,True,,32500.0,[]
-Ingénieur Testeur en Logiciel Embarqué - Secteur Iot H/F,Astek,Paris - 75,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,,39500.0,[]
+Ingénieur Testeur en Logiciel Embarqué - Secteur Iot H/F,Astek,Paris - 75,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,,39500.0,['python']
 Ingénieur Software Embarqué H/F,Rhéobie,Savigny - 69,CDI,Bac +5,Services aux Entreprises,True,7.0,37800.0,[]
-Ingénieur - E Développement Logiciel H/F,Apside,Rennes - 35,CDI,,,False,,37500.0,[]
-Ingénieur Développement Simulateur de Vol C - C++ - Secteur Aéronautique H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,50000.0,[]
-Administrateur Base de Données H/F,Axians Outsourcing Sud Ouest,Montauban - 82,CDI,Bac +5,,False,,41000.0,[]
+Ingénieur - E Développement Logiciel H/F,Apside,Rennes - 35,CDI,,,False,,37500.0,"['python', 'c/c++', 'linux']"
+Ingénieur Développement Simulateur de Vol C - C++ - Secteur Aéronautique H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,50000.0,['c/c++']
+Administrateur Base de Données H/F,Axians Outsourcing Sud Ouest,Montauban - 82,CDI,Bac +5,,False,,41000.0,['postgresql']
 Tech-Lead Mainframe H/F,BNP Paribas,Nantes - 44,CDI,,,False,,60000.0,[]
-Ingénieur Développement Simulateur de Vol C - C++ - Secteur Aéronautique H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,50000.0,[]
+Ingénieur Développement Simulateur de Vol C - C++ - Secteur Aéronautique H/F,Astek,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,50000.0,['c/c++']
 Ingénieur Contrôle Moteur Model Based Design H/F,Expleo,Montigny-le-Bretonneux - 78,CDI,Bac +5,Secteur informatique • ESN,True,,45000.0,[]
-Ingénieur d'Affaires en Ingénierie Logicielle - Centre de Services H/F,Silkhom,Villeurbanne - 69,CDI,Bac +5,Services aux Entreprises,True,,55000.0,[]
+Ingénieur d'Affaires en Ingénierie Logicielle - Centre de Services H/F,Silkhom,Villeurbanne - 69,CDI,Bac +5,Services aux Entreprises,True,,55000.0,"['c/c++', 'linux']"
 Senior Business Developer H/F,Ecair,Paris - 75,CDI,Bac +5,Secteur Energie • Environnement,True,7.0,36000.0,[]
-Ingénieur Testeur en Logiciel Embarqué - Secteur Iot H/F,Astek,Paris - 75,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,,39500.0,[]
-Ingénieur en Développement C++ - C# H/F,EURO-INFORMATION PRODUCTION,Strasbourg - 67,CDI,Bac +5,,True,,42500.0,[]
-Ingénieur Informatique en Prestation de Services ESN H/F,Tana-Tech,Bordeaux - 33,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42000.0,[]
+Ingénieur Testeur en Logiciel Embarqué - Secteur Iot H/F,Astek,Paris - 75,CDI,"Bac +3, Bac +4",Secteur informatique • ESN,True,,39500.0,['python']
+Ingénieur en Développement C++ - C# H/F,EURO-INFORMATION PRODUCTION,Strasbourg - 67,CDI,Bac +5,,True,,42500.0,"['kubernetes', 'python', 'cassandra', 'microservices', '.net', 'php', 'mysql', 'java', 'mongodb', 'c/c++', 'hbase', 'rust', 'javascript']"
+Ingénieur Informatique en Prestation de Services ESN H/F,Tana-Tech,Bordeaux - 33,CDI,Bac +5,Secteur informatique • ESN,True,1.0,42000.0,"['.net', 'angular', 'java']"
 Chef de Projet H/F,Akkodis Talent,Petite-Forêt - 59,CDI,Bac +5,Services aux Entreprises,False,,61000.0,[]
-Information Analyst H/F,Eviden,Aix-en-Provence - 13,CDI,Bac +5,Secteur informatique • ESN,True,,37000.0,[]
-Chef de Projet Électronique - Domaine de l'Iot H/F,BlueDocker,Lyon - 69,CDI,Bac +5,Services aux Entreprises,True,,47500.0,[]
-Chef de Projet Électronique - Domaine de l'Iot H/F,Silkhom,Lyon - 69,CDI,Bac +5,Services aux Entreprises,True,,57500.0,[]
-Ingénieur Développement Système et Réseau H/F,Eviden,Échirolles - 38,CDI,,,False,,40000.0,[]
-Développeur Java H/F,Carrefour,Massy - 91,CDI,Bac +5,,True,,50000.0,[]
-Graduate Program - Ingénieur Systèmes et Logiciel Embarqué H/F,Volvo Group,Saint-Priest - 69,CDI,,,False,,45000.0,[]
-Ingénieur Développement Java H/F,SII Ile de France,Paris - La Défense,CDI,Bac +5,Secteur informatique • ESN,True,1.0,41000.0,[]
-Ingénieur d'Affaires en Ingénierie Logicielle - Centre de Services H/F,Silkhom,Villeurbanne - 69,CDI,Bac +5,Services aux Entreprises,True,,55000.0,[]
-Electrical Engineering Manager- Distributed Solar + Storage H/F,ENGIE,Us - 95,CDI,Bac +5,Secteur Energie • Environnement,False,,62500.0,[]
-Design Engineer Radiological Characterization Bristol H/F,ENGIE,Saint-Ouen-sur-Seine - 93,CDI,Bac +5,Secteur Energie • Environnement,False,,28500.0,[]
+Information Analyst H/F,Eviden,Aix-en-Provence - 13,CDI,Bac +5,Secteur informatique • ESN,True,,37000.0,"['ios', 'java']"
+Chef de Projet Électronique - Domaine de l'Iot H/F,BlueDocker,Lyon - 69,CDI,Bac +5,Services aux Entreprises,True,,47500.0,['electron']
+Chef de Projet Électronique - Domaine de l'Iot H/F,Silkhom,Lyon - 69,CDI,Bac +5,Services aux Entreprises,True,,57500.0,['electron']
+Ingénieur Développement Système et Réseau H/F,Eviden,Échirolles - 38,CDI,,,False,,40000.0,"['python', 'linux', 'devops']"
+Développeur Java H/F,Carrefour,Massy - 91,CDI,Bac +5,,True,,50000.0,"['product management', 'java', 'apps', 'devops']"
+Graduate Program - Ingénieur Systèmes et Logiciel Embarqué H/F,Volvo Group,Saint-Priest - 69,CDI,,,False,,45000.0,['c/c++']
+Ingénieur Développement Java H/F,SII Ile de France,Paris - La Défense,CDI,Bac +5,Secteur informatique • ESN,True,1.0,41000.0,"['java', 'docker', 'postgresql', 'linux', 'devops']"
+Ingénieur d'Affaires en Ingénierie Logicielle - Centre de Services H/F,Silkhom,Villeurbanne - 69,CDI,Bac +5,Services aux Entreprises,True,,55000.0,"['python', '.net', 'php', 'java']"
+Electrical Engineering Manager- Distributed Solar + Storage H/F,ENGIE,Us - 95,CDI,Bac +5,Secteur Energie • Environnement,False,,62500.0,"['corda', 'unity', 'diversity', 'al design']"
+Design Engineer Radiological Characterization Bristol H/F,ENGIE,Saint-Ouen-sur-Seine - 93,CDI,Bac +5,Secteur Energie • Environnement,False,,28500.0,"['python', 'unity', 'al design', 'rust']"
 Technicien Géomètre-Topographe H/F,"LTD - Métiers de l'encadrement de chantier TP, de la VRD IDF, Géomètre-Topographe",Brest - 29,CDI,Bac +2,Services aux Entreprises,False,,30500.0,[]
 Technicien Géomètre-Topographe H/F,"LTD - Métiers de l'encadrement de chantier TP, de la VRD IDF, Géomètre-Topographe",Lille - 59,CDI,Bac +2,Services aux Entreprises,False,,26400.0,[]
 Technicien Géomètre-Topographe H/F,"LTD - Métiers de l'encadrement de chantier TP, de la VRD IDF, Géomètre-Topographe",Saint-Hilaire-de-Riez - 85,CDI,Bac +2,Services aux Entreprises,False,,26500.0,[]
 Technicien Géomètre-Topographe H/F,"LTD - Métiers de l'encadrement de chantier TP, de la VRD IDF, Géomètre-Topographe",Cher - 18,CDI,Bac +2,Services aux Entreprises,False,,27500.0,[]
 Technicien Géomètre-Topographe H/F,"LTD - Métiers de l'encadrement de chantier TP, de la VRD IDF, Géomètre-Topographe",Lorient - 56,CDI,Bac +2,Services aux Entreprises,False,,27000.0,[]
-Lead Dev Python H/F,Michael Page,Paris 17e - 75,CDI,Bac +5,Services aux Entreprises,False,1.0,82500.0,[]
+Lead Dev Python H/F,Michael Page,Paris 17e - 75,CDI,Bac +5,Services aux Entreprises,False,1.0,82500.0,"['python', 'devops']"
 Technicien Géomètre Foncier H/F,"LTD - Métiers de l'encadrement de chantier TP, de la VRD IDF, Géomètre-Topographe",Hauts-de-Seine - 92,CDI,Bac +2,Services aux Entreprises,False,,27500.0,[]
 Ingénieur Bureau d'Études - Méthodes H/F,Fed Engineering,Franconville - 95,CDI,Bac +5,,False,1.0,50000.0,[]
 Ingénieur Développement C++ - Qt H/F,Groupagora,Rennes - 35,CDI,Bac +5,Secteur informatique • ESN,True,7.0,44500.0,[]
-Profil Cockpit Systems Engineer - Avion du Futur H/F,Talents Occitanie,Haute-Garonne - 31,CDI,Bac +5,Services aux Entreprises,False,,35000.0,[]
-Profilspace Systems Engineer - Newspace H/F,Talents Occitanie,Haute-Garonne - 31,CDI,Bac +5,Services aux Entreprises,False,,35000.0,[]
+Profil Cockpit Systems Engineer - Avion du Futur H/F,Talents Occitanie,Haute-Garonne - 31,CDI,Bac +5,Services aux Entreprises,False,,35000.0,['integration']
+Profilspace Systems Engineer - Newspace H/F,Talents Occitanie,Haute-Garonne - 31,CDI,Bac +5,Services aux Entreprises,False,,35000.0,['integration']
 Expert Infrastructure Santé H/F,Michael Page,Versailles - 78,CDI,Bac +5,Services aux Entreprises,False,1.0,55000.0,[]
 Ingénieur Développement C++ - Qt H/F,Groupagora,Lorient - 56,CDI,Bac +5,Secteur informatique • ESN,True,7.0,42500.0,[]
-Ingénieur Informatique Industrielle H/F,Off Nat Etudes Recherches Aerospatiale,Modane - 73,CDI,Bac +5,Secteur informatique • ESN,False,,50000.0,[]
+Ingénieur Informatique Industrielle H/F,Off Nat Etudes Recherches Aerospatiale,Modane - 73,CDI,Bac +5,Secteur informatique • ESN,False,,50000.0,"['python', 'windows', 'linux', 'devops', 'fortran']"
 Qa Inspection In Supply Chain Management H/F,LR Technologies Groupe,France,CDI,Bac +5,Services aux Entreprises,True,7.0,35000.0,[]
-Tech Lead React H/F,HR Team,France,CDI,Bac +5,Secteur informatique • ESN,False,7.0,70000.0,[]
-Référent Logiciel - Lead Technique Architecture et Projet - Environnement International - Remote Possible H/F,L2C Recrutement,France,CDI,Bac +5,Secteur informatique • ESN,True,7.0,77499.98,[]
-Développeur Logiciel Data - Full Remote - Référence Majeure au Sein de l'Écosystème Numérique Fr H/F,L2C Recrutement,France,CDI,Bac +5,Secteur informatique • ESN,True,7.0,62499.99,[]
-DevOps Engineer Storage Team Feature Flex - Remote H/F,Iliad,Paris - 75,CDI,,,False,,67500.0,[]
-Backend Developer C# .Net Core - CDI - F - M H/F,veepee_france,Paris - 75,CDI,Bac +5,,False,,47500.0,[]
-DevOps - Platform Engineer H/F,Virtuo,Paris - 75,CDI,,,False,,67500.0,[]
-Ingénieur Intégration Algorithms And Machine Learning H/F,Netatmo,Boulogne-Billancourt - 92,CDI,Bac +5,,False,,35000.0,[]
-Full-Stack Engineer Python - React - Industry Team M - F - D H/F,Deezer,Paris - 75,CDI,Bac +5,,False,,47500.0,[]
-Product Engineer - Perception System For Autonomous Train F - M - X H/F,Alstom,Villeurbanne - 69,CDI,,,False,,45000.0,[]
-Qa Engineer H/F,PriceHubble,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,,40000.0,[]
-Engineering Manager - Systems Development H/F,Scaleway,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,,62500.0,[]
-Customer Success Manager F - M H/F,Newfund,Lyon - 69,CDI,"Bac +3, Bac +4",,True,,37000.0,[]
-Data Engineer Scala - Spark Senior H/F,Itnovem,Nantes - 44,CDI,,,False,,42500.0,[]
-Maintenance And Mechanical Engineer La Ciotat Fr 13600 H/F,Jobs2web,La Ciotat - 13,CDI,Bac +5,Secteur informatique • ESN,False,,42500.0,[]
-Service Reliability Engineer DevOps - Paris H/F,Deepki,Paris - 75,CDI,,,False,,67500.0,[]
-Senior Frontend Engineer - Discover Squad H/F,BlaBlaCar,Paris - 75,CDI,"Bac +3, Bac +4",,True,,45000.0,[]
-Dev Senior Front React H/F,Adevinta,Nantes - 44,CDI,,,False,,35000.0,[]
-Technicien de Mise en Service CDI H/F,Tetra Pak,Puteaux - 92,CDI,"Bac +3, Bac +4",,False,,29000.0,[]
-Qa Engineer H/F,Ledger,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,40000.0,[]
-DevOps Engineer - Engineering Tools All Genders H/F,Dailymotion,Paris - 75,CDI,,,False,,67500.0,[]
-CDI - Ingénieur Développement de Cartes Électroniques M - F H/F,STMicroelectronics,Sophia-Antipolis - 06,CDI,Bac +5,,False,1.0,50000.0,[]
-Account Executive Expert - SAP Digital Supply Chain Levallois-Perret Fr 92300 H/F,Jobs2web,Levallois-Perret - 92,CDI,,,False,,48000.0,[]
-Backend Developer .Net Core - CDI H/F,veepee_france,Paris - 75,CDI,Bac +5,,False,,47500.0,[]
+Tech Lead React H/F,HR Team,France,CDI,Bac +5,Secteur informatique • ESN,False,7.0,70000.0,"['react', 'devops']"
+Référent Logiciel - Lead Technique Architecture et Projet - Environnement International - Remote Possible H/F,L2C Recrutement,France,CDI,Bac +5,Secteur informatique • ESN,True,7.0,77499.98,"['mysql', 'java', 'terraform', 'mongodb', 'docker', 'react', 'spark']"
+Développeur Logiciel Data - Full Remote - Référence Majeure au Sein de l'Écosystème Numérique Fr H/F,L2C Recrutement,France,CDI,Bac +5,Secteur informatique • ESN,True,7.0,62499.99,"['machine learning', 'big data']"
+DevOps Engineer Storage Team Feature Flex - Remote H/F,Iliad,Paris - 75,CDI,,,False,,67500.0,['kubernetes']
+Backend Developer C# .Net Core - CDI - F - M H/F,veepee_france,Paris - 75,CDI,Bac +5,,False,,47500.0,"['unity', 'microservices', '.net', 'integration', 'diversity', 'postgresql', 'scala']"
+DevOps - Platform Engineer H/F,Virtuo,Paris - 75,CDI,,,False,,67500.0,"['kubernetes', 'containers', 'unity', 'security', 'java', 'mongodb', 'diversity', 'linux', 'javascript', 'devops']"
+Ingénieur Intégration Algorithms And Machine Learning H/F,Netatmo,Boulogne-Billancourt - 92,CDI,Bac +5,,False,,35000.0,"['electronics', 'security', 'electron', 'computer vision', 'integration', 'artificial intelligence', 'machine learning', 'perl', 'computer science', 'scala']"
+Full-Stack Engineer Python - React - Industry Team M - F - D H/F,Deezer,Paris - 75,CDI,Bac +5,,False,,47500.0,"['kubernetes', 'python', 'unity', 'jquery', 'microservices', 'mysql', 'docker', 'diversity', 'back-end development', 'react', 'big data', 'scala']"
+Product Engineer - Perception System For Autonomous Train F - M - X H/F,Alstom,Villeurbanne - 69,CDI,,,False,,45000.0,"['python', 'unity', 'datasets', 'security', 'computer vision', 'integration', 'testing', 'artificial intelligence', 'computer science']"
+Qa Engineer H/F,PriceHubble,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,,40000.0,"['analytics', 'python', 'machine learning', 'big data', 'backbone', 'computer science']"
+Engineering Manager - Systems Development H/F,Scaleway,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,False,,62500.0,"['nginx', 'python', 'ansible', 'microservices', 'docker', 'testing', 'postgresql', 'linux', 'devops']"
+Customer Success Manager F - M H/F,Newfund,Lyon - 69,CDI,"Bac +3, Bac +4",,True,,37000.0,"['unity', 'integration']"
+Data Engineer Scala - Spark Senior H/F,Itnovem,Nantes - 44,CDI,,,False,,42500.0,"['data science', 'ansible', 'data engineering', 'spark', 'scala']"
+Maintenance And Mechanical Engineer La Ciotat Fr 13600 H/F,Jobs2web,La Ciotat - 13,CDI,Bac +5,Secteur informatique • ESN,False,,42500.0,"['unity', 'al design', 'rust']"
+Service Reliability Engineer DevOps - Paris H/F,Deepki,Paris - 75,CDI,,,False,,67500.0,"['influxdb', 'python', 'ansible', 'containers', 'unity', 'security', 'ios', 'code review', 'terraform', 'mongodb', 'docker', 'programming languages', 'testing', 'linux', 'devops']"
+Senior Frontend Engineer - Discover Squad H/F,BlaBlaCar,Paris - 75,CDI,"Bac +3, Bac +4",,True,,45000.0,"['html5', 'kubernetes', 'web design', 'unity', 'css', 'web performance optimization', 'code review', 'docker', 'diversity', 'react', 'node.js']"
+Dev Senior Front React H/F,Adevinta,Nantes - 44,CDI,,,False,,35000.0,"['corda', 'unity', 'css', 'angular', 'code review', 'java', 'diversity', 'testing', 'react', 'javascript', 'devops']"
+Technicien de Mise en Service CDI H/F,Tetra Pak,Puteaux - 92,CDI,"Bac +3, Bac +4",,False,,29000.0,"['unity', 'electronics', 'electron', 'diversity']"
+Qa Engineer H/F,Ledger,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,40000.0,"['kubernetes', 'containers', 'unity', 'ledger', 'ios', 'nix', 'docker', 'testing', 'rust']"
+DevOps Engineer - Engineering Tools All Genders H/F,Dailymotion,Paris - 75,CDI,,,False,,67500.0,"['kubernetes', 'python', 'containers', 'microservices', 'mysql', 'integration', 'terraform', 'linux', 'devops']"
+CDI - Ingénieur Développement de Cartes Électroniques M - F H/F,STMicroelectronics,Sophia-Antipolis - 06,CDI,Bac +5,,False,1.0,50000.0,"['electronics', 'security', 'electron']"
+Account Executive Expert - SAP Digital Supply Chain Levallois-Perret Fr 92300 H/F,Jobs2web,Levallois-Perret - 92,CDI,,,False,,48000.0,"['analytics', 'unity', 'economics', 'machine learning']"
+Backend Developer .Net Core - CDI H/F,veepee_france,Paris - 75,CDI,Bac +5,,False,,47500.0,"['.net', 'java', 'integration', 'mongodb', 'diversity', 'react', 'postgresql', 'javascript', 'scala']"
 Architecte Fonctionnel - Urbaniste Si H/F,Boulanger,Lesquin - 59,CDI,Bac +5,,False,7.0,62500.0,[]
-Ml Ops Engineer - All Genders H/F,Sanofi,Lyon - 69,CDI,,,False,,80000.0,[]
-Qa Engineer H/F,Ledger,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,40000.0,[]
-Network Engineer H/F,Kyriba,Saint-Cloud - 92,CDI,Bac +5,,False,,45000.0,[]
-System Security Engineer H/F,Loft Orbital Solutions,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,False,,55000.0,[]
-Ingénieur Support Logiciel Embarqué Tcms H/F,Alstom,Villeurbanne - 69,CDI,Bac +5,Secteur Energie • Environnement,False,,28371.5,[]
-Consultant DevOps CI - CD - Innovative Tech H/F,Devoteam,Lyon - 69,CDI,,,False,,37500.0,[]
-Technical Support Engineer Full Remote Possible H/F,Pennylane,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,45000.0,[]
-Développeur Full Stack - Rennes Bretagne 35 Fr H/F,Jobs2web,Bretagne - 90,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,[]
-Ingénieur d'Affaires et d'Application Expérimenté H/F,Adoc Talent Management,Paris - 75,CDI,Bac +5,Services aux Entreprises,False,,50000.0,[]
-Backend GO Developer H/F,Adevinta,Paris - 75,CDI,Bac +5,Services aux Entreprises,False,,47500.0,[]
-DevOps Engineer W - M - Nb H/F,Ubisoft,Bordeaux - 33,CDI,,,False,,45000.0,[]
-Consultant DevOps CI - CD - Innovative Tech H/F,Devoteam,Nantes - 44,CDI,,,False,,35000.0,[]
-Architecte Technique - Lyon 69 H/F,Informatis,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,False,7.0,50000.0,[]
-Architecte Fonctionnel - Risques de Marché et Contrepartie H/F,Crédit Agricole CIB,Montrouge - 92,CDI,Bac +5,,False,7.0,57500.0,[]
+Ml Ops Engineer - All Genders H/F,Sanofi,Lyon - 69,CDI,,,False,,80000.0,"['kubernetes', 'analytics', 'python', 'data science', 'datasets', 'security', 'github', 'data engineering', 'terraform', 'docker', 'diversity', 'programming languages', 'github', 'healthcare', 'artificial intelligence', 'machine learning', 'apps', 'spark', 'computer science']"
+Qa Engineer H/F,Ledger,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,40000.0,"['kubernetes', 'containers', 'unity', 'ledger', 'ios', 'nix', 'docker', 'testing', 'rust']"
+Network Engineer H/F,Kyriba,Saint-Cloud - 92,CDI,Bac +5,,False,,45000.0,"['snmp', 'unity', 'windows', 'promises', 'linux']"
+System Security Engineer H/F,Loft Orbital Solutions,Toulouse - 31,CDI,Bac +5,Secteur informatique • ESN,False,,55000.0,"['kubernetes', 'python', 'unity', 'security', 'slack', 'diversity', 'rust']"
+Ingénieur Support Logiciel Embarqué Tcms H/F,Alstom,Villeurbanne - 69,CDI,Bac +5,Secteur Energie • Environnement,False,,28371.5,"['c/c++', 'linux']"
+Consultant DevOps CI - CD - Innovative Tech H/F,Devoteam,Lyon - 69,CDI,,,False,,37500.0,"['kubernetes', 'ansible', 'terraform', 'selenium', 'linux', 'devops', 'salesforce']"
+Technical Support Engineer Full Remote Possible H/F,Pennylane,Paris - 75,CDI,Bac +5,Secteur informatique • ESN,True,,45000.0,"['unity', 'answers', 'integration', 'healthcare', 'rust', 'computer science', 'swift', 'scala']"
+Développeur Full Stack - Rennes Bretagne 35 Fr H/F,Jobs2web,Bretagne - 90,CDI,Bac +5,Secteur informatique • ESN,True,,42500.0,"['python', 'eslint', 'redux', 'flask', 'ios', 'angular', 'java', 'docker', 'react', 'javascript']"
+Ingénieur d'Affaires et d'Application Expérimenté H/F,Adoc Talent Management,Paris - 75,CDI,Bac +5,Services aux Entreprises,False,,50000.0,"['security', 'ios', 'integration', 'computer science']"
+Backend GO Developer H/F,Adevinta,Paris - 75,CDI,Bac +5,Services aux Entreprises,False,,47500.0,"['unity', 'android', 'microservices', 'ios', 'integration', 'testing', 'postgresql', 'devops', 'scala']"
+DevOps Engineer W - M - Nb H/F,Ubisoft,Bordeaux - 33,CDI,,,False,,45000.0,"['kubernetes', 'python', 'unity', 'sass', 'java', 'integration', 'docker', 'programming languages', 'c/c++', 'site reliability engineering', 'testing', 'talks', 'javascript', 'devops', 'computer science', 'scala']"
+Consultant DevOps CI - CD - Innovative Tech H/F,Devoteam,Nantes - 44,CDI,,,False,,35000.0,"['kubernetes', 'ansible', 'terraform', 'selenium', 'big data', 'linux', 'devops', 'salesforce']"
+Architecte Technique - Lyon 69 H/F,Informatis,Lyon - 69,CDI,Bac +5,Secteur informatique • ESN,False,7.0,50000.0,"['.net', 'php', 'mysql', 'windows', 'angular', 'java', 'mongodb', 'docker', 'linux']"
+Architecte Fonctionnel - Risques de Marché et Contrepartie H/F,Crédit Agricole CIB,Montrouge - 92,CDI,Bac +5,,False,7.0,57500.0,['ios']
