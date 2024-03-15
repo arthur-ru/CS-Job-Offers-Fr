@@ -16,6 +16,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+# D:\Prive\Code\CS-Job-Offers-Fr
 library(flexdashboard)
 library(leaflet)
 library(ggplot2)
@@ -28,6 +29,8 @@ library(tmaptools)
 world_map <- map_data("world")
 france_map <- map_data("france")
 finalData <- read_csv("data/finalData.csv")
+dep <- data.frame(num_dep = c(1:95),
+               nom_dep = c("Ain", "Aisne", "Allier", "Alpes-de-Haute-Provence", "Hautes-Alpes", "Alpes-Maritimes", "Ardeche", "Ardennes", "Ariege", "Aube", "Aude", "Aveyron", "Bouches-du-Rhone", "Calvados", "Cantal", "Charente", "Charente-Maritime", "Cher", "Correze", "Corse", "Cote-Dor", "Cotes-Darmor", "Creuse", "Dordogne", "Doubs", "Drome", "Eure", "Eure-et-Loir", "Finistere", "Gard", "Haute-Garonne", "Gers", "Gironde", "Herault", "Ille-et-Vilaine", "Indre", "Indre-et-Loire", "Isere", "Jura", "Landes", "Loir-et-Cher", "Loire", "Haute-Loire", "Loire-Atlantique", "Loiret", "Lot", "Lot-et-Garonne", "Lozere", "Maine-et-Loire", "Manche", "Marne", "Haute-Marne", "Mayenne", "Meurthe-et-Moselle", "Meuse", "Morbihan", "Moselle", "Nievre", "Nord", "Oise", "Orne", "Pas-de-Calais", "Puy-de-Dome", "Pyrenees-Atlantiques", "Hautes-Pyrenees", "Pyrenees-Orientales", "Bas-Rhin", "Haut-Rhin", "Rhone", "Haute-Saone", "Saone-et-Loire", "Sarthe", "Savoie", "Haute-Savoie", "Paris", "Seine-Maritime", "Seine-et-Marne", "Yvelines", "Deux-Sevres", "Somme", "Tarn", "Tarn-et-Garonne", "Var", "Vaucluse", "Vendee", "Vienne", "Haute-Vienne", "Vosges", "Yonne", "Territoire de Belfort", "Essonne", "Hauts-de-Seine", "Seine-Saint-Denis", "Val-de-Marne", "Val-Doise"));
 ```
 
 # Répartition des offres 
@@ -38,25 +41,8 @@ finalData <- read_csv("data/finalData.csv")
 ## Column 1 {data-width=650}
 ### Cartes
 ```{r}
-france_map$region <- unique(france_map$region) %>% sort()
-location <- finalData$location
-num_dep <- substr(location, nchar(location) - 1, nchar(location))
-dep <- france_map$region[num_dep]
+regions_unique <- france_map$region %>% unique()
 
-map_data <- finalData %>%
-  group_by(dep) %>%
-  summarise(num_offres = n()) %>%
-  left_join(france_map, by = c("dep" = "region"))
-
-ggplot() +
-  geom_map(data = france_map, map = france_map,
-           aes(x = long, y = lat, map_id = region),
-           fill = "lightblue", color = "black") +
-  geom_point(data = map_data, aes(x = long, y = lat, size = num_offres),
-             color = "red", alpha = 0.7) +
-  expand_limits(x = france_map$long, y = france_map$lat) +
-  theme_void() +
-  theme(plot.background = element_rect(fill = "black"))
 ```
 
 ## Column 2 {data-width=350}
