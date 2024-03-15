@@ -42,7 +42,24 @@ dep <- data.frame(num_dep = c(1:95),
 ### Cartes
 ```{r}
 regions_unique <- france_map$region %>% unique()
+dep_offers <- finalData$department
+dep_offers_count <- table(dep_offers)
+dep_offers_count <- as.data.frame(dep_offers_count)
+names(dep_offers_count) <- c("num_dep", "nb_offers") 
+dep_offers_count <- merge(dep_offers_count, dep, by.x = "num_dep", by.y = "num_dep", all.x = TRUE)
+dep_offers_count$nom_dep <- dep$nom_dep[match(as.numeric(dep_offers_count$num_dep), dep$num_dep)]
 
+ggplot(dep_offers_count, aes(fill = nb_offers)) +
+  geom_map(data = france_map, map = france_map,
+           aes(x = long, y = lat, map_id = region),
+           color = "#101010", size = 0.2) +
+  geom_text(data = dep_offers_count, aes(x = long, y = lat, label = nom_dep),
+            color = "#FDF7F7", size = 3, fontface = "bold") +
+  scale_fill_gradient(low = "#ED79F9", high = "#101010", na.value = "grey50",
+                      name = "Nombre d'offres") +
+  labs(title = "Répartition des offres par département") +
+  theme_minimal() +
+  theme(legend.position = "right")
 ```
 
 ## Column 2 {data-width=350}

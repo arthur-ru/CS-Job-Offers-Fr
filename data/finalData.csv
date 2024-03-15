@@ -219,7 +219,7 @@ Ingénieur Logiciel Java H/F,Scalian,CDI,Bac +5,Secteur informatique • ESN,Tru
 CDI- Ingénieur de Développement Logiciel H/F,Naval Group,CDI,,,False,,43653.0,['java'],Toulon,83
 Ingénieur Développement Logiciel Tcms H/F,Expleo,CDI,Bac +5,Secteur informatique • ESN,True,,43653.0,"['node.js', 'python', 'node.js']",Montigny-le-Bretonneux,78
 Ingénieur Développement Logiciel Ferroviaire H/F,COWORK ENGINEERING,CDI,Bac +5,Services aux Entreprises,True,7.0,47500.0,"['angular', 'xamarin', 'laravel', 'java']",Paris,75
-Ingénieur Développement Logiciel pour Applications Critiques H/F,SII Ile de France,CDI,Bac +5,Secteur informatique • ESN,True,1.0,44500.0,['devops'],Paris,La Défense
+Ingénieur Développement Logiciel pour Applications Critiques H/F,SII Ile de France,CDI,Bac +5,Secteur informatique • ESN,True,1.0,44500.0,['devops'],Paris,75
 Architecte Applicatif Ibmi As400 H/F,Fish Eye Technologies,CDI,Bac +5,Secteur informatique • ESN,False,7.0,43653.0,['devops'],Paris 8e,75
 Ingénieur en Développement Logiciel Couche Basse H/F,SII Ouest,CDI,Bac +5,Secteur informatique • ESN,True,,38000.0,['git'],Le Mans,72
 Ingénieur Logiciel-Rams - Vélizy-Villacoublay H/F,LGM,CDI,Bac +5,Secteur informatique • ESN,True,,43653.0,"['opencv', 'aws', 'python', 'java', 'kotlin', 'python', 'hibernate', 'swift', 'python', 'flask']",Vélizy-Villacoublay,78
@@ -874,7 +874,7 @@ CDI - Concepteur Logiciel Expérimenté H/F,Naval Group,CDI,Bac +5,,False,1.0,43
 Ingénieur Robotique - Ros - Paris France H/F,Astek,CDI,Bac +5,,True,,43653.0,"['android', 'kubernetes', 'ruby on rails', 'python', 'deep learning', 'spring']",Paris,75
 Alternance - BTS Electrotechnique - Maitrise des Energies H/F,Naval Group,Alternance,Bac +2,,False,7.0,13464.0,"['java', 'mongodb', 'rails', 'swift', 'computer vision', 'python']",Nantes,44
 CDI - Ingénieur Confirmé Intelligence Drone Embarquée H/F,Naval Group,CDI,Bac +5,,False,1.0,30500.0,"['django', 'tensorflow']",Ollioules,83
-Ingénieur Développement C++ - Secteur Défense H/F,SII Ile de France,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,['linux'],Paris,La Défense
+Ingénieur Développement C++ - Secteur Défense H/F,SII Ile de France,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,['linux'],Paris,75
 Application Security Engineer H/F,Volvo Group,CDI,Bac +5,,True,,43653.0,"['php', 'php', 'devsecops', 'azure', 'ruby', 'swift']",Lyon 1er,69
 Chef de Projet Électronique - Société Internationale H/F,Silkhom,CDI,Bac +5,Services aux Entreprises,True,,43653.0,"['angular', 'python', 'c#', 'sql', 'redux', 'django']",Cluses,74
 CDI - Ingénieur Logiciel Temps Réel Embarqué Système de Lancement H/F,Naval Group,CDI,Bac +5,,False,1.0,48500.0,['swift'],Saint-Tropez,83
@@ -892,7 +892,7 @@ Infographiste H/F,Manpower,CDI,"Bac +3, Bac +4",Services aux Entreprises,False,1
 Release Manager en Contexte de CI - CD H/F,Celad,CDI,Bac +5,Secteur informatique • ESN,True,7.0,43653.0,"['kubernetes', 'docker', 'python', 'devops']",Valbonne,06
 Ingénieur Génie Electrique H/F,Ogmios developpement,CDI,Bac +5,Services aux Entreprises,True,1.0,40000.0,"['git', 'python']",Hauts-de-Seine,92
 Ingénieur Développement Simulateur de Vol C - C++ - Secteur Aéronautique - Paris France H/F,Astek,CDI,Bac +5,,True,,37500.0,"['mongodb', 'android']",Paris,75
-Ingénieur Développement Java - Secteur Défense H/F,SII Ile de France,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,['java'],Paris,La Défense
+Ingénieur Développement Java - Secteur Défense H/F,SII Ile de France,CDI,Bac +5,Secteur informatique • ESN,True,1.0,47500.0,['java'],Paris,75
 Ingénieur Développement Logiciel Embarqué c - C++ . H/F,Randstad Digital,CDI,Bac +5,Services aux Entreprises,False,,43653.0,"['php', 'analytics']",Issy-les-Moulineaux,92
 Ingénieur Chercheur en Compilation H/F,CEA,CDI,Bac +5,,True,,43653.0,"['python', 'python', 'perl', 'code review', 'flask', 'python', 'ibm cloud', 'linux', 'react', 'react native', 'c/c++', 'dart', 'css']",Grenoble,38
 Ingénieur en Développement C++ - Windows H/F,Eviden,CDI,Bac +5,Secteur informatique • ESN,True,,43653.0,"['big data', 'windows', 'php', 'php']",Aix-en-Provence,13
@@ -957,7 +957,7 @@ Graduate Program - Ingénieur Systèmes et Logiciel Embarqué H/F,Volvo Group,CD
 Ingénieur Logiciel Embarqué C - C++ H/F,Expleo,CDI,,,False,,43653.0,"['jenkins', 'linux', 'c/c++', 'windows', 'python', 'java', 'postgresql']",Lyon 1er,69
 Ingénieur Essais Vibration et Acoustique - Nvh - Vibration And Acoustic Test Engineer - Nvh H/F,Groupe Atlantic,CDI,Bac +5,,True,,39000.0,['testing'],Merville,59
 Ingénieur R&D Innovation Pompe à Chaleur - Heat Pump Innovation Engineer H/F,Groupe Atlantic,CDI,Bac +5,,True,,43653.0,python,Billy-Berclau,62
-Ingénieur Développement Java H/F,SII Ile de France,CDI,Bac +5,Secteur informatique • ESN,True,1.0,41000.0,"['docker', 'devops', 'linux', 'hibernate', 'java', 'git', 'postgresql', 'spring']",Paris,La Défense
+Ingénieur Développement Java H/F,SII Ile de France,CDI,Bac +5,Secteur informatique • ESN,True,1.0,41000.0,"['docker', 'devops', 'linux', 'hibernate', 'java', 'git', 'postgresql', 'spring']",Paris,75
 Ingénieur d'Affaires en Ingénierie Logicielle - Centre de Services H/F,Silkhom,CDI,Bac +5,Services aux Entreprises,True,,55000.0,"['php', 'typescript', 'python', 'java']",Villeurbanne,69
 Cloud Aplication Architect H/F,Eviden,CDI,Bac +5,Secteur informatique • ESN,True,,60000.0,"['vuejs', 'python', 'big data']",Bezons,95
 Consultant Informatique - Cg H/F,CGI,CDI,Bac +5,Secteur informatique • ESN,True,,43653.0,"['machine learning', 'apache', 'jquery', 'html5', 'javascript', 'hibernate', 'angular', 'junit', 'java', 'git', 'spring']",Paris,75
