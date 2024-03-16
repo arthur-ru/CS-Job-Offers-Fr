@@ -1,19 +1,24 @@
 ---
-title: "Projet de collecte"
-output: 
+title: "job offer per region"
+output:
   flexdashboard::flex_dashboard:
     theme:
-      bg: "#101010"
-      fg: "#FDF7F7" 
-      primary: "#ED79F9"
-      base_font:
-        google: Prompt
-      code_font:
-        google: JetBrains Mono
+      bootswatch: flatly
     orientation: columns
     vertical_layout: fill
-    runtime: shiny
+    source_code: embed
+runtime: shiny
+resource_files:
+- data/finalData.csv
+- departements/departements-20180101.cpg
+- departements/departements-20180101.dbf
+- departements/departements-20180101.prj
+- departements/departements-20180101.shp
+- departements/departements-20180101.shx
+- logo.png
+
 ---
+
 
 ```{r setup, include=FALSE}
 # D:\Prive\Code\CS-Job-Offers-Fr
@@ -25,139 +30,106 @@ library(readr)
 library(dplyr)
 library(ggmap)
 library(tmaptools)
+library(sf)
+library(tidyr)
+library(shiny)
 
-world_map <- map_data("world")
-france_map <- map_data("france")
-finalData <- read_csv("data/finalData.csv")
-dep <- data.frame(num_dep = c(1:95),
-               nom_dep = c("Ain", "Aisne", "Allier", "Alpes-de-Haute-Provence", "Hautes-Alpes", "Alpes-Maritimes", "Ardeche", "Ardennes", "Ariege", "Aube", "Aude", "Aveyron", "Bouches-du-Rhone", "Calvados", "Cantal", "Charente", "Charente-Maritime", "Cher", "Correze", "Corse", "Cote-Dor", "Cotes-Darmor", "Creuse", "Dordogne", "Doubs", "Drome", "Eure", "Eure-et-Loir", "Finistere", "Gard", "Haute-Garonne", "Gers", "Gironde", "Herault", "Ille-et-Vilaine", "Indre", "Indre-et-Loire", "Isere", "Jura", "Landes", "Loir-et-Cher", "Loire", "Haute-Loire", "Loire-Atlantique", "Loiret", "Lot", "Lot-et-Garonne", "Lozere", "Maine-et-Loire", "Manche", "Marne", "Haute-Marne", "Mayenne", "Meurthe-et-Moselle", "Meuse", "Morbihan", "Moselle", "Nievre", "Nord", "Oise", "Orne", "Pas-de-Calais", "Puy-de-Dome", "Pyrenees-Atlantiques", "Hautes-Pyrenees", "Pyrenees-Orientales", "Bas-Rhin", "Haut-Rhin", "Rhone", "Haute-Saone", "Saone-et-Loire", "Sarthe", "Savoie", "Haute-Savoie", "Paris", "Seine-Maritime", "Seine-et-Marne", "Yvelines", "Deux-Sevres", "Somme", "Tarn", "Tarn-et-Garonne", "Var", "Vaucluse", "Vendee", "Vienne", "Haute-Vienne", "Vosges", "Yonne", "Territoire de Belfort", "Essonne", "Hauts-de-Seine", "Seine-Saint-Denis", "Val-de-Marne", "Val-Doise"));
-```
-
-# Répartition des offres 
-```{r}
-
-
-```
-## Column 1 {data-width=650}
-### Cartes
-```{r}
-regions_unique <- france_map$region %>% unique()
+finalData <- read.csv("data/finalData.csv", dec=".", sep = ",")
 dep_offers <- finalData$department
 dep_offers_count <- table(dep_offers)
 dep_offers_count <- as.data.frame(dep_offers_count)
-names(dep_offers_count) <- c("num_dep", "nb_offers")
-dep_offers_count$nom_dep <- dep$nom_dep[match(as.numeric(dep_offers_count$num_dep), dep$num_dep)]
+names(dep_offers_count) <- c("num_dep", "nb_offers") 
 
-ggplot() +
-  geom_map(data = merge(france_map, dep_offers_count, by.x = "region", by.y = "nom_dep", all.x = TRUE),
-               map = france_map,
-               aes(x = long, y = lat, map_id = region, fill = nb_offers),
-               color = "#101010", size = 0.2) +
-  scale_fill_gradient(low = "#ED79F9", high = "#101010", na.value = "grey50",
-                      name = "Nombre d'offres") +
-  theme_minimal() +
-  theme(legend.position = "right")
+
+france_departments <- st_read("departements/departements-20180101.shp")
+france_departments$code_insee <- gsub("M", "", france_departments$code_insee)
+france_departments$code_insee <- gsub("D", "", france_departments$code_insee)
+france_departments$code_insee <- as.numeric(france_departments$code_insee)
+france_departments <- subset(france_departments, code_insee <= 95)
+
+france_departments <- merge(france_departments, dep_offers_count, by.x="code_insee", by.y="num_dep", all.x=TRUE)
+
+# Fill NA values in nb_offers column with zeros
+france_departments$nb_offers <- ifelse(is.na(france_departments$nb_offers), 0, france_departments$nb_offers)
+
+
 ```
 
-## Column 2 {data-width=350}
-### Secteurs
-```{r}
-selectInput("competence", label = "Sélectionnez une compétence :", 
-            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
-            selected = "Compétence 1")
-count.data <- data.frame(
-  class = c("1st", "2nd", "3rd", "Crew"),
-  n = c(325, 285, 706, 885),
-  prop = c(14.8, 12.9, 32.1, 40.2)
-)
-count.data <- count.data %>%
-  arrange(desc(class)) %>%
-  mutate(lab.ypos = cumsum(prop) - 0.5*prop)
-mycols <- c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF")
-
-ggplot(count.data, aes(x = "", y = prop, fill = class)) +
-  geom_bar(width = 1, stat = "identity", color = "white") +
-  coord_polar("y", start = 0)+
-  geom_text(aes(y = lab.ypos, label = prop), color = "white")+
-  scale_fill_manual(values = mycols) +
-  theme_void()
-```
-
-# Compétences
+# Présentation
 ## Column 1 {data-width=650}
-```{r}
-set.seed(123)
-secteur_data <- data.frame(Secteur = sample(c("Finance", "Technologie", "Santé", "Éducation"), 100, replace = TRUE),
-                           Salaire = rnorm(100, mean = 50000, sd = 10000))
+### Présentation du sujet
 
-# Tracer l'histogramme
-ggplot(secteur_data, aes(x = Salaire)) +
-  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
-  labs(title = "Répartition des salaires par secteur",
-       x = "Salaire", y = "Fréquence") +
-  theme_minimal()
+Présentation du sujet bla bla bla
 
-```
 
 ## Column 2 {data-width=350}
+
+###
 ```{r}
-selectInput("competence", label = "Sélectionnez une compétence :", 
-            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
-            selected = "Compétence 1")
-df <- data.frame(
-  sexe = c("f", "f", "h", "h"),
-  age = c(52, 31, 29, 35),
-  blond = c(FALSE, TRUE, TRUE, FALSE),
-  stringsAsFactors = FALSE
+fluidRow(
+  column(width = 4, img(src = "logo.png", width = 350))
 )
-df
 ```
 
+
+
+### Dashboard réalisé par :
+
+<ul>
+  <li>EL-OTHMANI Youssef</li>
+  <li>FLANDRE Noe</li>
+  <li>MICHELIN Marc-Alexandre</li>
+  <li>RUBIO Arthur</li>
+  <li>TERRASSON Ludovic</li>
+</ul>
+
+
+# Base de données
+Column {.tabset}
+-----------------------------------------------------------------------
+### Données
+
+```{r}
+DT::datatable(finalData, 
+              options = list( pageLength = 25, 
+                              dom = 'Bfrtip', 
+                              buttons = c('csv')),
+              extensions = 'Buttons',
+              height = 1000,
+              width = 1000)
+
+```
+
+### Description des données
+
+description bla bla bla
+
+# Offres par département {data-navmenu=Visualisation}
+```{r}
+
+output$map <- renderLeaflet({
+leaflet(data = france_departments) %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  setView(lng = 2.2137, lat = 46.2276, zoom = 6) %>%
+  addPolygons(
+    fillColor = ~colorNumeric("YlOrRd", domain = france_departments$nb_offers)(nb_offers),
+    color = "#BDBDC3",
+    weight = 1,
+    fillOpacity = 1,
+    opacity = 1,
+    smoothFactor = 0.7,
+    popup = ~paste("Nombre d'offres dans ",nom, ": ", nb_offers)
+  )
+})
+
+output$mapUI <- renderUI({
+  leafletOutput("map", height = "500px")
+})
+
+# Call the UI output to render the map
+uiOutput("mapUI")
+
+
+```
 # Salaires par départements
 ## Column 1 {data-width=650}
-```{r}
-ggplot() +
-  geom_map(data = world_map, map = world_map,
-           aes(x = long, y = lat, map_id = region),
-           fill = "lightblue", color = "black") +
-  expand_limits(x = world_map$long, y = world_map$lat) + theme_void()
-
-```
-
-## Column 2 {data-width=350}
-```{r}
-selectInput("competence", label = "Sélectionnez une compétence :", 
-            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
-            selected = "Compétence 1")
-df
-```
-
-# Salaire par secteur
-## Column 1 {data-width=650}
-```{r}
-set.seed(123)
-secteur_data <- data.frame(Secteur = sample(c("Finance", "Technologie", "Santé", "Éducation"), 100, replace = TRUE),
-                           Salaire = rnorm(100, mean = 50000, sd = 10000))
-
-# Tracer l'histogramme
-ggplot(secteur_data, aes(x = Salaire)) +
-  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
-  labs(title = "Répartition des salaires par secteur",
-       x = "Salaire", y = "Fréquence") +
-  theme_minimal()
-
-```
-
-## Column 2 {data-width=350}
-```{r}
-selectInput("competence", label = "Sélectionnez une compétence :", 
-            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
-            selected = "Compétence 1")
-df
-```
-# Conclusion
-
-```{r}
-
-```
-
