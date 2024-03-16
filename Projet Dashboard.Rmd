@@ -146,7 +146,19 @@ uiOutput("mapUI")
 
 # Compétences demandées {data-navmenu=Visualisation}
 ```{r}
-
+finalData$skills <- gsub("\\[|\\]|'", "", df_job$skills)
+finalData$skills <- strsplit(df_job$skills, ", ")
+df_explose <- finalData %>% unnest(cols = skills)
+df_skills <- unique(df_explose$skills)
+skills_info <- list()
+for (skill in df_skills) {
+    count <- sum(df_explose$skills == skill)
+    skills_info[[skill]] <- c(count)
+}
+skills_df <- as.data.frame(do.call(rbind, skills_info))
+colnames(skills_df) <- c("Nombre d'occurrences")
+skills_df_ordered <- arrange(skills_df, desc(`Nombre d'occurrences`))
+skills_df_ordered
 
 ```
 
