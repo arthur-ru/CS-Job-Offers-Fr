@@ -146,8 +146,8 @@ uiOutput("mapUI")
 
 # Compétences demandées {data-navmenu=Visualisation}
 ```{r}
-finalData$skills <- gsub("\\[|\\]|'", "", df_job$skills)
-finalData$skills <- strsplit(df_job$skills, ", ")
+finalData$skills <- gsub("\\[|\\]|'", "", finalData$skills)
+finalData$skills <- strsplit(finalData$skills, ", ")
 df_explose <- finalData %>% unnest(cols = skills)
 df_skills <- unique(df_explose$skills)
 skills_info <- list()
