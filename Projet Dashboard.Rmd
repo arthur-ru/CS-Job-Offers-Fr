@@ -101,18 +101,19 @@ Column {.tabset}
 
 ```{r}
 DT::datatable(finalData, 
-  options = list(pageLength = 25, 
+    options = list( pageLength = 25, 
     dom = 'Bfrtip', 
     buttons = c('csv')),
-  extensions = 'Buttons',
-  height = 1000,
-  width = 1000,
-  colnames = c("Job Title", "Company", "Contract Type", "Education Level", "Sector", "Remote", "Years of Exp", "Salary (€)", "Skills", "City","Dep n°"),
+    extensions = 'Buttons',
+    height = 1000,
+    width = 1000,
+    colnames = c("Job Title", "Company", "Contract Type", "Education Level", "Sector", "Remote", "Years of Exp", "Salary (€)", "Skills", "City","Dep n°")
 )
 
 ```
 
 ### Description of the data
+
 
 #### `finalData.csv` Dataset Description
 The `finalData.csv` dataset was sourced through web scraping from Hello Work, a job listing site where web scraping is legally permitted. It comprises various attributes related to job postings gathered for analysis and machine learning applications. Below is the types of information it includes:
@@ -128,6 +129,7 @@ The `finalData.csv` dataset was sourced through web scraping from Hello Work, a 
 - **Skills (`skills`)**: Array of specific skills mentioned in the job listing (programming languages, software proficiency, or other professional competencies).
 - **City (`city`)**: City where the job is located.
 - **Department (`department`)**: Administrative division where the job is located.
+
 
 # Offers by regions {data-navmenu=Visualisation}
 ```{r}
@@ -153,7 +155,7 @@ server <- function(input, output) {
         fillOpacity = 1,
         opacity = 1,
         smoothFactor = 0.7,
-        popup = ~paste("Number of offers in ", nom, ": ", nb_offers)
+        popup = ~paste("Nombre d'offres dans ", nom, ": ", nb_offers)
       )
   })
   
@@ -169,16 +171,16 @@ shinyApp(ui = ui, server = server)
 
 ```
 
-# Compétences demandées {data-navmenu=Visualisation}
+# Skills required {data-navmenu=Visualisation}
 ```{r}
 ui <- fluidPage(
   fluidRow(
-    column(width = 6,
+    column(width = 5,
            selectInput("secteur", label = "Secteur",
-                       choices = c("All Sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL),
+                       choices = c("all", unique(finalData$secteur)), multiple = FALSE, selected = NULL),
            tableOutput("table")
     ),
-    column(width = 6,
+    column(width = 7,
            plotlyOutput("pieChart")
     )
   )
@@ -186,7 +188,7 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   output$table <- renderTable({
-    if (input$secteur == "All Sectors") {
+    if (input$secteur == "all") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
@@ -209,7 +211,7 @@ server <- function(input, output) {
   })
   
   output$pieChart <- renderPlotly({
-    if (input$secteur == "All Sectors") {
+    if (input$secteur == "all") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
@@ -229,11 +231,12 @@ server <- function(input, output) {
       na.omit()
     
     plot_ly(skills_info, labels = ~skills, values = ~`Nombre d'occurrences`, type = 'pie') %>%
-      layout(title = "Most asked skills by sector")
+      layout(title = "Compétences les plus demandées par secteur")
   })
 }
 
 shinyApp(ui = ui, server = server)
+
 ```
 
 # Salaries by region (€) {data-navmenu=Visualisation}
@@ -250,8 +253,7 @@ renderPlotly({
     geom_histogram(fill = "lightblue", color = "black", bins = 20) +
     labs(title = "Salary repartition by region",
          x = "Salaries", y = "") +
-    theme_minimal() +
-    theme(plot.margin = margin(1, 1, 2.5, 1, "cm"))
+    theme_minimal()
 })
 ```
 
@@ -267,25 +269,26 @@ renderPlotly({
     geom_histogram(fill = "lightblue", color = "black", bins = 20) +
     labs(title = "Répartition des salaires par secteur",
          x = "salaire", y = "") +
-    theme_minimal() +
-    theme(plot.margin = margin(1, 1, 2.5, 1, "cm"))
+    theme_minimal() 
 })
 ```
 
-# Matrice de corrélation {data-navmenu=Visualisation}
+# Correlation matrix {data-navmenu=Visualisation}
 ```{r}
 arrondir_dizaine_millier <- function(salaire) {
   salaire_arrondi <- round(salaire / 10000) * 10000
   return(salaire_arrondi)
 }
 
+finalDataCopy <- finalData
+
 # Apply the function to the salary column
-finalData$salaire2 <- arrondir_dizaine_millier(finalData$salaire)
-finalData<- finalData[finalData$salaire2 != 40000 | sample(c(TRUE, FALSE), nrow(finalData), replace = TRUE, prob = c(0.1, 0.9)), ]
-finalData <- finalData %>%
+finalDataCopy$salaire2 <- arrondir_dizaine_millier(finalDataCopy$salaire)
+finalDataCopy<- finalDataCopy[finalDataCopy$salaire2 != 40000 | sample(c(TRUE, FALSE), nrow(finalData), replace = TRUE, prob = c(0.1, 0.9)), ]
+finalDataCopy <- finalDataCopy %>%
   mutate(teletravail = ifelse(teletravail == "False", -1, 1))
-finalData$number_of_skills <- str_count(finalData$skills, "\\w+")
-data_selected <- finalData[, c("teletravail", "department", "number_of_skills", "salaire2")]
+finalDataCopy$number_of_skills <- str_count(finalDataCopy$skills, "\\w+")
+data_selected <- finalDataCopy[, c("teletravail", "department", "number_of_skills", "salaire2")]
 data_selected <- na.omit(data_selected)
 corr_matrix <- cor(data_selected)
 rownames(corr_matrix) <- c("Telecommuting", "Department", "Number of Skills", "Salary")
@@ -300,15 +303,10 @@ train <- data_selected[ind==1,]
 test <- data_selected[ind==2,]
 rf <- randomForest(salaire2~., data=train, proximity=TRUE)
 print(rf)
+
 ```
 
 ## Column 1 {data-width=650}
-
-# Prediction
-
-```{r}
-
-```
 
 # Conclusion
 
