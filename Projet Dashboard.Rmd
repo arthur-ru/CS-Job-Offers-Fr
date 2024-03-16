@@ -15,7 +15,8 @@ resource_files:
 - departements/departements-20180101.prj
 - departements/departements-20180101.shp
 - departements/departements-20180101.shx
-- logo.png
+- www/logo.png
+- www/mines_ales.png
 
 ---
 
@@ -66,8 +67,19 @@ Présentation du sujet bla bla bla
 
 ###
 ```{r}
+logo_path <- "www/logo.png"
+
+server <- function(input, output, session) {
+  output$logo <- renderImage({
+    list(src = logo_path,
+         contentType = "image/png",
+         alt = "Logo")
+  }, deleteFile = FALSE)
+}
+
 fluidRow(
-  column(width = 4, img(src = "logo.png", width = 350))
+  column(width = 4, 
+         imageOutput("logo", height = "100px", width = "100px"))
 )
 ```
 
