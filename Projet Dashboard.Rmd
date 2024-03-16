@@ -1,5 +1,5 @@
 ---
-title: "job offer per region"
+title: "French Software Engineering Job Market"
 output:
   flexdashboard::flex_dashboard:
     theme:
@@ -56,9 +56,9 @@ france_departments$nb_offers <- ifelse(is.na(france_departments$nb_offers), 0, f
 
 ```
 
-# Présentation
+# Presentation
 ## Column 1 {data-width=650}
-### Présentation du sujet
+### Presentation of the subject
 
 Présentation du sujet bla bla bla
 
@@ -85,7 +85,7 @@ fluidRow(
 
 
 
-### Dashboard réalisé par :
+### Dashboards made by :
 
 <ul>
   <li>EL-OTHMANI Youssef</li>
@@ -96,10 +96,10 @@ fluidRow(
 </ul>
 
 
-# Base de données
+# Database
 Column {.tabset}
 -----------------------------------------------------------------------
-### Données
+### Data
 
 ```{r}
 DT::datatable(finalData, 
@@ -112,11 +112,11 @@ DT::datatable(finalData,
 
 ```
 
-### Description des données
+### Description of the data
 
 description bla bla bla
 
-# Offres par département {data-navmenu=Visualisation}
+# Offers by regions {data-navmenu=Visualisation}
 ```{r}
 
 output$map <- renderLeaflet({
@@ -130,7 +130,7 @@ leaflet(data = france_departments) %>%
     fillOpacity = 1,
     opacity = 1,
     smoothFactor = 0.7,
-    popup = ~paste("Nombre d'offres dans ",nom, ": ", nb_offers)
+    popup = ~paste("Number of offers in ",nom, ": ", nb_offers)
   )
 })
 
@@ -150,9 +150,9 @@ uiOutput("mapUI")
 
 ```
 
-# Salaires par départements {data-navmenu=Visualisation}
+# Salaries by region (€) {data-navmenu=Visualisation}
 ```{r}
-selectInput("département", label = "Département",
+selectInput("département", label = "Region",
             choices = unique(sort(finalData$department)),
             multiple = FALSE,
             selected = NULL) 
@@ -162,14 +162,14 @@ renderPlotly({
   # Tracer l'histogramme
   ggplot(location_data, aes(x = salaire)) +
     geom_histogram(fill = "lightblue", color = "black", bins = 20) +
-    labs(title = "Répartition des salaires par département",
-         x = "salaire", y = "") +
+    labs(title = "Salary repartition by region",
+         x = "Salaries", y = "") +
     theme_minimal() +
     theme(plot.margin = margin(1, 1, 2.5, 1, "cm"))
 })
 ```
 
-# Salaires par secteurs {data-navmenu=Visualisation}
+# Salaries by sectors {data-navmenu=Visualisation}
 ```{r}
 selectInput("secteur", label = "Secteur",
 choices = unique(finalData$secteur), multiple = FALSE, selected = NULL)
