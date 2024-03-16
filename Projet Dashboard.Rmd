@@ -145,19 +145,69 @@ shinyApp(ui = ui, server = server)
 
 # Compétences demandées {data-navmenu=Visualisation}
 ```{r}
-finalData$skills <- gsub("\\[|\\]|'", "", finalData$skills)
-finalData$skills <- strsplit(finalData$skills, ", ")
-df_explose <- finalData %>% unnest(cols = skills)
-df_skills <- unique(df_explose$skills)
-skills_info <- list()
-for (skill in df_skills) {
-    count <- sum(df_explose$skills == skill)
-    skills_info[[skill]] <- c(count)
+ui <- fluidPage(
+  fluidRow(
+    column(width = 6,
+           selectInput("secteur", label = "Secteur",
+                       choices = c("all", unique(finalData$secteur)), multiple = FALSE, selected = NULL),
+           tableOutput("table")
+    ),
+    column(width = 6,
+           plotlyOutput("pieChart")
+    )
+  )
+)
+
+server <- function(input, output) {
+  output$table <- renderTable({
+    if (input$secteur == "all") {
+      sector_data <- finalData %>%
+        mutate(skills = gsub("\\[|\\]|'", "", skills),
+               skills = strsplit(skills, ",\\s*")) %>%
+        unnest(skills)
+    } else {
+      sector_data <- finalData %>%
+        filter(secteur == input$secteur) %>%
+        mutate(skills = gsub("\\[|\\]|'", "", skills),
+               skills = strsplit(skills, ",\\s*")) %>%
+        unnest(skills)
+    }
+    
+    skills_info <- sector_data %>%
+      count(skills, name = "Nombre d'occurrences") %>%
+      arrange(desc(`Nombre d'occurrences`)) %>%
+      mutate(skills = ifelse(row_number() <= 15, skills, NA)) %>%
+      na.omit()
+    
+    skills_info
+  })
+  
+  output$pieChart <- renderPlotly({
+    if (input$secteur == "all") {
+      sector_data <- finalData %>%
+        mutate(skills = gsub("\\[|\\]|'", "", skills),
+               skills = strsplit(skills, ",\\s*")) %>%
+        unnest(skills)
+    } else {
+      sector_data <- finalData %>%
+        filter(secteur == input$secteur) %>%
+        mutate(skills = gsub("\\[|\\]|'", "", skills),
+               skills = strsplit(skills, ",\\s*")) %>%
+        unnest(skills)
+    }
+    
+    skills_info <- sector_data %>%
+      count(skills, name = "Nombre d'occurrences") %>%
+      arrange(desc(`Nombre d'occurrences`)) %>%
+      mutate(skills = ifelse(row_number() <= 15, skills, NA)) %>%
+      na.omit()
+    
+    plot_ly(skills_info, labels = ~skills, values = ~`Nombre d'occurrences`, type = 'pie') %>%
+      layout(title = "Compétences les plus demandées par secteur")
+  })
 }
-skills_df <- as.data.frame(do.call(rbind, skills_info))
-colnames(skills_df) <- c("Nombre d'occurrences")
-skills_df_ordered <- arrange(skills_df, desc(`Nombre d'occurrences`))
-skills_df_ordered
+
+shinyApp(ui = ui, server = server)
 
 ```
 
