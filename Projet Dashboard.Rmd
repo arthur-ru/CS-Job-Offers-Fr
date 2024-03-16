@@ -141,32 +141,36 @@ uiOutput("mapUI")
 # Salaires par départements {data-navmenu=Visualisation}
 ```{r}
 selectInput("département", label = "Département",
-            choices = unique(finalData$department), multiple = TRUE, selected = NULL)
+            choices = unique(sort(finalData$department)),
+            multiple = FALSE,
+            selected = NULL) 
 renderPlotly({
-  # Sous-ensemble des données selon les types de permis sélectionnés par l'utilisateur
-  location_data <- finalData %>% filter(department %in% input$département)
-# Tracer l'histogramme
-ggplot(location_data, aes(x = salaire)) +
-  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
-  labs(title = "Répartition des salaires par département",
-       x = "salaire", y = "") +
-  theme_minimal()
+  # Sous-ensemble des données selon le département sélectionné par l'utilisateur
+  location_data <- finalData %>% filter(department == input$département)
+  # Tracer l'histogramme
+  ggplot(location_data, aes(x = salaire)) +
+    geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+    labs(title = "Répartition des salaires par département",
+         x = "salaire", y = "") +
+    theme_minimal() +
+    theme(plot.margin = margin(1, 1, 2.5, 1, "cm"))
 })
 ```
 
 # Salaires par secteurs {data-navmenu=Visualisation}
 ```{r}
 selectInput("secteur", label = "Secteur",
-            choices = unique(finalData$secteur), multiple = TRUE, selected = NULL)
+choices = unique(finalData$secteur), multiple = FALSE, selected = NULL)
 renderPlotly({
-  # Sous-ensemble des données selon les types de permis sélectionnés par l'utilisateur
-  secteur_data <- finalData %>% filter(secteur %in% input$secteur)
-# Tracer l'histogramme
-ggplot(secteur_data, aes(x = salaire)) +
-  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
-  labs(title = "Répartition des salaires par secteur",
-       x = "salaire", y = "") +
-  theme_minimal()
+  # Sous-ensemble des données selon le secteur sélectionné par l'utilisateur
+  secteur_data <- finalData %>% filter(secteur == input$secteur)
+  # Tracer l'histogramme
+  ggplot(secteur_data, aes(x = salaire)) +
+    geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+    labs(title = "Répartition des salaires par secteur",
+         x = "salaire", y = "") +
+    theme_minimal() +
+    theme(plot.margin = margin(1, 1, 2.5, 1, "cm"))
 })
 ```
 
