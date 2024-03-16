@@ -21,7 +21,6 @@ resource_files:
 
 
 ```{r setup, include=FALSE}
-# D:\Prive\Code\CS-Job-Offers-Fr
 library(flexdashboard)
 library(leaflet)
 library(ggplot2)
@@ -33,6 +32,7 @@ library(tmaptools)
 library(sf)
 library(tidyr)
 library(shiny)
+library(plotly)
 
 finalData <- read.csv("data/finalData.csv", dec=".", sep = ",")
 dep_offers <- finalData$department
@@ -131,5 +131,55 @@ uiOutput("mapUI")
 
 
 ```
-# Salaires par départements
+
+# Compétences demandées {data-navmenu=Visualisation}
+```{r}
+
+
+```
+
+# Salaires par départements {data-navmenu=Visualisation}
+```{r}
+selectInput("département", label = "Département",
+            choices = unique(finalData$department), multiple = TRUE, selected = NULL)
+renderPlotly({
+  # Sous-ensemble des données selon les types de permis sélectionnés par l'utilisateur
+  location_data <- finalData %>% filter(department %in% input$département)
+# Tracer l'histogramme
+ggplot(location_data, aes(x = salaire)) +
+  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+  labs(title = "Répartition des salaires par département",
+       x = "salaire", y = "") +
+  theme_minimal()
+})
+```
+
+# Salaires par secteurs {data-navmenu=Visualisation}
+```{r}
+selectInput("secteur", label = "Secteur",
+            choices = unique(finalData$secteur), multiple = TRUE, selected = NULL)
+renderPlotly({
+  # Sous-ensemble des données selon les types de permis sélectionnés par l'utilisateur
+  secteur_data <- finalData %>% filter(secteur %in% input$secteur)
+# Tracer l'histogramme
+ggplot(secteur_data, aes(x = salaire)) +
+  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+  labs(title = "Répartition des salaires par secteur",
+       x = "salaire", y = "") +
+  theme_minimal()
+})
+```
+
+# Matrice de corrélation {data-navmenu=Visualisation}
+```{r}
+
+
+```
+
 ## Column 1 {data-width=650}
+
+# Conclusion
+
+```{r}
+
+```

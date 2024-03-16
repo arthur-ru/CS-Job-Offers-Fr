@@ -36,7 +36,7 @@ library(rpart.plot)
 library(randomForest)
 library("dplyr")
 library(tidyr)
-df_job=read.csv("C:/Users/marca/Downloads/finalData (2).csv")
+df_job=read.csv("data/finalData.csv", dec=".", sep = ",")
 world_map <- map_data("world")
 df <- data.frame(
   valeur = c(10, 20, 30, 40),
