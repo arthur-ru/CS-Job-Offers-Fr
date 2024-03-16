@@ -34,6 +34,8 @@ library(sf)
 library(tidyr)
 library(shiny)
 library(plotly)
+library(rmapshaper)
+
 
 finalData <- read.csv("data/finalData.csv", dec=".", sep = ",")
 dep_offers <- finalData$department
@@ -66,22 +68,7 @@ Présentation du sujet bla bla bla
 ## Column 2 {data-width=350}
 
 ###
-```{r}
-logo_path <- "www/logo.png"
-
-server <- function(input, output, session) {
-  output$logo <- renderImage({
-    list(src = logo_path,
-         contentType = "image/png",
-         alt = "Logo")
-  }, deleteFile = FALSE)
-}
-
-fluidRow(
-  column(width = 4, 
-         imageOutput("logo", height = "100px", width = "100px"))
-)
-```
+![](https://i.ibb.co/MNZ1nhD/mines-ales.png){}
 
 
 
@@ -119,27 +106,39 @@ description bla bla bla
 # Offers by regions {data-navmenu=Visualisation}
 ```{r}
 
-output$map <- renderLeaflet({
-leaflet(data = france_departments) %>%
-  addProviderTiles(providers$CartoDB.Positron) %>%
-  setView(lng = 2.2137, lat = 46.2276, zoom = 6) %>%
-  addPolygons(
-    fillColor = ~colorNumeric("YlOrRd", domain = france_departments$nb_offers)(nb_offers),
-    color = "#BDBDC3",
-    weight = 1,
-    fillOpacity = 1,
-    opacity = 1,
-    smoothFactor = 0.7,
-    popup = ~paste("Number of offers in ",nom, ": ", nb_offers)
-  )
-})
+france_departments_simplified <- ms_simplify(france_departments, keep = 0.1)
+# Define UI
+ui <- fluidPage(
+  # Call the UI output to render the map
+  uiOutput("mapUI")
+)
 
-output$mapUI <- renderUI({
-  leafletOutput("map", height = "500px")
-})
+# Define server logic
+server <- function(input, output) {
+  
+  output$map <- renderLeaflet({
+    leaflet(data = france_departments_simplified) %>%
+      addProviderTiles(providers$CartoDB.Positron) %>%
+      setView(lng = 2.2137, lat = 46.2276, zoom = 6) %>%
+      addPolygons(
+        fillColor = ~colorNumeric("YlOrRd", domain = france_departments_simplified$nb_offers)(nb_offers),
+        color = "#BDBDC3",
+        weight = 1,
+        fillOpacity = 1,
+        opacity = 1,
+        smoothFactor = 0.7,
+        popup = ~paste("Nombre d'offres dans ", nom, ": ", nb_offers)
+      )
+  })
+  
+  output$mapUI <- renderUI({
+    leafletOutput("map", height = "500px")
+  })
+}
 
-# Call the UI output to render the map
-uiOutput("mapUI")
+# Run the application
+shinyApp(ui = ui, server = server)
+
 
 
 ```
