@@ -1,0 +1,204 @@
+---
+title: "Projet de collecte"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      bg: "#101010"
+      fg: "#FDF7F7" 
+      primary: "#ED79F9"
+      base_font:
+        google: Prompt
+      code_font:
+        google: JetBrains Mono
+    orientation: columns
+    vertical_layout: fill
+    runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(leaflet)
+library(maps)
+library(caTools)
+library(corrplot)
+library(plotly)
+library(caret)
+library(DT)
+library(readr)
+library(ggplot2)
+library(scales)
+library(dplyr)
+library(knitr)
+library(shiny)
+library(DT)
+library(rpart)
+library(rpart.plot)
+library(randomForest)
+library("dplyr")
+library(tidyr)
+df_job=read.csv("C:/Users/marca/Downloads/finalData (2).csv")
+world_map <- map_data("world")
+df <- data.frame(
+  valeur = c(10, 20, 30, 40),
+  categorie = c("A", "B", "C", "D")
+)
+```
+
+# Analyse des données 
+### Chart A
+
+```{r}
+valeurs_uniques <- unique(df_job$niveau_etude)
+
+# Affichage des valeurs uniques
+print(valeurs_uniques)
+```
+
+# Répartition des offres 
+```{r}
+
+
+```
+## Column 1 {data-width=650}
+### Cartes
+```{r}
+
+ggplot() +
+  geom_map(data = world_map, map = world_map,
+           aes(x = long, y = lat, map_id = region),
+           fill = "lightblue", color = "black") +
+  expand_limits(x = world_map$long, y = world_map$lat) + theme_void()
+```
+
+## Column 2 {data-width=350}
+### Secteurs
+```{r}
+selectInput("competence", label = "Sélectionnez une compétence :", 
+            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
+            selected = "Compétence 1")
+count.data <- data.frame(
+  class = c("1st", "2nd", "3rd", "Crew"),
+  n = c(325, 285, 706, 885),
+  prop = c(14.8, 12.9, 32.1, 40.2)
+)
+count.data <- count.data %>%
+  arrange(desc(class)) %>%
+  mutate(lab.ypos = cumsum(prop) - 0.5*prop)
+mycols <- c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF")
+
+ggplot(count.data, aes(x = "", y = prop, fill = class)) +
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  coord_polar("y", start = 0)+
+  geom_text(aes(y = lab.ypos, label = prop), color = "white")+
+  scale_fill_manual(values = mycols) +
+  theme_void()
+```
+
+# Compétences
+## Column 1 {data-width=650}
+```{r}
+set.seed(123)
+secteur_data <- data.frame(Secteur = sample(c("Finance", "Technologie", "Santé", "Éducation"), 100, replace = TRUE),
+                           Salaire = rnorm(100, mean = 50000, sd = 10000))
+
+# Tracer l'histogramme
+ggplot(as.data.frame(prop.table(df_job$Salaire)), aes(x = df_job$Salaire)) +
+  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+  labs(title = "Répartition des salaires par secteur",
+       x = "Salaire", y = "Fréquence") +
+  theme_minimal()
+
+```
+
+## Column 2 {data-width=350}
+```{r}
+selectInput("competence", label = "Sélectionnez une compétence :", 
+            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
+            selected = "Compétence 1")
+df <- data.frame(
+  sexe = c("f", "f", "h", "h"),
+  age = c(52, 31, 29, 35),
+  blond = c(FALSE, TRUE, TRUE, FALSE),
+  stringsAsFactors = FALSE
+)
+df
+```
+
+# Salaires par départements
+## Column 1 {data-width=650}
+```{r}
+selectInput("département", label = "Département",
+            choices = unique(df_job$department), multiple = TRUE, selected = NULL)
+renderPlotly({
+  # Sous-ensemble des données selon les types de permis sélectionnés par l'utilisateur
+  location_data <- df_job %>% filter(department %in% input$départment)
+# Tracer l'histogramme
+ggplot(location_data, aes(x = salaire)) +
+  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+  labs(title = "Répartition des salaires par département",
+       x = "salaire", y = "") +
+  theme_minimal()
+})
+
+```
+
+## Column 2 {data-width=350}
+```{r}
+df_job$skills <- gsub("\\[|\\]|'", "", df_job$skills)
+
+# Diviser les chaînes en listes
+df_job$skills <- strsplit(df_job$skills, ", ")
+
+# Exploder les listes en plusieurs lignes
+df_explose <- df_job %>% unnest(cols = skills)
+df_skills <- unique(df_explose$skills)
+selectInput("competencedpt", label = "Sélectionnez une compétence :", 
+            choices = df_skills, multiple = TRUE, selected = NULL)
+df_contientcmpt <- reactive({
+  # Vérifier si les compétences sélectionnées sont présentes dans chaque ligne
+  presence_competences <- sapply(input$competencedpt, function(comp) {
+    grepl(comp, df_job$skills)
+  })
+  # Vérifier si au moins une compétence est présente pour chaque ligne
+  rowSums(presence_competences) > 0
+})
+
+# Filtrer le dataframe en fonction de la présence des compétences sélectionnées
+df_filtré <- reactive({
+  df_job[df_contientcmpt(), ]
+})
+reactive({input$competencedpt})
+df_filtré
+```
+
+# Salaire par secteur
+## Column 1 {data-width=650}
+```{r}
+selectInput("secteur", label = "Secteur",
+            choices = unique(df_job$secteur), multiple = TRUE, selected = NULL)
+renderPlotly({
+  # Sous-ensemble des données selon les types de permis sélectionnés par l'utilisateur
+  secteur_data <- df_job %>% filter(secteur %in% input$secteur)
+# Tracer l'histogramme
+ggplot(secteur_data, aes(x = salaire)) +
+  geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+  labs(title = "Répartition des salaires par secteur",
+       x = "salaire", y = "") +
+  theme_minimal()
+})
+```
+
+## Column 2 {data-width=350}
+```{r}
+selectInput("competence", label = "Sélectionnez une compétence :", 
+            choices = c("Compétence 1", "Compétence 2", "Compétence 3"),
+            selected = "Compétence 1")
+df
+```
+
+# Conclusion
+
+```{r}
+
+```
+
