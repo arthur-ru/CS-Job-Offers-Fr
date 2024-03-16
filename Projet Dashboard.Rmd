@@ -35,6 +35,8 @@ library(tidyr)
 library(shiny)
 library(plotly)
 library(rmapshaper)
+library(stringr)
+library(corrplot)
 
 
 finalData <- read.csv("data/finalData.csv", dec=".", sep = ",")
@@ -60,10 +62,18 @@ france_departments$nb_offers <- ifelse(is.na(france_departments$nb_offers), 0, f
 
 # Presentation
 ## Column 1 {data-width=650}
-### Presentation of the subject
+### **Presentation of the subject**
+The **French Software Engineering Job Market** is a project that aims to **analyze and visualize the job offers** in the software engineering field in France. By analyzing a dataset of job offers, we provide insights into the demand for software engineers in **different regions and sectors**, as well as the required skills and salary distribution.
 
-Présentation du sujet bla bla bla
+In fact, individuals starting in the tech domain need to understand which programming languages and technologies they need to master in order to find employment opportunities.
 
+Our project utilizes various R packages such as `flexdashboard`, `leaflet`, `ggplot2`, and `shiny` to create interactive dashboards and visualizations. The dashboards allow users to **explore the data, filter by region and sector**, and gain a better understanding of the job market trends.
+
+In addition to the visualizations, we also perform data preprocessing and analysis. We merge the job offer data with geographical information to map the offers by region. We also analyze the skills required by different sectors and examine the correlation between telecommuting, number of skills, and salary.
+
+The dataset was sourced through **web scraping** from Hello Work, a job listing site where web scraping is legally permitted, providing a rich source of information for our analysis.
+
+Overall, our project provides **valuable insights into the French software engineering job market**. It helps job seekers understand the demand for their skills in different regions and sectors, and it provides employers with information on the current job market trends.
 
 ## Column 2 {data-width=350}
 
@@ -90,18 +100,33 @@ Column {.tabset}
 
 ```{r}
 DT::datatable(finalData, 
-              options = list( pageLength = 25, 
-                              dom = 'Bfrtip', 
-                              buttons = c('csv')),
-              extensions = 'Buttons',
-              height = 1000,
-              width = 1000)
+  options = list(pageLength = 25, 
+    dom = 'Bfrtip', 
+    buttons = c('csv')),
+  extensions = 'Buttons',
+  height = 1000,
+  width = 1000,
+  colnames = c("Job Title", "Company", "Contract Type", "Education Level", "Sector", "Remote", "Years of Exp", "Salary (€)", "Skills", "City","Dep n°"),
+)
 
 ```
 
 ### Description of the data
 
-description bla bla bla
+#### `finalData.csv` Dataset Description
+The `finalData.csv` dataset was sourced through web scraping from Hello Work, a job listing site where web scraping is legally permitted. It comprises various attributes related to job postings gathered for analysis and machine learning applications. Below is the types of information it includes:
+
+- **Job Title (`job_title`)**: Title of the job posting, which could include positions like "Software Engineer".
+- **Company Name (`company_name`)**: Name of the company offering the job position.
+- **Contract Type (`contract_type`)**: Type of employment contract being offered, such as CDI (Permanent Contract), CDD (Fixed-Term Contract), Internship, etc.
+- **Education Level (`niveau_etude`)**: Minimum level of education required for the job, specified as diploma levels (e.g., "Bac +5" equivalent to a Master's degree in the French education system).
+- **Sector (`secteur`)**: Industry or sector the job belongs to, for example, Healthcare, Tech.
+- **Remote Work (`teletravail`)**: Boolean indicating whether the job offers the possibility for remote work.
+- **Experience Required (`experience`)**: Professional experience required for the job, possibly indicated in years.
+- **Salary (`salaire`)**: Annual salary offered for the position expressed in euros.
+- **Skills (`skills`)**: Array of specific skills mentioned in the job listing (programming languages, software proficiency, or other professional competencies).
+- **City (`city`)**: City where the job is located.
+- **Department (`department`)**: Administrative division where the job is located.
 
 # Offers by regions {data-navmenu=Visualisation}
 ```{r}
@@ -149,7 +174,7 @@ ui <- fluidPage(
   fluidRow(
     column(width = 6,
            selectInput("secteur", label = "Secteur",
-                       choices = c("all", unique(finalData$secteur)), multiple = FALSE, selected = NULL),
+                       choices = c("All Sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL),
            tableOutput("table")
     ),
     column(width = 6,
@@ -160,7 +185,7 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   output$table <- renderTable({
-    if (input$secteur == "all") {
+    if (input$secteur == "All Sectors") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
@@ -183,7 +208,7 @@ server <- function(input, output) {
   })
   
   output$pieChart <- renderPlotly({
-    if (input$secteur == "all") {
+    if (input$secteur == "All Sectors") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
@@ -203,12 +228,11 @@ server <- function(input, output) {
       na.omit()
     
     plot_ly(skills_info, labels = ~skills, values = ~`Nombre d'occurrences`, type = 'pie') %>%
-      layout(title = "Compétences les plus demandées par secteur")
+      layout(title = "Most asked skills by sector")
   })
 }
 
 shinyApp(ui = ui, server = server)
-
 ```
 
 # Salaries by region (€) {data-navmenu=Visualisation}
@@ -249,11 +273,38 @@ renderPlotly({
 
 # Matrice de corrélation {data-navmenu=Visualisation}
 ```{r}
+arrondir_dizaine_millier <- function(salaire) {
+  salaire_arrondi <- round(salaire / 10000) * 10000
+  return(salaire_arrondi)
+}
 
-
+# Appliquer la fonction à la colonne des salaires
+finalData$salaire2 <- arrondir_dizaine_millier(finalData$salaire)
+finalData<- finalData[finalData$salaire2 != 40000 | sample(c(TRUE, FALSE), nrow(finalData), replace = TRUE, prob = c(0.1, 0.9)), ]
+finalData <- finalData %>%
+  mutate(teletravail = ifelse(teletravail == "False", -1, 1))
+finalData$nombre_de_skills <- str_count(finalData$skills, "\\w+")
+data_selected <- finalData[, c("teletravail", "department", "nombre_de_skills", "salaire2")]
+data_selected <- na.omit(data_selected)
+corrplot(cor(data_selected), method="ellipse")
+library(randomForest)
+data_selected$salaire2 <- as.factor(data_selected$salaire2)
+# Séparation des données en ensembles d'entraînement et de test
+set.seed(123) # Pour la reproductibilité
+ind <- sample(2, nrow(data_selected), replace = TRUE, prob = c(0.8, 0.2))
+train <- data_selected[ind==1,]
+test <- data_selected[ind==2,]
+rf <- randomForest(salaire2~., data=train, proximity=TRUE)
+print(rf)
 ```
 
 ## Column 1 {data-width=650}
+
+# Prediction
+
+```{r}
+
+```
 
 # Conclusion
 
