@@ -131,7 +131,7 @@ selectInput("département", label = "Département",
             choices = unique(df_job$department), multiple = TRUE, selected = NULL)
 renderPlotly({
   # Sous-ensemble des données selon les types de permis sélectionnés par l'utilisateur
-  location_data <- df_job %>% filter(department %in% input$départment)
+  location_data <- df_job %>% filter(department %in% input$département)
 # Tracer l'histogramme
 ggplot(location_data, aes(x = salaire)) +
   geom_histogram(fill = "lightblue", color = "black", bins = 20) +
