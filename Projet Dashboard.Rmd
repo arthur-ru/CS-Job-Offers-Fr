@@ -73,7 +73,7 @@ Our project utilizes various R packages such as `flexdashboard`, `leaflet`, `ggp
 
 In addition to the visualizations, we also perform data preprocessing and analysis. We merge the job offer data with geographical information to map the offers by county. We also analyze the skills required by different sectors and examine the correlation between telecommuting, number of skills, and salary.
 
-The dataset was sourced through **web scraping** from Hello Work, a job listing site where web scraping is legally permitted, providing a rich source of information for our analysis.
+The dataset of 1000+ job offers was sourced through **web scraping** from Hello Work, a job listing site where web scraping is legally permitted, providing a rich source of information for our analysis.
 
 Overall, our project provides **valuable insights into the French software engineering job market**. It helps job seekers understand the demand for their skills in different counties and sectors, and it provides employers with information on the current job market trends.
 
@@ -370,9 +370,31 @@ This heatmap displays the correlation coefficients between **Remote**, **County*
 - The **strongest positive correlations are between Remote and County, and also Nb of Skills**, hinting that **remote jobs may require more skills**. 
 
 - Salary exhibits a **moderate positive correlation** with Remote and County, implying a connection between higher salaries and remote work options or regional job markets, particularly notable in areas like Paris where salaries tend to be higher. Conversely, the **negative correlation between Salary and Number of Skills** suggests that higher salaries are associated with roles demanding expertise in a narrower range of skills, contrasting with entry-level positions that require a broader skill set without requiring expertise in each.
+The moderate correlations between salary and the other factors can be explained by the importance of salary negotiations in the tech industry.
 
 # Conclusion {data-icon="fa-pen-to-square"}
+## Column 1 {data-width=500}
+### Limitations
 
-```{r}
+It is important to note that this study has its limits. 
 
-```
+- First, the dataset was sourced through web scraping from Hello Work, a job listing site where web scraping is legally permitted. However, the dataset may not be fully representative of the entire job market, as it only includes **job postings from this specific site**. Also, the dataset may not be fully up-to-date, as it was collected at a specific point in time.
+
+- It is important to note that the data, particularly regarding salary information, may not be entirely precise, given that it's often approximated and subject to negotiation, influenced by factors such as years of experience and previous employment history.
+
+- Secondly, another limitation of our project is the prevalence of the **hidden job market**, as many job openings are not posted online and remain inaccessible through web scraping.
+
+- Finally, the tech job market is known for its **dynamic nature** with constant advancements and evolving technologies. As a result, the skills that are highly sought after in the industry can change rapidly. What may be in high demand today could become less relevant tomorrow as new technologies emerge and market needs shift. 
+
+## Column 2 {data-width=500}
+### Conclusion
+
+In conclusion, our project provides valuable insights into the French software engineering job market. Here are some of our major findings:
+
+- **Regional Hegemony**: The Paris region holds a commanding lead nationally, with both higher salaries and a greater number of job opportunities.
+
+- **Skill Demand**: The market demands a mix of classic programming skills, such as Python and Java, as well as unexpected ones like PHP, highlighting the value of developer versatility along with proficiency in cloud tools like AWS and Docker.
+
+- **Salary and Skills Correlation**: A negative correlation exists between salary and specific skills, indicating specialized language experts are in demand for senior roles, unlike generalists.
+
+- **Tech Sector Salaries**: Salaries in the tech sector surpass those in other fields, confirming its status as a lucrative employment market.
