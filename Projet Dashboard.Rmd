@@ -212,7 +212,8 @@ ui <- fluidPage(
            tableOutput("table")
     ),
     column(width = 7,
-           plotlyOutput("pieChart")
+           plotlyOutput("pieChart"),
+           uiOutput("resultText")  # Use uiOutput instead of textOutput
     )
   )
 )
@@ -233,8 +234,8 @@ server <- function(input, output) {
     }
     
     skills_info <- sector_data %>%
-      count(skills, name = "Nombre d'occurrences") %>%
-      arrange(desc(`Nombre d'occurrences`)) %>%
+      count(skills, name = "Number of occurences") %>%
+      arrange(desc(`Number of occurences`)) %>%
       mutate(skills = ifelse(row_number() <= 15, skills, NA)) %>%
       na.omit()
     
@@ -256,13 +257,22 @@ server <- function(input, output) {
     }
     
     skills_info <- sector_data %>%
-      count(skills, name = "Nombre d'occurrences") %>%
-      arrange(desc(`Nombre d'occurrences`)) %>%
+      count(skills, name = "Number of occurences") %>%
+      arrange(desc(`Number of occurences`)) %>%
       mutate(skills = ifelse(row_number() <= 15, skills, NA)) %>%
       na.omit()
     
-    plot_ly(skills_info, labels = ~skills, values = ~`Nombre d'occurrences`, type = 'pie') %>%
-      layout(title = "Compétences les plus demandées par secteur")
+    plot_ly(skills_info, labels = ~skills, values = ~`Number of occurences`, type = 'pie') %>%
+      layout(title = "The 15 most demanded skills by sector")
+  })
+  
+  output$resultText <- renderUI({  # Use renderUI instead of renderText
+    HTML("The pie chart displays the most demanded 15 skills. The most in-demand programming languages include <strong>Python</strong>, <strong>Java</strong>, and <strong>PHP</strong>, with PHP maintaining high demand despite being launched in 1994.<br>
+    Furthermore, deployment-related skills such as <strong>Docker</strong>, <strong>Kubernetes</strong>, and <strong>AWS</strong> are prominent in the most demanded skills. <br>
+    The most popular framework is <strong>Angular</strong>, known for its versatility to build dynamic web apps. <br>
+    Proficiency in <strong>Linux</strong> is also essential, as familiarity with various operating systems is advantageous. <br>
+    Additionally, <strong>DevOps</strong>, a collaborative approach emphasizing communication and integration between software development and IT operations teams, is a significant skill sought after in the industry. <br>
+    Through this pie chart, we have learned that not only languages are in demand, but also <strong>deployment and framework-related</strong> skills. This is coherent with the need of companies to have a versatile team.")
   })
 }
 
@@ -320,6 +330,7 @@ output$secteurPlot <- renderPlotly({
 ```
 
 # 🔍 Correlation matrix {data-navmenu="📈 Visualization" }
+## Column 1 {data-width=650}
 ```{r}
 arrondir_dizaine_millier <- function(salaire) {
   salaire_arrondi <- round(salaire / 10000) * 10000
@@ -352,7 +363,13 @@ print(rf)
 
 ```
 
-## Column 1 {data-width=650}
+## Column 2 {data-width=650}
+### Matrix Observations:
+This heatmap displays the correlation coefficients between **Remote**, **County**, **Nb of Skills**, and **Salary**, with each cell's color denoting the correlation's strength and direction: blue for positive, red for negative, and grey for none, although only positive correlations are evident here. 
+
+- The **strongest positive correlations are between Remote and County, and also Nb of Skills**, hinting that **remote jobs may require more skills**. 
+
+- Salary exhibits a **moderate positive correlation** with Remote and County, implying a connection between higher salaries and remote work options or regional job markets, particularly notable in areas like Paris where salaries tend to be higher. Conversely, the **negative correlation between Salary and Number of Skills** suggests that higher salaries are associated with roles demanding expertise in a narrower range of skills, contrasting with entry-level positions that require a broader skill set without requiring expertise in each.
 
 # Conclusion {data-icon="fa-pen-to-square"}
 
