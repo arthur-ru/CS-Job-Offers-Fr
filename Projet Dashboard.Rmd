@@ -65,17 +65,17 @@ france_departments$nb_offers <- ifelse(is.na(france_departments$nb_offers), 0, f
 # Presentation {data-icon="fa-home"}
 ## Column 1 {data-width=650}
 ### **Presentation of the subject**
-The **French Software Engineering Job Market** is a project that aims to **analyze and visualize the job offers** in the software engineering field in France. By analyzing a dataset of job offers, we provide insights into the demand for software engineers in **different regions and sectors**, as well as the required skills and salary distribution.
+The **French Software Engineering Job Market** is a project that aims to **analyze and visualize the job offers** in the software engineering field in France. By analyzing a dataset of job offers, we provide insights into the demand for software engineers in **different counties and sectors**, as well as the required skills and salary distribution.
 
 In fact, individuals starting in the tech domain need to understand which programming languages and technologies they need to master in order to find employment opportunities.
 
-Our project utilizes various R packages such as `flexdashboard`, `leaflet`, `ggplot2`, and `shiny` to create interactive dashboards and visualizations. The dashboards allow users to **explore the data, filter by region and sector**, and gain a better understanding of the job market trends.
+Our project utilizes various R packages such as `flexdashboard`, `leaflet`, `ggplot2`, and `shiny` to create interactive dashboards and visualizations. The dashboards allow users to **explore the data, filter by county and sector**, and gain a better understanding of the job market trends.
 
-In addition to the visualizations, we also perform data preprocessing and analysis. We merge the job offer data with geographical information to map the offers by region. We also analyze the skills required by different sectors and examine the correlation between telecommuting, number of skills, and salary.
+In addition to the visualizations, we also perform data preprocessing and analysis. We merge the job offer data with geographical information to map the offers by county. We also analyze the skills required by different sectors and examine the correlation between telecommuting, number of skills, and salary.
 
 The dataset was sourced through **web scraping** from Hello Work, a job listing site where web scraping is legally permitted, providing a rich source of information for our analysis.
 
-Overall, our project provides **valuable insights into the French software engineering job market**. It helps job seekers understand the demand for their skills in different regions and sectors, and it provides employers with information on the current job market trends.
+Overall, our project provides **valuable insights into the French software engineering job market**. It helps job seekers understand the demand for their skills in different counties and sectors, and it provides employers with information on the current job market trends.
 
 ## Column 2 {data-width=350}
 
@@ -108,7 +108,7 @@ DT::datatable(finalData,
     extensions = 'Buttons',
     height = 1000,
     width = 1000,
-    colnames = c("Job Title", "Company", "Contract Type", "Education Level", "Sector", "Remote", "Years of Exp", "Salary (€)", "Skills", "City","Dep n°")
+    colnames = c("Job Title", "Company", "Contract Type", "Education Level", "Sector", "Remote", "Years of Exp", "Salary (€)", "Skills", "City","County n°")
 )
 
 ```
@@ -132,9 +132,9 @@ The `finalData.csv` dataset was sourced through web scraping from Hello Work, a 
 - **Department (`department`)**: Administrative division where the job is located.
 
 
-# Offers by regions {data-navmenu="📈 Visualisation"}
+# 🗺️ Offers by counties {data-navmenu="📈 Visualization"}
 ## Column 1 {data-width=750}
-### Offers by regions
+### Offers by counties
 ```{r}
 
 france_departments_simplified <- ms_simplify(france_departments, keep = 0.1)
@@ -175,10 +175,10 @@ shinyApp(ui = ui, server = server)
 ```
 
 ## Column 2  {data-width=250}
-### Top regions
+### Top counties
 
 ```{r}
-top_regions<-france_departments
+top_regions <- france_departments
 top_regions <- st_drop_geometry(top_regions)
 top_regions <- top_regions[, c("nom", "nb_offers")]
 top_regions <- top_regions[order(-top_regions$nb_offers), ][1:15, ]
@@ -186,12 +186,13 @@ top_regions$nb_offers <- as.integer(top_regions$nb_offers)
 ui = fluidPage(
     # Table output
     fluidRow(
-      column(width = 12,tableOutput("regionsTable"))
+      column(width = 12, tableOutput("regionsTable"))
     )
 )
 server = function(input, output) {
     # Render the table
     output$regionsTable <- renderTable({
+      colnames(top_regions) <- c("Name", "Nb of offers")
       return(top_regions)
     })
 }
@@ -201,13 +202,13 @@ shinyApp(ui = ui, server = server)
 
 
 
-# Skills required {data-navmenu="📈 Visualisation" }
+# ⚙️ Skills required {data-navmenu="📈 Visualization" }
 ```{r}
 ui <- fluidPage(
   fluidRow(
     column(width = 5,
            selectInput("secteur", label = "Secteur",
-                       choices = c("all", unique(finalData$secteur)), multiple = FALSE, selected = NULL),
+                       choices = c("All Sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL),
            tableOutput("table")
     ),
     column(width = 7,
@@ -218,7 +219,7 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   output$table <- renderTable({
-    if (input$secteur == "all") {
+    if (input$secteur == "All Sectors") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
@@ -241,7 +242,7 @@ server <- function(input, output) {
   })
   
   output$pieChart <- renderPlotly({
-    if (input$secteur == "all") {
+    if (input$secteur == "All Sectors") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
@@ -269,9 +270,9 @@ shinyApp(ui = ui, server = server)
 
 ```
 
-# Salaries by region (€) {data-navmenu="📈 Visualisation" }
+# 💰 Salaries by county (€) {data-navmenu="📈 Visualization" }
 ```{r}
-selectInput("département", label = "Region",
+selectInput("département", label = "County",
             choices = unique(sort(finalData$department)),
             multiple = FALSE,
             selected = NULL) 
@@ -288,13 +289,13 @@ output$regionPlot <- renderPlotly({
   # Tracer l'histogramme
   ggplot(location_data, aes(x = salaire)) +
     geom_histogram(fill = "lightblue", color = "black", bins = 20) +
-    labs(title = "Salary repartition by region",
+    labs(title = "Salary repartition by county",
          x = "Salaries", y = "") +
     theme_minimal()
 })
 ```
 
-# Salaries by sectors {data-navmenu="📈 Visualisation" }
+# 📊 Salaries by sectors {data-navmenu="📈 Visualization" }
 ```{r}
 selectInput("secteur", label = "Secteur",
 choices = unique(finalData$secteur), multiple = FALSE, selected = NULL)
@@ -318,7 +319,7 @@ output$secteurPlot <- renderPlotly({
 })
 ```
 
-# Correlation matrix {data-navmenu="📈 Visualisation" }
+# 🔍 Correlation matrix {data-navmenu="📈 Visualization" }
 ```{r}
 arrondir_dizaine_millier <- function(salaire) {
   salaire_arrondi <- round(salaire / 10000) * 10000
@@ -336,8 +337,8 @@ finalDataCopy$number_of_skills <- str_count(finalDataCopy$skills, "\\w+")
 data_selected <- finalDataCopy[, c("teletravail", "department", "number_of_skills", "salaire2")]
 data_selected <- na.omit(data_selected)
 corr_matrix <- cor(data_selected)
-rownames(corr_matrix) <- c("Telecommuting", "Department", "Number of Skills", "Salary")
-colnames(corr_matrix) <- c("Telecommuting", "Department", "Number of Skills", "Salary")
+rownames(corr_matrix) <- c("Remote", "County", "Nb of Skills", "Salary")
+colnames(corr_matrix) <- c("Remote", "County", "Nb of Skills", "Salary")
 corrplot(corr_matrix, method="ellipse")
 
 data_selected$salaire2 <- as.factor(data_selected$salaire2)
