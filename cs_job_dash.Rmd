@@ -1,56 +1,398 @@
 ---
-title: "Offres d'emploi"
-output: 
+title: "French Software Engineering Job Market"
+output:
   flexdashboard::flex_dashboard:
     theme:
-      bg: "#101010"
-      fg: "#FDF7F7" 
-      primary: "#ED79F9"
-      base_font:
-        google: Prompt
-      code_font:
-        google: JetBrains Mono
+      bootswatch: flatly
     orientation: columns
     vertical_layout: fill
     source_code: embed
-    runtime: shiny
+    
+runtime: shiny
+resource_files:
+- data/finalData.csv
+- departements/departements-20180101.cpg
+- departements/departements-20180101.dbf
+- departements/departements-20180101.prj
+- departements/departements-20180101.shp
+- departements/departements-20180101.shx
+
 ---
+
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
-library(rsconnect)
-library(shiny)
-library(tidyverse)
+library(leaflet)
 library(ggplot2)
-# Install thematic and un-comment for themed static plots (i.e., ggplot2)
-# thematic::thematic_rmd()
+library(maps)
+library(readr)
+library(dplyr)
+library(ggmap)
+library(tmaptools)
+library(sf)
+library(tidyr)
+library(shiny)
+library(plotly)
+library(rmapshaper)
+library(stringr)
+library(corrplot)
+library(randomForest)
+
+
+finalData <- read.csv("data/finalData.csv", dec=".", sep = ",")
+dep_offers <- finalData$department
+dep_offers_count <- table(dep_offers)
+dep_offers_count <- as.data.frame(dep_offers_count)
+names(dep_offers_count) <- c("num_dep", "nb_offers") 
+
+
+france_departments <- st_read("departements/departements-20180101.shp")
+france_departments$code_insee <- gsub("M", "", france_departments$code_insee)
+france_departments$code_insee <- gsub("D", "", france_departments$code_insee)
+france_departments$code_insee <- as.numeric(france_departments$code_insee)
+france_departments <- subset(france_departments, code_insee <= 95)
+
+france_departments <- merge(france_departments, dep_offers_count, by.x="code_insee", by.y="num_dep", all.x=TRUE)
+
+# Fill NA values in nb_offers column with zeros
+france_departments$nb_offers <- ifelse(is.na(france_departments$nb_offers), 0, france_departments$nb_offers)
+
+
 ```
 
-Column {data-width=650 .tabset}
+# Presentation {data-icon="fa-home"}
+## Column 1 {data-width=650}
+### **Presentation of the subject**
+The **French Software Engineering Job Market** is a project that aims to **analyze and visualize the job offers** in the software engineering field in France. By analyzing a dataset of job offers, we provide insights into the demand for software engineers in **different counties and sectors**, as well as the required skills and salary distribution.
+
+In fact, individuals starting in the tech domain need to understand which programming languages and technologies they need to master in order to find employment opportunities.
+
+Our project utilizes various R packages such as `flexdashboard`, `leaflet`, `ggplot2`, and `shiny` to create interactive dashboards and visualizations. The dashboards allow users to **explore the data, filter by county and sector**, and gain a better understanding of the job market trends.
+
+In addition to the visualizations, we also perform data preprocessing and analysis. We merge the job offer data with geographical information to map the offers by county. We also analyze the skills required by different sectors and examine the correlation between telecommuting, number of skills, and salary.
+
+The dataset of 1000+ job offers was sourced through **web scraping** from Hello Work, a job listing site where web scraping is legally permitted, providing a rich source of information for our analysis.
+
+Overall, our project provides **valuable insights into the French software engineering job market**. It helps job seekers understand the demand for their skills in different counties and sectors, and it provides employers with information on the current job market trends.
+
+## Column 2 {data-width=350}
+
+###
+![](https://i.ibb.co/MNZ1nhD/mines-ales.png){}
+
+
+
+### Dashboards made by :
+
+<ul>
+  <li>EL-OTHMANI Youssef</li>
+  <li>FLANDRE Noe</li>
+  <li>MICHELIN Marc-Alexandre</li>
+  <li>RUBIO Arthur</li>
+  <li>TERRASSON Ludovic</li>
+</ul>
+
+
+# Database {data-icon="fa-database"}
+Column {.tabset}
 -----------------------------------------------------------------------
-# Répartition des offres
-### Cartes
+### Data
 
 ```{r}
+DT::datatable(finalData, 
+    options = list( pageLength = 25, 
+    dom = 'Bfrtip', 
+    buttons = c('csv')),
+    extensions = 'Buttons',
+    height = 1000,
+    width = 1000,
+    colnames = c("Job Title", "Company", "Contract Type", "Education Level", "Sector", "Remote", "Years of Exp", "Salary (€)", "Skills", "City","County n°")
+)
 
 ```
 
-### Secteurs
+### Description of the data
 
+
+#### `finalData.csv` Dataset Description
+The `finalData.csv` dataset was sourced through web scraping from Hello Work, a job listing site where web scraping is legally permitted. It comprises various attributes related to job postings gathered for analysis and machine learning applications. Below is the types of information it includes:
+
+- **Job Title (`job_title`)**: Title of the job posting, which could include positions like "Software Engineer".
+- **Company Name (`company_name`)**: Name of the company offering the job position.
+- **Contract Type (`contract_type`)**: Type of employment contract being offered, such as CDI (Permanent Contract), CDD (Fixed-Term Contract), Internship, etc.
+- **Education Level (`niveau_etude`)**: Minimum level of education required for the job, specified as diploma levels (e.g., "Bac +5" equivalent to a Master's degree in the French education system).
+- **Sector (`secteur`)**: Industry or sector the job belongs to, for example, Healthcare, Tech.
+- **Remote Work (`teletravail`)**: Boolean indicating whether the job offers the possibility for remote work.
+- **Experience Required (`experience`)**: Professional experience required for the job, possibly indicated in years.
+- **Salary (`salaire`)**: Annual salary offered for the position expressed in euros.
+- **Skills (`skills`)**: Array of specific skills mentioned in the job listing (programming languages, software proficiency, or other professional competencies).
+- **City (`city`)**: City where the job is located.
+- **Department (`department`)**: Administrative division where the job is located.
+
+
+# 🗺️ Offers by counties {data-navmenu="📈 Visualization"}
+## Column 1 {data-width=750}
+### Offers by counties
 ```{r}
+
+france_departments_simplified <- ms_simplify(france_departments, keep = 0.1)
+# Define UI
+ui <- fluidPage(
+  # Call the UI output to render the map
+  uiOutput("mapUI")
+)
+
+# Define server logic
+server <- function(input, output) {
+  
+  output$map <- renderLeaflet({
+    leaflet(data = france_departments_simplified) %>%
+      addProviderTiles(providers$CartoDB.Positron) %>%
+      setView(lng = 2.2137, lat = 46.2276, zoom = 6) %>%
+      addPolygons(
+        fillColor = ~colorNumeric("YlOrRd", domain = france_departments_simplified$nb_offers)(nb_offers),
+        color = "#BDBDC3",
+        weight = 1,
+        fillOpacity = 1,
+        opacity = 1,
+        smoothFactor = 0.7,
+        popup = ~paste("Nombre d'offres dans ", nom, ": ", nb_offers)
+      )
+  })
+  
+  output$mapUI <- renderUI({
+    leafletOutput("map", height = "500px")
+  })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+
+
 
 ```
 
-# Compétences
-
-### Chart D
+## Column 2  {data-width=250}
+### Top counties
 
 ```{r}
+top_regions <- france_departments
+top_regions <- st_drop_geometry(top_regions)
+top_regions <- top_regions[, c("nom", "nb_offers")]
+top_regions <- top_regions[order(-top_regions$nb_offers), ][1:15, ]
+top_regions$nb_offers <- as.integer(top_regions$nb_offers)
+ui = fluidPage(
+    # Table output
+    fluidRow(
+      column(width = 12, tableOutput("regionsTable"))
+    )
+)
+server = function(input, output) {
+    # Render the table
+    output$regionsTable <- renderTable({
+      colnames(top_regions) <- c("Name", "Nb of offers")
+      return(top_regions)
+    })
+}
+
+shinyApp(ui = ui, server = server)
+```
+
+
+
+# ⚙️ Skills required {data-navmenu="📈 Visualization" }
+```{r}
+ui <- fluidPage(
+  fluidRow(
+    column(width = 5,
+           selectInput("secteur", label = "Secteur",
+                       choices = c("All Sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL),
+           tableOutput("table")
+    ),
+    column(width = 7,
+           plotlyOutput("pieChart"),
+           uiOutput("resultText")  # Use uiOutput instead of textOutput
+    )
+  )
+)
+
+server <- function(input, output) {
+  output$table <- renderTable({
+    if (input$secteur == "All Sectors") {
+      sector_data <- finalData %>%
+        mutate(skills = gsub("\\[|\\]|'", "", skills),
+               skills = strsplit(skills, ",\\s*")) %>%
+        unnest(skills)
+    } else {
+      sector_data <- finalData %>%
+        filter(secteur == input$secteur) %>%
+        mutate(skills = gsub("\\[|\\]|'", "", skills),
+               skills = strsplit(skills, ",\\s*")) %>%
+        unnest(skills)
+    }
+    
+    skills_info <- sector_data %>%
+      count(skills, name = "Number of occurences") %>%
+      arrange(desc(`Number of occurences`)) %>%
+      mutate(skills = ifelse(row_number() <= 15, skills, NA)) %>%
+      na.omit()
+    
+    skills_info
+  })
+  
+  output$pieChart <- renderPlotly({
+    if (input$secteur == "All Sectors") {
+      sector_data <- finalData %>%
+        mutate(skills = gsub("\\[|\\]|'", "", skills),
+               skills = strsplit(skills, ",\\s*")) %>%
+        unnest(skills)
+    } else {
+      sector_data <- finalData %>%
+        filter(secteur == input$secteur) %>%
+        mutate(skills = gsub("\\[|\\]|'", "", skills),
+               skills = strsplit(skills, ",\\s*")) %>%
+        unnest(skills)
+    }
+    
+    skills_info <- sector_data %>%
+      count(skills, name = "Number of occurences") %>%
+      arrange(desc(`Number of occurences`)) %>%
+      mutate(skills = ifelse(row_number() <= 15, skills, NA)) %>%
+      na.omit()
+    
+    plot_ly(skills_info, labels = ~skills, values = ~`Number of occurences`, type = 'pie') %>%
+      layout(title = "The 15 most demanded skills by sector")
+  })
+  
+  output$resultText <- renderUI({  # Use renderUI instead of renderText
+    HTML("The pie chart displays the most demanded 15 skills. The most in-demand programming languages include <strong>Python</strong>, <strong>Java</strong>, and <strong>PHP</strong>, with PHP maintaining high demand despite being launched in 1994.<br>
+    Furthermore, deployment-related skills such as <strong>Docker</strong>, <strong>Kubernetes</strong>, and <strong>AWS</strong> are prominent in the most demanded skills. <br>
+    The most popular framework is <strong>Angular</strong>, known for its versatility to build dynamic web apps. <br>
+    Proficiency in <strong>Linux</strong> is also essential, as familiarity with various operating systems is advantageous. <br>
+    Additionally, <strong>DevOps</strong>, a collaborative approach emphasizing communication and integration between software development and IT operations teams, is a significant skill sought after in the industry. <br>
+    Through this pie chart, we have learned that not only languages are in demand, but also <strong>deployment and framework-related</strong> skills. This is coherent with the need of companies to have a versatile team.")
+  })
+}
+
+shinyApp(ui = ui, server = server)
 
 ```
 
-# Salaires par régions
+# 💰 Salaries by county (€) {data-navmenu="📈 Visualization" }
+```{r}
+selectInput("département", label = "County",
+            choices = unique(sort(finalData$department)),
+            multiple = FALSE,
+            selected = NULL) 
+fluidRow(
+  column(width = 12,
+         plotlyOutput("regionPlot", height = "400px")  # Adjust height as needed
+  )
+)
 
-# Salaires par secteur
+output$regionPlot <- renderPlotly({
+  # Sous-ensemble des données selon le département sélectionné par l'utilisateur
+  location_data <- finalData %>% filter(department == input$département)
+  
+  # Tracer l'histogramme
+  ggplot(location_data, aes(x = salaire)) +
+    geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+    labs(title = "Salary repartition by county",
+         x = "Salaries", y = "") +
+    theme_minimal()
+})
+```
 
-# Conclusion
+# 📊 Salaries by sectors {data-navmenu="📈 Visualization" }
+```{r}
+selectInput("secteur", label = "Secteur",
+choices = unique(finalData$secteur), multiple = FALSE, selected = NULL)
+
+fluidRow(
+  column(width = 12,
+         plotlyOutput("secteurPlot", height = "400px")  # Adjust height as needed
+  )
+)
+
+output$secteurPlot <- renderPlotly({
+  # Sous-ensemble des données selon le secteur sélectionné par l'utilisateur
+  secteur_data <- finalData %>% filter(secteur == input$secteur)
+  
+  # Tracer l'histogramme
+  ggplot(secteur_data, aes(x = salaire)) +
+    geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+    labs(title = "Répartition des salaires par secteur",
+         x = "salaire", y = "") +
+    theme_minimal() 
+})
+```
+
+# 🔍 Correlation matrix {data-navmenu="📈 Visualization" }
+## Column 1 {data-width=650}
+```{r}
+arrondir_dizaine_millier <- function(salaire) {
+  salaire_arrondi <- round(salaire / 10000) * 10000
+  return(salaire_arrondi)
+}
+
+finalDataCopy <- finalData
+
+# Apply the function to the salary column
+finalDataCopy$salaire2 <- arrondir_dizaine_millier(finalDataCopy$salaire)
+finalDataCopy<- finalDataCopy[finalDataCopy$salaire2 != 40000 | sample(c(TRUE, FALSE), nrow(finalData), replace = TRUE, prob = c(0.1, 0.9)), ]
+finalDataCopy <- finalDataCopy %>%
+  mutate(teletravail = ifelse(teletravail == "False", -1, 1))
+finalDataCopy$number_of_skills <- str_count(finalDataCopy$skills, "\\w+")
+data_selected <- finalDataCopy[, c("teletravail", "department", "number_of_skills", "salaire2")]
+data_selected <- na.omit(data_selected)
+corr_matrix <- cor(data_selected)
+rownames(corr_matrix) <- c("Remote", "County", "Nb of Skills", "Salary")
+colnames(corr_matrix) <- c("Remote", "County", "Nb of Skills", "Salary")
+corrplot(corr_matrix, method="ellipse")
+
+data_selected$salaire2 <- as.factor(data_selected$salaire2)
+# Séparation des données en ensembles d'entraînement et de test
+set.seed(123) # Pour la reproductibilité
+ind <- sample(2, nrow(data_selected), replace = TRUE, prob = c(0.8, 0.2))
+train <- data_selected[ind==1,]
+test <- data_selected[ind==2,]
+rf <- randomForest(salaire2~., data=train, proximity=TRUE)
+print(rf)
+
+```
+
+## Column 2 {data-width=650}
+### Matrix Observations:
+This heatmap displays the correlation coefficients between **Remote**, **County**, **Nb of Skills**, and **Salary**, with each cell's color denoting the correlation's strength and direction: blue for positive, red for negative, and grey for none, although only positive correlations are evident here. 
+
+- The **strongest positive correlations are between Remote and County, and also Nb of Skills**, hinting that **remote jobs may require more skills**. 
+
+- Salary exhibits a **moderate positive correlation** with Remote and County, implying a connection between higher salaries and remote work options or regional job markets, particularly notable in areas like Paris where salaries tend to be higher. Conversely, the **negative correlation between Salary and Number of Skills** suggests that higher salaries are associated with roles demanding expertise in a narrower range of skills, contrasting with entry-level positions that require a broader skill set without requiring expertise in each.
+The moderate correlations between salary and the other factors can be explained by the importance of salary negotiations in the tech industry.
+
+# Conclusion {data-icon="fa-pen-to-square"}
+## Column 1 {data-width=500}
+### Limitations
+
+It is important to note that this study has its limits. 
+
+- First, the dataset was sourced through web scraping from Hello Work, a job listing site where web scraping is legally permitted. However, the dataset may not be fully representative of the entire job market, as it only includes **job postings from this specific site**. Also, the dataset may not be fully up-to-date, as it was collected at a specific point in time.
+
+- It is important to note that the data, particularly regarding salary information, may not be entirely precise, given that it's often approximated and subject to negotiation, influenced by factors such as years of experience and previous employment history.
+
+- Secondly, another limitation of our project is the prevalence of the **hidden job market**, as many job openings are not posted online and remain inaccessible through web scraping.
+
+- Finally, the tech job market is known for its **dynamic nature** with constant advancements and evolving technologies. As a result, the skills that are highly sought after in the industry can change rapidly. What may be in high demand today could become less relevant tomorrow as new technologies emerge and market needs shift. 
+
+## Column 2 {data-width=500}
+### Conclusion
+
+In conclusion, our project provides valuable insights into the French software engineering job market. Here are some of our major findings:
+
+- **Regional Hegemony**: The Paris region holds a commanding lead nationally, with both higher salaries and a greater number of job opportunities.
+
+- **Skill Demand**: The market demands a mix of classic programming skills, such as Python and Java, as well as unexpected ones like PHP, highlighting the value of developer versatility along with proficiency in cloud tools like AWS and Docker.
+
+- **Salary and Skills Correlation**: A negative correlation exists between salary and specific skills, indicating specialized language experts are in demand for senior roles, unlike generalists.
+
+- **Tech Sector Salaries**: Salaries in the tech sector surpass those in other fields, confirming its status as a lucrative employment market.

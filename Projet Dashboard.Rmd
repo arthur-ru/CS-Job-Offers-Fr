@@ -16,8 +16,6 @@ resource_files:
 - departements/departements-20180101.prj
 - departements/departements-20180101.shp
 - departements/departements-20180101.shx
-- www/logo.png
-- www/mines_ales.png
 
 ---
 
@@ -212,8 +210,10 @@ ui <- fluidPage(
            tableOutput("table")
     ),
     column(width = 7,
+           offset = 0.5,  # Move the pie chart to the left
            plotlyOutput("pieChart"),
-           uiOutput("resultText")  # Use uiOutput instead of textOutput
+           uiOutput("resultText"),  # Use uiOutput instead of textOutput
+           br()  # Add a line break for spacing
     )
   )
 )
@@ -263,7 +263,7 @@ server <- function(input, output) {
       na.omit()
     
     plot_ly(skills_info, labels = ~skills, values = ~`Number of occurences`, type = 'pie') %>%
-      layout(title = "The 15 most demanded skills by sector")
+      layout(title = "The 15 most demanded skills by sector", margin = list(t = 50))  # Add margin to move the pie chart down
   })
   
   output$resultText <- renderUI({  # Use renderUI instead of renderText

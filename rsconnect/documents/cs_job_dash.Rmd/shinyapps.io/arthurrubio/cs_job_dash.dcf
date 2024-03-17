@@ -1,0 +1,12 @@
+name: cs_job_dash
+title: cs_job_dash
+username: arthurrubio
+account: arthurrubio
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11512790
+bundleId: 8382495
+url: https://arthurrubio.shinyapps.io/cs_job_dash/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
