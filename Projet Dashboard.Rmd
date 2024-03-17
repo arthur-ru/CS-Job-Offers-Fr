@@ -130,6 +130,52 @@ The `finalData.csv` dataset was sourced through web scraping from Hello Work, a 
 - **Department (`department`)**: Administrative division where the job is located.
 
 
+
+# data analysis
+
+## column 1
+### Salary
+```{r}
+ui <- fluidPage(
+dataTableOutput("summary_table")
+)
+
+# Define server logic
+server <- function(input, output) {
+  
+  # Compute summary statistics
+  salaire_summary <- summary(finalData$salaire)
+  
+  # Create a data frame to store the summary statistics
+  summary_table <- data.frame(
+    Statistic = c("Minimum", "1st Quartile", "Median", "Mean", "3rd Quartile", "Maximum"),
+    Value = c(min(finalData$salaire), quantile(finalData$salaire, 0.25), median(finalData$salaire), mean(finalData$salaire), quantile(finalData$salaire, 0.75), max(finalData$salaire))
+  )
+  
+  # Output summary table
+  output$summary_table <- renderDataTable({
+    summary_table
+  })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+```
+
+## column 2 {data-width=400}
+### Interpretation
+```{r}
+p("- The dataset is somewhat right-skewed since the mean (average) is slightly higher than the median.")
+p("- Most of the data points (75%) lie within the range of approximately 13,464 to 43,653.")
+p("- The maximum value of 90,000 suggests that there are some outliers in the dataset, which are significantly higher than the rest of the values. These outliers could represent unusually high salaries.")
+```
+
+### plot
+```{r}
+plot_ly(finalData, y = ~salaire, type = "box") %>%
+  layout(title = "Boxplot of Salary")
+```
+
 # 🗺️ Offers by counties {data-navmenu="📈 Visualization"}
 ## Column 1 {data-width=750}
 ### Offers by counties
