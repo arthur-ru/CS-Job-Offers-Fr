@@ -296,18 +296,18 @@ Auvergne_Rhone_Alpes <- c(1, 3, 7, 15, 26, 38, 42, 43, 63, 69, 73, 74)
 Provence_Alpes_Cote_d_Azur <- c(4, 5, 6, 13, 83, 84)
 
 regions <- list(
-  Hauts_de_France = Hauts_de_France,
-  Ile_de_France = Ile_de_France,
-  Grand_Est = Grand_Est,
-  Normandie = Normandie,
-  Bretagne = Bretagne,
-  Pays_de_la_Loire = Pays_de_la_Loire,
-  Centre_Val_de_Loire = Centre_Val_de_Loire,
-  Bourgogne_Franche_Comte = Bourgogne_Franche_Comte,
-  Nouvelle_Aquitaine = Nouvelle_Aquitaine,
-  Occitanie = Occitanie,
-  Auvergne_Rhone_Alpes = Auvergne_Rhone_Alpes,
-  Provence_Alpes_Cote_d_Azur = Provence_Alpes_Cote_d_Azur
+  "Hauts de France" = Hauts_de_France,
+  "Ile de France" = Ile_de_France,
+  "Grand Est" = Grand_Est,
+  "Normandie" = Normandie,
+  "Bretagne" = Bretagne,
+  "Pays de la Loire" = Pays_de_la_Loire,
+  "Centre Val de Loire" = Centre_Val_de_Loire,
+  "Bourgogne Franche Comte" = Bourgogne_Franche_Comte,
+  "Nouvelle Aquitaine" = Nouvelle_Aquitaine,
+  "Occitanie" = Occitanie,
+  "Auvergne Rhone Alpes" = Auvergne_Rhone_Alpes,
+  "Provence Alpes Cote d'Azur" = Provence_Alpes_Cote_d_Azur
 )
 
 regions_df <- data.frame(
