@@ -7,6 +7,7 @@ output:
     orientation: columns
     vertical_layout: fill
     source_code: embed
+    
 runtime: shiny
 resource_files:
 - data/finalData.csv
@@ -61,7 +62,7 @@ france_departments$nb_offers <- ifelse(is.na(france_departments$nb_offers), 0, f
 
 ```
 
-# Presentation
+# Presentation {data-icon="fa-home"}
 ## Column 1 {data-width=650}
 ### **Presentation of the subject**
 The **French Software Engineering Job Market** is a project that aims to **analyze and visualize the job offers** in the software engineering field in France. By analyzing a dataset of job offers, we provide insights into the demand for software engineers in **different regions and sectors**, as well as the required skills and salary distribution.
@@ -94,7 +95,7 @@ Overall, our project provides **valuable insights into the French software engin
 </ul>
 
 
-# Database
+# Database {data-icon="fa-database"}
 Column {.tabset}
 -----------------------------------------------------------------------
 ### Data
@@ -131,7 +132,9 @@ The `finalData.csv` dataset was sourced through web scraping from Hello Work, a 
 - **Department (`department`)**: Administrative division where the job is located.
 
 
-# Offers by regions {data-navmenu=Visualisation}
+# Offers by regions {data-navmenu="📈 Visualisation"}
+## Column 1 {data-width=750}
+### Offers by regions
 ```{r}
 
 france_departments_simplified <- ms_simplify(france_departments, keep = 0.1)
@@ -171,7 +174,34 @@ shinyApp(ui = ui, server = server)
 
 ```
 
-# Skills required {data-navmenu=Visualisation}
+## Column 2  {data-width=250}
+### Top regions
+
+```{r}
+top_regions<-france_departments
+top_regions <- st_drop_geometry(top_regions)
+top_regions <- top_regions[, c("nom", "nb_offers")]
+top_regions <- top_regions[order(-top_regions$nb_offers), ][1:15, ]
+top_regions$nb_offers <- as.integer(top_regions$nb_offers)
+ui = fluidPage(
+    # Table output
+    fluidRow(
+      column(width = 12,tableOutput("regionsTable"))
+    )
+)
+server = function(input, output) {
+    # Render the table
+    output$regionsTable <- renderTable({
+      return(top_regions)
+    })
+}
+
+shinyApp(ui = ui, server = server)
+```
+
+
+
+# Skills required {data-navmenu="📈 Visualisation" }
 ```{r}
 ui <- fluidPage(
   fluidRow(
@@ -239,15 +269,22 @@ shinyApp(ui = ui, server = server)
 
 ```
 
-# Salaries by region (€) {data-navmenu=Visualisation}
+# Salaries by region (€) {data-navmenu="📈 Visualisation" }
 ```{r}
 selectInput("département", label = "Region",
             choices = unique(sort(finalData$department)),
             multiple = FALSE,
             selected = NULL) 
-renderPlotly({
+fluidRow(
+  column(width = 12,
+         plotlyOutput("regionPlot", height = "400px")  # Adjust height as needed
+  )
+)
+
+output$regionPlot <- renderPlotly({
   # Sous-ensemble des données selon le département sélectionné par l'utilisateur
   location_data <- finalData %>% filter(department == input$département)
+  
   # Tracer l'histogramme
   ggplot(location_data, aes(x = salaire)) +
     geom_histogram(fill = "lightblue", color = "black", bins = 20) +
@@ -257,13 +294,21 @@ renderPlotly({
 })
 ```
 
-# Salaries by sectors {data-navmenu=Visualisation}
+# Salaries by sectors {data-navmenu="📈 Visualisation" }
 ```{r}
 selectInput("secteur", label = "Secteur",
 choices = unique(finalData$secteur), multiple = FALSE, selected = NULL)
-renderPlotly({
+
+fluidRow(
+  column(width = 12,
+         plotlyOutput("secteurPlot", height = "400px")  # Adjust height as needed
+  )
+)
+
+output$secteurPlot <- renderPlotly({
   # Sous-ensemble des données selon le secteur sélectionné par l'utilisateur
   secteur_data <- finalData %>% filter(secteur == input$secteur)
+  
   # Tracer l'histogramme
   ggplot(secteur_data, aes(x = salaire)) +
     geom_histogram(fill = "lightblue", color = "black", bins = 20) +
@@ -273,7 +318,7 @@ renderPlotly({
 })
 ```
 
-# Correlation matrix {data-navmenu=Visualisation}
+# Correlation matrix {data-navmenu="📈 Visualisation" }
 ```{r}
 arrondir_dizaine_millier <- function(salaire) {
   salaire_arrondi <- round(salaire / 10000) * 10000
@@ -308,7 +353,7 @@ print(rf)
 
 ## Column 1 {data-width=650}
 
-# Conclusion
+# Conclusion {data-icon="fa-pen-to-square"}
 
 ```{r}
 
