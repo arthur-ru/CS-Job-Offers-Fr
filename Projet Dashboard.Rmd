@@ -20,6 +20,7 @@ resource_files:
 - scrapHardSkills.py
 - scrapOffersLink.py
 - preprocessing.ipynb
+- Rapport_g2.pdf
 
 ---
 
@@ -323,24 +324,8 @@ shinyApp(ui = ui, server = server)
 
 # ⚙️ Skills required {data-navmenu="📈 Visualization" }
 ```{r}
-ui <- fluidPage(
-  fluidRow(
-    column(width = 5,
-           selectInput("secteur", label = "Secteur",
-                       choices = c("All Sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL),
-           tableOutput("table")
-    ),
-    column(width = 7,
-           offset = 0.5,  # Move the pie chart to the left
-           plotlyOutput("pieChart"),
-           uiOutput("resultText"),  # Use uiOutput instead of textOutput
-           br()  # Add a line break for spacing
-    )
-  )
-)
 
-server <- function(input, output) {
-  output$table <- renderTable({
+output$table <- renderTable({
     if (input$secteur == "All Sectors") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
@@ -363,7 +348,7 @@ server <- function(input, output) {
     skills_info
   })
   
-  output$pieChart <- renderPlotly({
+output$pieChart <- renderPlotly({
     if (input$secteur == "All Sectors") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
@@ -387,7 +372,7 @@ server <- function(input, output) {
       layout(title = "The 15 most demanded skills by sector", margin = list(t = 50))  # Add margin to move the pie chart down
   })
   
-  output$resultText <- renderUI({  # Use renderUI instead of renderText
+output$resultText <- renderUI({  # Use renderUI instead of renderText
     HTML("The pie chart displays the most demanded 15 skills. The most in-demand programming languages include <strong>Python</strong>, <strong>Java</strong>, and <strong>PHP</strong>, with PHP maintaining high demand despite being launched in 1994.<br>
     Furthermore, deployment-related skills such as <strong>Docker</strong>, <strong>Kubernetes</strong>, and <strong>AWS</strong> are prominent in the most demanded skills. <br>
     The most popular framework is <strong>Angular</strong>, known for its versatility to build dynamic web apps. <br>
@@ -395,10 +380,36 @@ server <- function(input, output) {
     Additionally, <strong>DevOps</strong>, a collaborative approach emphasizing communication and integration between software development and IT operations teams, is a significant skill sought after in the industry. <br>
     Through this pie chart, we have learned that not only languages are in demand, but also <strong>deployment and framework-related</strong> skills. This is coherent with the need of companies to have a versatile team.")
   })
-}
 
-shinyApp(ui = ui, server = server)
 
+
+
+```
+
+## column 1 {data-width=300}
+###
+
+```{r}
+selectInput("secteur", label = "Secteur",
+                       choices = c("All Sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL)
+tableOutput("table")
+
+```
+
+
+## column 2
+
+###
+
+```{r}
+ plotlyOutput("pieChart")
+```
+
+### Observations
+
+```{r}
+uiOutput("resultText")
+br()
 ```
 
 # 💰 Salaries by region (€) {data-navmenu="📈 Visualization" }
@@ -751,3 +762,23 @@ In conclusion, our project provides valuable insights into the French software e
 - **Salary and Skills Correlation**: A negative correlation exists between salary and specific skills, indicating specialized language experts are in demand for senior roles, unlike generalists.
 
 - **Tech Sector Salaries**: Salaries in the tech sector surpass those in other fields, confirming its status as a lucrative employment market.
+
+```{r}
+ui <- fluidPage(
+downloadButton("downloadSRapport", "Download Report ")
+)
+
+
+server <- function(input, output) {
+  output$downloadSRapport <- downloadHandler(
+    filename = function() {
+      "Rapport_g2.pdf"  
+    },
+    content = function(file) {
+      file.copy("Rapport_g2.pdf", file)
+    }
+  )
+}
+shinyApp(ui, server)
+
+```
