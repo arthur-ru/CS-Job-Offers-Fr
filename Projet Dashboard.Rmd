@@ -20,7 +20,7 @@ resource_files:
 - scrapHardSkills.py
 - scrapOffersLink.py
 - preprocessing.ipynb
-- Rapport_g2.pdf
+- Collecte_rapport_g2.pdf
 
 ---
 
@@ -772,10 +772,10 @@ downloadButton("downloadSRapport", "Download Report ")
 server <- function(input, output) {
   output$downloadSRapport <- downloadHandler(
     filename = function() {
-      "Rapport_g2.pdf"  
+      "Collecte_rapport_g2.pdf"  
     },
     content = function(file) {
-      file.copy("Rapport_g2.pdf", file)
+      file.copy("Collecte_rapport_g2.pdf", file)
     }
   )
 }
