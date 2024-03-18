@@ -130,51 +130,53 @@ The `finalData.csv` dataset was sourced through web scraping from Hello Work, a 
 - **Department (`department`)**: Administrative division where the job is located.
 
 
+### data preprocessing
 
-# data analysis
 
-## column 1
-### Salary
 ```{r}
-ui <- fluidPage(
-dataTableOutput("summary_table")
+p("We conducted a thorough preprocessing phase to enhance the quality and usability of the dataset. This involved several key steps aimed at standardizing and refining the data for subsequent analysis.")
+p("Initially, we converted the 'experience' column to string format to facilitate handling of any missing values. Next, we extracted numerical experience values from this column to quantify the level of expertise required for each job offer.
+")
+p("Additionally, we processed the 'salaire' column to extract average salary information, rounded it for precision, and replaced any missing values with the computed average. ")
+p("Geographical analysis was also improved by splitting the 'location' column into 'city' and 'department' components, allowing for more granular insights into job distribution across regions. Furthermore, we transformed the 'skills' column into a list format, removing duplicates and converting all entries to lowercase for consistency. These preprocessing steps collectively ensured that the dataset was cleansed, standardized, and ready for further analysis.")
+
+# Example preprocessed experience data
+example_data <- data.frame(
+  original_experience = c("Exp. 5 ans", "Exp. 1 à 7 ans", NA, "Exp. + 7 ans"),
+  original_salary = c("40 000 - 45 000 EUR par an", "819 - 2 100 EUR par mois", NA, "35 000 - 38 000 EUR par an"),
+  original_location = c("Paris 1er - 75", "Paris - 75", "Lyon 1er - 69", "Lyon - 69"),
+  'dep' = c('','','','')
 )
 
-# Define server logic
-server <- function(input, output) {
-  
-  # Compute summary statistics
-  salaire_summary <- summary(finalData$salaire)
-  
-  # Create a data frame to store the summary statistics
-  summary_table <- data.frame(
-    Statistic = c("Minimum", "1st Quartile", "Median", "Mean", "3rd Quartile", "Maximum"),
-    Value = c(min(finalData$salaire), quantile(finalData$salaire, 0.25), median(finalData$salaire), mean(finalData$salaire), quantile(finalData$salaire, 0.75), max(finalData$salaire))
-  )
-  
-  # Output summary table
-  output$summary_table <- renderDataTable({
-    summary_table
-  })
-}
 
-# Run the application
-shinyApp(ui = ui, server = server)
+# Example preprocessed experience data
+example_data_processed <- data.frame(
+  processed_experience = c(5, 1, NA, 7),  # Processed values (example)
+  processed_salary = c(42500, 17514, 32171, 36500),  # Processed values (example)
+  processed_city = c("Paris", "Paris", "Lyon", "Lyon"),
+  procced_dep = c(75, 75, 69, 69)
+)
+
+
+# Use formattable within a div with width and centering
+HTML(sprintf('<div style="display: flex; align-items: center; justify-content: center;">
+  <div style="width: 40%%; margin-right: 10px;">%s</div>
+    <div style="width: 10%%; margin-right: 10px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+        </div>
+        
+        <div style="width: 40%%; margin-left: 10px;">%s</div>
+          </div>',
+             formattable(
+               example_data
+             ),
+             formattable(
+               example_data_processed
+             )
+))
+
 ```
 
-## column 2 {data-width=400}
-### Interpretation
-```{r}
-p("- The dataset is somewhat right-skewed since the mean (average) is slightly higher than the median.")
-p("- Most of the data points (75%) lie within the range of approximately 13,464 to 43,653.")
-p("- The maximum value of 90,000 suggests that there are some outliers in the dataset, which are significantly higher than the rest of the values. These outliers could represent unusually high salaries.")
-```
-
-### plot
-```{r}
-plot_ly(finalData, y = ~salaire, type = "box") %>%
-  layout(title = "Boxplot of Salary")
-```
 
 # 🗺️ Offers by counties {data-navmenu="📈 Visualization"}
 ## Column 1 {data-width=750}
@@ -360,20 +362,6 @@ regions_df <- data.frame(
   region = rep(names(regions), lengths(regions)),
   department = unlist(regions)
 )
-
-selectInput("region", label = "Region",
-            choices = c("All regions", names(regions)),
-            multiple = FALSE,
-            selected = "All regions") 
-fluidRow(
-  column(width = 8,
-         plotlyOutput("regionPlot", height = "400px")  # Adjust height as needed
-  ),
-  column(width = 4,
-         tableOutput("regionTable")
-  )
-)
-
 output$regionPlot <- renderPlotly({
   # Check if "All regions" is selected or a specific region
   if (input$region == "All regions") {
@@ -436,7 +424,55 @@ output$regionTable <- renderTable({
       "Value" = format(c(top_10_best, quartiles[2], mean(location_data$salaire), top_10_worst, max_value, min_value), nsmall = 0)
     )
 })
+
+output$regionBoxPlot <- renderPlotly({
+  # Check if "All regions" is selected or a specific region
+  if (input$region == "All regions") {
+    location_data <- finalData
+  } else {
+    # Get department codes for the selected region
+    selected_departments <- regions[[input$region]]
+    
+    # Filter the data for those departments
+    location_data <- finalData %>% 
+      filter(department %in% selected_departments)
+  }
+  
+  plot_ly(location_data, y = ~salaire, type = "box") %>%
+  layout(title = "Boxplot of Salary")
+  
+})
+
 ```
+
+## column 1
+### plot
+```{r}
+selectInput("region", label = "Region",
+            choices = c("All regions", names(regions)),
+            multiple = FALSE,
+            selected = "All regions") 
+column(
+  width = 12,
+
+
+plotlyOutput("regionPlot", height = "400px")
+)
+
+```
+
+## column 2 {data-width=400}
+### table
+```{r}
+tableOutput("regionTable")  # Adjust height as needed
+```
+
+### Boxplot of Salary by regen
+```{r}
+plotlyOutput("regionBoxPlot", height = "400px")
+
+```
+
 
 # 📊 Salaries by sectors {data-navmenu="📈 Visualization" }
 ```{r}
