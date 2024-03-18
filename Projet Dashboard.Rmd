@@ -16,6 +16,7 @@ resource_files:
 - scrapOffersLink.py
 - preprocessing.ipynb
 - Collecte_rapport_g2.pdf
+- departements/departements.geojson
 
 ---
 
