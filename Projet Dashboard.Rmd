@@ -37,6 +37,7 @@ library(rmapshaper)
 library(stringr)
 library(corrplot)
 library(randomForest)
+library(formattable)
 
 
 finalData <- read.csv("data/finalData.csv", dec=".", sep = ",")
