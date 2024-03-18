@@ -597,9 +597,9 @@ valueBox("42%", icon = "fa-house", color = "#8400ff")
 ### Observations
 The dataset is somewhat **right-skewed** since the mean (average) is slightly higher than the median.
 
-Most of the data points (75%) lie within the range of approximately 13,464 to 43,653.
+Most of the data points (75%) lie within the range of approximately 13 464€ to 43 653€.
 
-- The maximum value of 90,000 suggests that there are some outliers in the dataset, which are significantly higher than the rest of the values. These outliers could represent unusually high salaries.
+- The maximum value of 90 000€ suggests that there are some outliers in the dataset, which are significantly higher than the rest of the values. These outliers could represent unusually high salaries.
 
 # 🔍 Correlation matrix {data-navmenu="📐 Modelization" }
 ## Column 1 {data-width=650}
