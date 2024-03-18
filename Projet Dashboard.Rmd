@@ -131,16 +131,14 @@ The `finalData.csv` dataset was sourced through web scraping from Hello Work, a 
 - **Department (`department`)**: Administrative division where the job is located.
 
 
-### data preprocessing
+### Data Preprocessing
 
+We conducted a thorough preprocessing phase to **enhance the quality and usability of the dataset**. This involved several key steps aimed at standardizing and refining the data for subsequent analysis.
+Initially, we converted the `experience` column to string format to facilitate handling of any missing values. Next, we extracted numerical experience values from this column to **quantify the level of expertise required** for each job offer.
+Additionally, we processed the `salaire` column to extract average salary information, rounded it for precision, and replaced any missing values with the computed average.
+Geographical analysis was also improved by **splitting the `location` column into `city` and `department`** components, allowing for more granular insights into job distribution across regions. Furthermore, we transformed the `skills` column into a **list format**, removing duplicates and converting all entries to lowercase for consistency. These preprocessing steps collectively ensured that the dataset was cleansed, standardized, and ready for further analysis.
 
 ```{r}
-p("We conducted a thorough preprocessing phase to enhance the quality and usability of the dataset. This involved several key steps aimed at standardizing and refining the data for subsequent analysis.")
-p("Initially, we converted the 'experience' column to string format to facilitate handling of any missing values. Next, we extracted numerical experience values from this column to quantify the level of expertise required for each job offer.
-")
-p("Additionally, we processed the 'salaire' column to extract average salary information, rounded it for precision, and replaced any missing values with the computed average. ")
-p("Geographical analysis was also improved by splitting the 'location' column into 'city' and 'department' components, allowing for more granular insights into job distribution across regions. Furthermore, we transformed the 'skills' column into a list format, removing duplicates and converting all entries to lowercase for consistency. These preprocessing steps collectively ensured that the dataset was cleansed, standardized, and ready for further analysis.")
-
 # Example preprocessed experience data
 example_data <- data.frame(
   original_experience = c("Exp. 5 ans", "Exp. 1 à 7 ans", NA, "Exp. + 7 ans"),
@@ -393,8 +391,8 @@ output$regionPlot <- renderPlotly({
   
   # Add vertical lines for the top 10% of best and worst salaries
   p <- p +
-    geom_vline(xintercept = top_10_best, color = "#200be0", linetype = "dashed") +
-    geom_vline(xintercept = top_10_worst, color = "#200be0", linetype = "dashed")
+    geom_vline(xintercept = top_10_best, color = "#00ff00", linetype = "dashed") +
+    geom_vline(xintercept = top_10_worst, color = "#ff0000", linetype = "dashed")
   
   ggplotly(p)
 })
@@ -447,7 +445,7 @@ output$regionBoxPlot <- renderPlotly({
 ```
 
 ## column 1
-### plot
+### Graph plot
 ```{r}
 selectInput("region", label = "Region",
             choices = c("All regions", names(regions)),
@@ -463,12 +461,12 @@ plotlyOutput("regionPlot", height = "400px")
 ```
 
 ## column 2 {data-width=400}
-### table
+### Statistics table
 ```{r}
 tableOutput("regionTable")  # Adjust height as needed
 ```
 
-### Boxplot of Salary by regen
+### Boxplot of Salary by Region
 ```{r}
 plotlyOutput("regionBoxPlot", height = "400px")
 
@@ -486,11 +484,16 @@ output$secteurPlot <- renderPlotly({
     secteur_data <- finalData %>% filter(secteur == input$secteur)
   }
   
-
-
+  mean_salary <- mean(secteur_data$salaire)
+  top_10_best <- quantile(secteur_data$salaire, probs = 0.9)
+  top_10_worst <- quantile(secteur_data$salaire, probs = 0.1)
+  
   # Tracer l'histogramme
   ggplot(secteur_data, aes(x = salaire)) +
     geom_histogram(fill = "lightblue", color = "black", bins = 20) +
+    geom_vline(xintercept = mean_salary, color = "#200be0", linetype = "dashed") +
+    geom_vline(xintercept = top_10_best, color = "#00ff00", linetype = "dashed") +
+    geom_vline(xintercept = top_10_worst, color = "#ff0000", linetype = "dashed") +
     labs(title = "Distribution of salaries by sector",
          x = "salaire", y = "") +
     theme_minimal() 
@@ -537,7 +540,7 @@ output$sectorTable <- renderTable({
 
 
 ## column 1
-### plot
+### Graph plot
 ```{r}
 selectInput("secteur", label = "Secteur",
 choices = c("All sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL)
@@ -549,13 +552,13 @@ plotlyOutput("secteurPlot", height = "400px")
 ```
 
 ## column 2 {data-width=400}
-### table
+### Statistics table
 ```{r}
 tableOutput("sectorTable") 
 ```
 
 
-### boxplot
+### Boxplot of Salary by Sector
 ```{r}
 plotlyOutput("sectorBoxPlot", height = "400px")
 ```
