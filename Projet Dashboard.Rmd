@@ -366,8 +366,11 @@ selectInput("region", label = "Region",
             multiple = FALSE,
             selected = "All regions") 
 fluidRow(
-  column(width = 12,
+  column(width = 8,
          plotlyOutput("regionPlot", height = "400px")  # Adjust height as needed
+  ),
+  column(width = 4,
+         tableOutput("regionTable")
   )
 )
 
@@ -384,14 +387,54 @@ output$regionPlot <- renderPlotly({
       filter(department %in% selected_departments)
   }
   
+  # Calculate the mean salary
+  mean_salary <- mean(location_data$salaire)
+  
   # Plot the histogram of salaries
   p <- ggplot(location_data, aes(x = salaire)) +
     geom_histogram(fill = "lightblue", color = "black", bins = 20) +
     labs(title = "Distribution of salaries by region",
          x = "Salaries", y = "") +
-    theme_minimal()
+    theme_minimal() +
+    geom_vline(xintercept = mean_salary, color = "#200be0", linetype = "dashed")  # Add a dashed red line for the mean salary
+  # Calculate quartiles, top 10% of best salaries, top 10% of worst salaries, maximum and minimum values
+  quartiles <- quantile(location_data$salaire, probs = c(0.1, 0.5, 0.9))
+  top_10_best <- quantile(location_data$salaire, probs = 0.9)
+  top_10_worst <- quantile(location_data$salaire, probs = 0.1)
+  
+  # Add vertical lines for the top 10% of best and worst salaries
+  p <- p +
+    geom_vline(xintercept = top_10_best, color = "#200be0", linetype = "dashed") +
+    geom_vline(xintercept = top_10_worst, color = "#200be0", linetype = "dashed")
   
   ggplotly(p)
+})
+
+output$regionTable <- renderTable({
+  # Check if "All regions" is selected or a specific region
+  if (input$region == "All regions") {
+    location_data <- finalData
+  } else {
+    # Get department codes for the selected region
+    selected_departments <- regions[[input$region]]
+    
+    # Filter the data for those departments
+    location_data <- finalData %>% 
+      filter(department %in% selected_departments)
+  }
+  
+  # Calculate quartiles, top 10% of best salaries, top 10% of worst salaries, maximum and minimum values
+  quartiles <- quantile(location_data$salaire, probs = c(0.1, 0.5, 0.9))
+  top_10_best <- quantile(location_data$salaire, probs = 0.9)
+  top_10_worst <- quantile(location_data$salaire, probs = 0.1)
+  max_value <- max(location_data$salaire)
+  min_value <- min(location_data$salaire)
+  
+  # Create the table
+  data.frame(
+      "Salaries" = c("10% Best", "Median", "Mean", "10% Worst", "Maximum", "Minimum"),
+      "Value" = format(c(top_10_best, quartiles[2], mean(location_data$salaire), top_10_worst, max_value, min_value), nsmall = 0)
+    )
 })
 ```
 
