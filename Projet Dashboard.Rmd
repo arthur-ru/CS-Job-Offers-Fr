@@ -1,5 +1,5 @@
 ---
-title: "French Software Engineering Job Market"
+title: "French SWE Job Market"
 output:
   flexdashboard::flex_dashboard:
     theme:
@@ -38,7 +38,7 @@ library(stringr)
 library(corrplot)
 library(randomForest)
 library(formattable)
-
+library(caret)
 
 finalData <- read.csv("data/finalData.csv", dec=".", sep = ",")
 dep_offers <- finalData$department
@@ -563,7 +563,45 @@ tableOutput("sectorTable")
 plotlyOutput("sectorBoxPlot", height = "400px")
 ```
 
-# 🔍 Correlation matrix {data-navmenu="📈 Visualization" }
+# 🔢 Basic Analysis {data-navmenu="📐 Modelization"}
+## Column1 {data-width="650"}
+### Mean Salary
+```{r}
+renderValueBox({
+valueBox("43 826€", icon = "fa-euro-sign", color = "#4fdfff")
+})
+```
+
+### Sector with most offers
+```{r}
+renderValueBox({
+valueBox("Tech", icon = "fa-laptop", color = "#1592ff")
+})
+```
+
+### Most asked skills
+```{r}
+renderValueBox({
+valueBox("Python, Java, PHP, Git", icon = "fa-brain", color = "#6810ff")
+})
+```
+
+### Percentage of remote jobs
+```{r}
+renderValueBox({
+valueBox("42%", icon = "fa-house", color = "#8400ff")
+})
+```
+
+## Column2 {data-width="350"}
+### Observations
+The dataset is somewhat **right-skewed** since the mean (average) is slightly higher than the median.
+
+Most of the data points (75%) lie within the range of approximately 13,464 to 43,653.
+
+- The maximum value of 90,000 suggests that there are some outliers in the dataset, which are significantly higher than the rest of the values. These outliers could represent unusually high salaries.
+
+# 🔍 Correlation matrix {data-navmenu="📐 Modelization" }
 ## Column 1 {data-width=650}
 ### Correlation matrix
 ```{r}
@@ -576,7 +614,6 @@ finalDataCopy <- finalData
 
 # Apply the function to the salary column
 finalDataCopy$salaire2 <- arrondir_dizaine_millier(finalDataCopy$salaire)
-finalDataCopy<- finalDataCopy[finalDataCopy$salaire2 != 40000 | sample(c(TRUE, FALSE), nrow(finalData), replace = TRUE, prob = c(0.1, 0.9)), ]
 finalDataCopy <- finalDataCopy %>%
   mutate(teletravail = ifelse(teletravail == "False", -1, 1))
 finalDataCopy$number_of_skills <- str_count(finalDataCopy$skills, "\\w+")
@@ -593,16 +630,19 @@ set.seed(123) # Pour la reproductibilité
 ind <- sample(2, nrow(data_selected), replace = TRUE, prob = c(0.8, 0.2))
 train <- data_selected[ind==1,]
 test <- data_selected[ind==2,]
-rf <- randomForest(salaire2~., data=train, proximity=TRUE)
-
+model <- randomForest(salaire2~., data=train, proximity=TRUE)
+predictions <- predict(model, newdata=test)
+confusion_matrix <- confusionMatrix(predictions, test$salaire2)
+accuracy <- confusion_matrix$overall['Accuracy']
 ```
 
-### Correlation table
+### Random Forest model accuracy
 ```{r}
-print(rf$confusion)
+gauge(value = as.integer(round(accuracy,2)*100), min = 0, max = 100)
 ```
 ## Column 2 {data-width=650}
 ### Matrix Observations:
+
 This heatmap displays the correlation coefficients between **Remote**, **County**, **Nb of Skills**, and **Salary**, with each cell's color denoting the correlation's strength and direction: blue for positive, red for negative, and grey for none, although only positive correlations are evident here. 
 
 - The **strongest positive correlations are between Remote and County, and also Nb of Skills**, hinting that **remote jobs may require more skills**. 
