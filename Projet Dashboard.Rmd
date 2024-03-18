@@ -16,6 +16,10 @@ resource_files:
 - departements/departements-20180101.prj
 - departements/departements-20180101.shp
 - departements/departements-20180101.shx
+- scrapOfferInfo.py
+- scrapHardSkills.py
+- scrapOffersLink.py
+- preprocessing.ipynb
 
 ---
 
@@ -174,8 +178,78 @@ HTML(sprintf('<div style="display: flex; align-items: center; justify-content: c
              )
 ))
 
+ui <- fluidPage( downloadButton("downloadScriptPreprocessing", "Download Script"))
+
+server <- function(input, output) {
+  output$downloadScriptPreprocessing <- downloadHandler(
+    filename = function() {
+      "preprocessing.ipynb"  
+    },
+    content = function(file) {
+      file.copy("preprocessing.ipynb", file)
+    }
+  )
+}
+
+shinyApp(ui, server)
+
+
 ```
 
+### Scraping Process
+```{r}
+h4("Scraping Process Overview:")
+
+ui <- fluidPage(
+  p(HTML("<strong>Initial Data Collection:</strong> We begin by scraping all the job offer links from 'Hello work'within the software engineering domain. These links are then stored in a structured format, typically a JSON file, for further processing.")),
+  
+  downloadButton("downloadScriptScrapLinks", "Download Script"),
+  p(""),
+  p(HTML("<strong>Detailed Offer Extraction:</strong> After acquiring the offer links, we proceed to scrape the detailed information from each individual job listing. This includes key details such as job title, company name, contract type, required skills, salary range, and location.")),
+  
+     downloadButton("downloadScriptScrapInfo", "Download Script"),
+  p(""),
+  p(HTML("<strong>Skill Extraction Methodology:</strong> One challenge we encounter is that skills are often mentioned within paragraphs of text rather than in structured fields. To address this, we employ a custom methodology. We utilize a predefined dictionary of skills and systematically search for their occurrence within the textual descriptions of job offers. This allows us to accurately identify and extract the required skills.")),
+  
+  p(HTML("<strong>Comprehensive Skill Scraping:</strong> Additionally, we conduct a thorough scraping process to gather a comprehensive list of relevant skills. This ensures that our skill dictionary is up-to-date and covers a wide range of industry-specific and in-demand skills.")),
+ downloadButton("downloadScrapHardSkills", "Download Script")
+
+
+)
+
+
+server <- function(input, output) {
+  output$downloadScriptScrapLinks <- downloadHandler(
+    filename = function() {
+      "scrapOffersLink.py"  
+    },
+    content = function(file) {
+      file.copy("scrapOffersLink.py", file)
+    }
+  )
+  output$downloadScriptScrapInfo <- downloadHandler(
+    filename = function() {
+      "scrapOfferInfo.py"  
+    },
+    content = function(file) {
+      file.copy("scrapOfferInfo.py", file)
+    }
+  )
+  
+  output$downloadScrapHardSkills <- downloadHandler(
+    filename = function() {
+      "scrapHardSkills.py"  
+    },
+    content = function(file) {
+      file.copy("scrapHardSkills.py", file)
+    }
+  )
+  
+}
+
+shinyApp(ui, server)
+
+```
 
 # 🗺️ Offers by counties {data-navmenu="📈 Visualization"}
 ## Column 1 {data-width=750}
