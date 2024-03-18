@@ -1,0 +1,12 @@
+name: 0Dashboard
+title: 0Dashboard
+username: demobrown
+account: demobrown
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11524574
+bundleId: 8387779
+url: https://demobrown.shinyapps.io/0Dashboard/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
