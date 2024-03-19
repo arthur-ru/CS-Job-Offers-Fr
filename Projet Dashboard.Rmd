@@ -11,12 +11,12 @@ output:
 runtime: shiny
 resource_files:
 - data/finalData.csv
+- departements/departements.geojson
 - scrapOfferInfo.py
 - scrapHardSkills.py
 - scrapOffersLink.py
 - preprocessing.ipynb
 - Collecte_rapport_g2.pdf
-- departements/departements.geojson
 
 ---
 
@@ -34,7 +34,6 @@ library(sf)
 library(tidyr)
 library(shiny)
 library(plotly)
-library(rmapshaper)
 library(stringr)
 library(corrplot)
 library(randomForest)
@@ -52,7 +51,7 @@ france_departments <- st_read("departements/departements.geojson")
 france_departments$code_insee <- gsub("M", "", france_departments$code)
 france_departments$code_insee <- gsub("D", "", france_departments$code)
 france_departments$code_insee <- as.numeric(france_departments$code)
-france_departments <- subset(france_departments, code <= 95)
+france_departments <- subset(france_departments, code_insee <= 95)
 
 france_departments <- merge(france_departments, dep_offers_count, by.x="code", by.y="num_dep", all.x=TRUE)
 
@@ -253,7 +252,6 @@ shinyApp(ui, server)
 ### Offers by counties
 ```{r}
 
-france_departments_simplified <- ms_simplify(france_departments, keep = 0.1)
 # Define UI
 ui <- fluidPage(
   # Call the UI output to render the map
@@ -264,11 +262,11 @@ ui <- fluidPage(
 server <- function(input, output) {
   
   output$map <- renderLeaflet({
-    leaflet(data = france_departments_simplified) %>%
+    leaflet(data = france_departments) %>%
       addProviderTiles(providers$CartoDB.Positron) %>%
       setView(lng = 2.2137, lat = 46.2276, zoom = 6) %>%
       addPolygons(
-        fillColor = ~colorNumeric("YlOrRd", domain = france_departments_simplified$nb_offers)(nb_offers),
+        fillColor = ~colorNumeric("YlOrRd", domain = france_departments$nb_offers)(nb_offers),
         color = "#BDBDC3",
         weight = 1,
         fillOpacity = 1,
@@ -321,15 +319,15 @@ shinyApp(ui = ui, server = server)
 # ⚙️ Skills required {data-navmenu="📈 Visualization" }
 ```{r}
 
-output$table <- renderTable({
-    if (input$secteur == "All Sectors") {
+output$table2 <- renderTable({
+    if (input$secteur2 == "All Sectors") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
         unnest(skills)
     } else {
       sector_data <- finalData %>%
-        filter(secteur == input$secteur) %>%
+        filter(secteur == input$secteur2) %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
         unnest(skills)
@@ -344,15 +342,15 @@ output$table <- renderTable({
     skills_info
   })
   
-output$pieChart <- renderPlotly({
-    if (input$secteur == "All Sectors") {
+output$pieChart2 <- renderPlotly({
+    if (input$secteur2 == "All Sectors") {
       sector_data <- finalData %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
         unnest(skills)
     } else {
       sector_data <- finalData %>%
-        filter(secteur == input$secteur) %>%
+        filter(secteur == input$secteur2) %>%
         mutate(skills = gsub("\\[|\\]|'", "", skills),
                skills = strsplit(skills, ",\\s*")) %>%
         unnest(skills)
@@ -368,7 +366,7 @@ output$pieChart <- renderPlotly({
       layout(title = "The 15 most demanded skills by sector", margin = list(t = 50))  # Add margin to move the pie chart down
   })
   
-output$resultText <- renderUI({  # Use renderUI instead of renderText
+output$resultText2 <- renderUI({  # Use renderUI instead of renderText
     HTML("The pie chart displays the most demanded 15 skills. The most in-demand programming languages include <strong>Python</strong>, <strong>Java</strong>, and <strong>PHP</strong>, with PHP maintaining high demand despite being launched in 1994.<br>
     Furthermore, deployment-related skills such as <strong>Docker</strong>, <strong>Kubernetes</strong>, and <strong>AWS</strong> are prominent in the most demanded skills. <br>
     The most popular framework is <strong>Angular</strong>, known for its versatility to build dynamic web apps. <br>
@@ -383,28 +381,28 @@ output$resultText <- renderUI({  # Use renderUI instead of renderText
 ```
 
 ## column 1 {data-width=300}
-###
+### dd
 
 ```{r}
-selectInput("secteur", label = "Secteur",
+selectInput("secteur2", label = "Secteur",
                        choices = c("All Sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL)
-tableOutput("table")
+tableOutput("table2")
 
 ```
 
 
 ## column 2
 
-###
+### ee
 
 ```{r}
- plotlyOutput("pieChart")
+ plotlyOutput("pieChart2")
 ```
 
 ### Observations
 
 ```{r}
-uiOutput("resultText")
+uiOutput("resultText2")
 br()
 ```
 
@@ -558,11 +556,11 @@ plotlyOutput("regionBoxPlot", height = "400px")
 
 ```{r}
 
-output$secteurPlot <- renderPlotly({
-  if (input$secteur == "All sectors") {
+output$secteurPlot1 <- renderPlotly({
+  if (input$secteur1 == "All sectors") {
     secteur_data <- finalData
   } else {
-    secteur_data <- finalData %>% filter(secteur == input$secteur)
+    secteur_data <- finalData %>% filter(secteur == input$secteur1)
   }
   
   mean_salary <- mean(secteur_data$salaire)
@@ -581,12 +579,12 @@ output$secteurPlot <- renderPlotly({
   
 })
 
-output$sectorBoxPlot <- renderPlotly({
+output$sectorBoxPlot1 <- renderPlotly({
   # Check if "All regions" is selected or a specific region
-  if (input$secteur == "All sectors") {
+  if (input$secteur1 == "All sectors") {
     secteur_data <- finalData
   } else {
-    secteur_data <- finalData %>% filter(secteur == input$secteur)
+    secteur_data <- finalData %>% filter(secteur == input$secteur1)
   }
   
   plot_ly(secteur_data, y = ~salaire, type = "box") %>%
@@ -595,12 +593,12 @@ output$sectorBoxPlot <- renderPlotly({
 })
 
 
-output$sectorTable <- renderTable({
+output$sectorTable1 <- renderTable({
   # Check if "All regions" is selected or a specific region
-   if (input$secteur == "All sectors") {
+   if (input$secteur1 == "All sectors") {
     secteur_data <- finalData
   } else {
-    secteur_data <- finalData %>% filter(secteur == input$secteur)
+    secteur_data <- finalData %>% filter(secteur == input$secteur1)
   }
   
   # Calculate quartiles, top 10% of best salaries, top 10% of worst salaries, maximum and minimum values
@@ -623,25 +621,26 @@ output$sectorTable <- renderTable({
 ## column 1
 ### Graph plot
 ```{r}
-selectInput("secteur", label = "Secteur",
+
+selectInput("secteur1", label = "Secteur1",
 choices = c("All sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL)
 
 column(
   width = 12,
-plotlyOutput("secteurPlot", height = "400px")
+plotlyOutput("secteurPlot1", height = "400px")
 )
 ```
 
 ## column 2 {data-width=400}
 ### Statistics table
 ```{r}
-tableOutput("sectorTable") 
+tableOutput("sectorTable1") 
 ```
 
 
 ### Boxplot of Salary by Sector
 ```{r}
-plotlyOutput("sectorBoxPlot", height = "400px")
+plotlyOutput("sectorBoxPlot1", height = "400px")
 ```
 
 # 🔢 Basic Analysis {data-navmenu="📐 Modelization"}
