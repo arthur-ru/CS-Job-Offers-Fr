@@ -11,16 +11,12 @@ output:
 runtime: shiny
 resource_files:
 - data/finalData.csv
-- departements/departements-20180101.cpg
-- departements/departements-20180101.dbf
-- departements/departements-20180101.prj
-- departements/departements-20180101.shp
-- departements/departements-20180101.shx
 - scrapOfferInfo.py
 - scrapHardSkills.py
 - scrapOffersLink.py
 - preprocessing.ipynb
 - Collecte_rapport_g2.pdf
+- departements/departements.geojson
 
 ---
 
@@ -52,13 +48,13 @@ dep_offers_count <- as.data.frame(dep_offers_count)
 names(dep_offers_count) <- c("num_dep", "nb_offers") 
 
 
-france_departments <- st_read("departements/departements-20180101.shp")
-france_departments$code_insee <- gsub("M", "", france_departments$code_insee)
-france_departments$code_insee <- gsub("D", "", france_departments$code_insee)
-france_departments$code_insee <- as.numeric(france_departments$code_insee)
-france_departments <- subset(france_departments, code_insee <= 95)
+france_departments <- st_read("departements/departements.geojson")
+france_departments$code_insee <- gsub("M", "", france_departments$code)
+france_departments$code_insee <- gsub("D", "", france_departments$code)
+france_departments$code_insee <- as.numeric(france_departments$code)
+france_departments <- subset(france_departments, code <= 95)
 
-france_departments <- merge(france_departments, dep_offers_count, by.x="code_insee", by.y="num_dep", all.x=TRUE)
+france_departments <- merge(france_departments, dep_offers_count, by.x="code", by.y="num_dep", all.x=TRUE)
 
 # Fill NA values in nb_offers column with zeros
 france_departments$nb_offers <- ifelse(is.na(france_departments$nb_offers), 0, france_departments$nb_offers)

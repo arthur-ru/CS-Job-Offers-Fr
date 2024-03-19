@@ -5,8 +5,9 @@ account: arthurrubio
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11512790
-bundleId: 8382495
+bundleId: 8387378
 url: https://arthurrubio.shinyapps.io/cs_job_dash/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: scrapOfferInfo.py|scrapHardSkills.py|scrapOffersLink.py|preprocessing.ipynb|Collecte_rapport_g2.pdf
