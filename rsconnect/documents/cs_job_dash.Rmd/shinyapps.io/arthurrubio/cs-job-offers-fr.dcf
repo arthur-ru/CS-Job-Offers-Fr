@@ -5,7 +5,7 @@ account: arthurrubio
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11201674
-bundleId: 8387273
+bundleId: 8387916
 url: https://arthurrubio.shinyapps.io/cs-job-offers-fr/
 version: 1
 asMultiple: FALSE

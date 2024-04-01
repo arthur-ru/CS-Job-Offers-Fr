@@ -7,10 +7,10 @@ import json
 import csv
 
 
-#initialize driver
+# Initialize driver
 driver = webdriver.Firefox()
 
-# Specify the path to your JSON file
+# Specify path to your JSON file
 json_file_path = "/data/offres.json"
 
 # Read data from the JSON file
@@ -79,13 +79,12 @@ for item in offreLinks:
             hardSkill =  row['hardskills'].strip().lower()
             if hardSkill in paragraph.lower():
                 found_hardskills.append(hardSkill)
-# Print the found elements
 
+# Print the found elements
     niveau_etude = ""
     secteur = ""
     teletravail = False
     experience =""
-
 
     try:
         teletravailElement =  secondPart.find_element(By.CLASS_NAME,"tw-tag-primary-s")

@@ -6,7 +6,6 @@ import pandas as pd
 import json
 
 
-
 driver = webdriver.Firefox()
 data =[]
 page =1
@@ -38,11 +37,8 @@ for page in range(1,lastPage):
         }
 
         data.append(row)
-
-
     sleep(3)
 driver.quit()
-
 
 
 output_file_path = "data/offresLink.json"
