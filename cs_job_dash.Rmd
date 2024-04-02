@@ -432,6 +432,9 @@ output$regionPlot <- renderPlotly({
       filter(department %in% selected_departments)
   }
   
+  location_data <- location_data %>% 
+  filter(salaire > 20000, salaire != 43653)
+  
   # Mean salary
   mean_salary <- mean(location_data$salaire)
   
@@ -465,6 +468,9 @@ output$regionTable <- renderTable({
       filter(department %in% selected_departments)
   }
   
+  location_data <- location_data %>% 
+  filter(salaire > 20000, salaire != 43653)
+  
   quartiles <- quantile(location_data$salaire, probs = c(0.1, 0.5, 0.9))
   top_10_best <- quantile(location_data$salaire, probs = 0.9)
   top_10_worst <- quantile(location_data$salaire, probs = 0.1)
@@ -487,6 +493,9 @@ output$regionBoxPlot <- renderPlotly({
     location_data <- finalData %>% 
       filter(department %in% selected_departments)
   }
+  
+  location_data <- location_data %>% 
+  filter(salaire > 20000, salaire != 43653)
   
   plot_ly(location_data, y = ~salaire, type = "box") %>%
   layout(title = "Boxplot of Salary")
@@ -522,12 +531,22 @@ plotlyOutput("regionBoxPlot", height = "400px")
 # 📊 Salaries by sectors {data-navmenu="📈 Visualization" }
 
 ```{r}
+nouvelleCategorie <- "Services Publics et Personnels"
+
 output$secteurPlot1 <- renderPlotly({
   if (input$secteur1 == "All sectors") {
     secteur_data <- finalData
+  } else if (input$secteur1 == "Services Publics et Personnels") {
+    secteursFusionnes <- c("Services aux Personnes • Particuliers", "Service public hospitalier", 
+                           "Service public des collectivités territoriales", "Service public autres")
+    secteur_data <- finalData %>% 
+      filter(secteur %in% secteursFusionnes)
   } else {
     secteur_data <- finalData %>% filter(secteur == input$secteur1)
   }
+
+  secteur_data <- secteur_data %>% 
+    filter(salaire > 20000, salaire != 43653)
   
   mean_salary <- mean(secteur_data$salaire)
   top_10_best <- quantile(secteur_data$salaire, probs = 0.9)
@@ -547,9 +566,17 @@ output$secteurPlot1 <- renderPlotly({
 output$sectorBoxPlot1 <- renderPlotly({
   if (input$secteur1 == "All sectors") {
     secteur_data <- finalData
+  } else if (input$secteur1 == "Services Publics et Personnels") {
+    secteursFusionnes <- c("Services aux Personnes • Particuliers", "Service public hospitalier", 
+                           "Service public des collectivités territoriales", "Service public autres")
+    secteur_data <- finalData %>% 
+      filter(secteur %in% secteursFusionnes)
   } else {
     secteur_data <- finalData %>% filter(secteur == input$secteur1)
   }
+  
+  secteur_data <- secteur_data %>% 
+  filter(salaire > 20000, salaire != 43653)
   
   plot_ly(secteur_data, y = ~salaire, type = "box") %>%
   layout(title = "Boxplot of Salary")
@@ -560,9 +587,17 @@ output$sectorBoxPlot1 <- renderPlotly({
 output$sectorTable1 <- renderTable({
    if (input$secteur1 == "All sectors") {
     secteur_data <- finalData
+  } else if (input$secteur1 == "Services Publics et Personnels") {
+    secteursFusionnes <- c("Services aux Personnes • Particuliers", "Service public hospitalier", 
+                           "Service public des collectivités territoriales", "Service public autres")
+    secteur_data <- finalData %>% 
+      filter(secteur %in% secteursFusionnes)
   } else {
     secteur_data <- finalData %>% filter(secteur == input$secteur1)
   }
+  
+  secteur_data <- secteur_data %>% 
+    filter(salaire > 20000, salaire != 43653)
   
   quartiles <- quantile(secteur_data$salaire, probs = c(0.1, 0.5, 0.9))
   top_10_best <- quantile(secteur_data$salaire, probs = 0.9)
@@ -582,8 +617,14 @@ output$sectorTable1 <- renderTable({
 ## column 1
 ### Graph plot
 ```{r}
-selectInput("secteur1", label = "Secteur1",
-choices = c("All sectors", unique(finalData$secteur)), multiple = FALSE, selected = NULL)
+selectInput("secteur1", label = "Secteur",
+            choices = c("All sectors", "Services Publics et Personnels", 
+                        unique(finalData$secteur[!finalData$secteur %in% c("Services aux Personnes • Particuliers", 
+                                                                            "Service public hospitalier", 
+                                                                            "Service public des collectivités territoriales", 
+                                                                            "Service public autres")])), 
+            multiple = FALSE, 
+            selected = NULL)
 
 column(
   width = 12,
@@ -608,7 +649,7 @@ plotlyOutput("sectorBoxPlot1", height = "400px")
 ### Mean Salary
 ```{r}
 renderValueBox({
-valueBox("43 826€", icon = "fa-euro-sign", color = "#4fdfff")
+valueBox("46 788€", icon = "fa-euro-sign", color = "#4fdfff")
 })
 ```
 
@@ -650,7 +691,8 @@ arrondir_dizaine_millier <- function(salaire) {
   return(salaire_arrondi)
 }
 
-finalDataCopy <- finalData
+finalDataCopy <- finalData %>% 
+  filter(salaire > 20000, salaire != 43653)
 
 # Apply the function to the salary column
 finalDataCopy$salaire2 <- arrondir_dizaine_millier(finalDataCopy$salaire)
@@ -670,7 +712,7 @@ set.seed(123) # Pour la reproductibilité
 ind <- sample(2, nrow(data_selected), replace = TRUE, prob = c(0.8, 0.2))
 train <- data_selected[ind==1,]
 test <- data_selected[ind==2,]
-model <- randomForest(salaire2~., data=train, proximity=TRUE)
+model <- randomForest(salaire2~., data=train, ntree=2000, proximity=TRUE)
 predictions <- predict(model, newdata=test)
 confusion_matrix <- confusionMatrix(predictions, test$salaire2)
 accuracy <- confusion_matrix$overall['Accuracy']
