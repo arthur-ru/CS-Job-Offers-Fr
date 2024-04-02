@@ -2,6 +2,20 @@
 
 This project is designed to scrape job offers for Software Engineers or other Computer Science related jobs in France from the HelloWork platform in order to analyze various data about the state of the SWE French job market such as the **average salary**, the **number of offers by regions** and the **most asked hard skills**. We will analyze the data using R for insights into the current job market trends for Software Engineers.
 
+The dashboard has been uploaded online on https://arthurrubio.shinyapps.io/cs-job-offers-fr/, please find it here!
+
+<div align="center">
+    <img src="interface/home_page.png" alt="Home page">
+</div>
+
+*Home page of the dashboard*
+
+<div align="center">
+    <img src="interface/modelization.png" alt="Modelization">
+</div>
+
+*Modelization using Correlation Matrix and Random Forest*
+
 ## Overview
 
 The project is structured into several scripts and notebooks, each handling a distinct part of the data collection, preprocessing, and analysis process:
